@@ -43,7 +43,7 @@ finishes over a few nights on Groq's free tier. See `.github/workflows/bench.yml
 * Spider is public and widely studied; a good score matches the field rather than leading it.
 * A sample of 200 questions has a margin of error of several percentage points; differences of a few points between
   configurations are not conclusive.
-* The model and the benchmark data are not mine: scores depend on the free models available on the day, and runs may mix models when a
+* Scores depend on the free models available on the day, and runs may mix models when a
   daily quota runs out (the per-model counts are recorded in `results/summary.json`).
 
 ## Run it

@@ -57,11 +57,16 @@ jobs:
           configs="${{ inputs.configs }}"; configs="${configs:-agent oneshot agent_1try agent_nosamples}"
           n="${{ inputs.n }}"; n="${n:-100}"
           seed="${{ inputs.seed }}"; seed="${seed:-1}"
-          max="${{ inputs.max_requests }}"; max="${max:-350}"
-          models="${{ inputs.models }}"
+          max="${{ inputs.max_requests }}"; max="${max:-900}"
+          models="${{ inputs.models }}"; models="${models:-openai/gpt-oss-120b}"
           for c in $configs; do
-            python -m analyst bench --config $c --n $n --seed $seed --max-requests $max ${models:+--models "$models"}
+            python -m analyst bench --config $c --n $n --seed $seed --max-requests $max --models "$models"
           done
+          if [ "${{ github.event_name }}" = "schedule" ]; then   # held-out sample (different seed) for the two headline configurations
+            for c in agent oneshot; do
+              python -m analyst bench --config $c --n 100 --seed 2 --max-requests $max --models "$models"
+            done
+          fi
       - name: Report
         if: always()
         run: python -m analyst report | tee -a "$GITHUB_STEP_SUMMARY"

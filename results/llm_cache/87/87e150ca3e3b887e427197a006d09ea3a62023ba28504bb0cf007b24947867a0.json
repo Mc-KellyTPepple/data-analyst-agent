@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT DISTINCT s1.Country\nFROM singer s1\nWHERE s1.Age > 40\n  AND EXISTS (\n    SELECT 1 FROM singer s2\n    WHERE s2.Age < 30 AND s2.Country = s1.Country\n  );", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 144, "prompt_tokens": 1056}}

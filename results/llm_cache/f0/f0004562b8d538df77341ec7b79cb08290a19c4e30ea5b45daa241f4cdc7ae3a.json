@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT name, tonnage\nFROM ship\nORDER BY name DESC;\nFINAL SQL:\nSELECT name, tonnage\nFROM ship\nORDER BY name DESC;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 60, "prompt_tokens": 360}}

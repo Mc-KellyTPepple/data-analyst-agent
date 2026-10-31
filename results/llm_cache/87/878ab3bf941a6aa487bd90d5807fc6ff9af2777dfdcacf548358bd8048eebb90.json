@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT cost_of_treatment\nFROM Treatments\nWHERE date_of_treatment = (SELECT MAX(date_of_treatment) FROM Treatments);", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 89, "prompt_tokens": 779}}

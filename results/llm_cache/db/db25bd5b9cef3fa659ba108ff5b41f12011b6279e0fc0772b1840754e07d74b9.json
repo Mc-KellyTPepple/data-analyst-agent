@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT DISTINCT Country\nFROM TV_Channel c\nWHERE NOT EXISTS (\n    SELECT 1\n    FROM Cartoon ca\n    WHERE ca.Written_by = 'Todd Casey'\n      AND ca.Channel = c.id\n);", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 148, "prompt_tokens": 400}}

@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Document_ID FROM Paragraphs GROUP BY Document_ID HAVING COUNT(*) >= 2;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 47, "prompt_tokens": 872}}

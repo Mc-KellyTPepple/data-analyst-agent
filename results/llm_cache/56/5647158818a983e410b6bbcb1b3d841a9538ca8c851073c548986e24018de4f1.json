@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT MAX(Capacity) AS max_capacity, AVG(Capacity) AS avg_capacity FROM stadium;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 28, "prompt_tokens": 876}}

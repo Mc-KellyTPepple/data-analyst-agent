@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Name FROM people WHERE Nationality \\u003c\\u003e 'Russia';\"}", "name": "run_sql"}, "id": "fc_e4f5aba1-ebec-40a7-9f38-1ee4b2963e38", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 60, "prompt_tokens": 606}}

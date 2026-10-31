@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT c.CountryName\nFROM countries c\nJOIN car_makers cm ON c.CountryId = cm.Country\nGROUP BY c.CountryId\nORDER BY COUNT(cm.Id) DESC\nLIMIT 1;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 80, "prompt_tokens": 951}}

@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT cd.Horsepower FROM cars_data cd WHERE cd.Cylinders=4 LIMIT 5\"}", "name": "run_sql"}, "id": "fc_ec08aa29-34e1-40e8-b58c-228dd115a4c4", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 111, "prompt_tokens": 877}}

@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT DISTINCT stadium.Name FROM stadium WHERE stadium.Stadium_ID NOT IN (SELECT concert.Stadium_ID FROM concert WHERE concert.Year = '2014');", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 36, "prompt_tokens": 967}}

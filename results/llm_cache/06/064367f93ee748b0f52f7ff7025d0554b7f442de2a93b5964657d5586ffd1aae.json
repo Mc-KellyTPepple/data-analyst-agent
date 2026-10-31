@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT DISTINCT c.Code, c.Name\nFROM country c\nJOIN countrylanguage l ON c.Code = l.CountryCode\nWHERE l.IsOfficial = 'T'\n  AND l.Language IN ('English', 'Dutch');", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 107, "prompt_tokens": 1213}}

@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT country.Name, COUNT(*) AS lang_count\nFROM country\nJOIN countrylanguage ON country.Code = countrylanguage.CountryCode\nGROUP BY country.Code\nHAVING COUNT(*) > 2;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 68, "prompt_tokens": 1232}}

@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT DISTINCT s1.District\nFROM shop s1\nJOIN shop s2 ON s1.District = s2.District\nWHERE s1.Number_products < 3000\n  AND s2.Number_products > 10000;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 74, "prompt_tokens": 1028}}

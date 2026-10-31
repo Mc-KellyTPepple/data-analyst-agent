@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT AVG(CAST(age AS REAL)) AS average_age\nFROM Dogs;\nFINAL SQL:\nSELECT AVG(CAST(age AS REAL)) AS average_age\nFROM Dogs;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 72, "prompt_tokens": 777}}

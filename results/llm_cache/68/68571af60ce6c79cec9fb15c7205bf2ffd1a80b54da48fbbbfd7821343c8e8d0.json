@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT COUNT(DISTINCT PetType) AS pet_type_count FROM Pets;\"}", "name": "run_sql"}, "id": "fc_3f6dd7aa-ac07-42cc-801c-55870ecb4084", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 50, "prompt_tokens": 590}}

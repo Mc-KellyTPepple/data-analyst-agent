@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT s.Name, s.Song_Name, s.Song_release_year FROM singer s WHERE s.Age = (SELECT MIN(Age) FROM singer)\"}", "name": "run_sql"}, "id": "fc_333bc890-5bef-4a31-9532-44f75fd153df", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 90, "prompt_tokens": 863}}

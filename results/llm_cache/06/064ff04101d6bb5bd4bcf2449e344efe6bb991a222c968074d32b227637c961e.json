@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT note FROM death WHERE note LIKE '%East%';\"}", "name": "run_sql"}, "id": "fc_2ba3cce3-c983-429d-8579-323f170d1ab8", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 55, "prompt_tokens": 741}}

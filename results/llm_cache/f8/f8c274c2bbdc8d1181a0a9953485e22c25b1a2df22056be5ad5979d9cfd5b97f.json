@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT COUNT(*) AS employee_count FROM employee;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 31, "prompt_tokens": 789}}

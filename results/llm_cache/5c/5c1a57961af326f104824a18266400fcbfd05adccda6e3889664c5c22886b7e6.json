@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT AVG(c.Edispl)\nFROM cars_data c\nJOIN car_names cn ON c.Id = cn.MakeId\nJOIN model_list ml ON cn.Model = ml.Model\nWHERE ml.Model = 'volvo'", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 50, "prompt_tokens": 1115}}

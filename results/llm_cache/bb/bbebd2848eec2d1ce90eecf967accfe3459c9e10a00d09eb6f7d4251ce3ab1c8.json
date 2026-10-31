@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT zip_postcode FROM Addresses WHERE city = 'Port Chelsea';\"}", "name": "run_sql"}, "id": "fc_116eeeca-8064-4d39-9813-098531f09367", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 57, "prompt_tokens": 1953}}

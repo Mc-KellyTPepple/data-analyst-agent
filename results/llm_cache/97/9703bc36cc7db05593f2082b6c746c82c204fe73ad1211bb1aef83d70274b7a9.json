@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT Name\nFROM conductor\nORDER BY Year_of_Work DESC\nLIMIT 1;\nFINAL SQL:\nSELECT Name\nFROM conductor\nORDER BY Year_of_Work DESC\nLIMIT 1;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 71, "prompt_tokens": 420}}

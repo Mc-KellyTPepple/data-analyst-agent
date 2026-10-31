@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT MAX(Share) AS max_share, MIN(Share) AS min_share\nFROM performance\nWHERE Type <> 'Live final';\nFINAL SQL:\nSELECT MAX(Share) AS max_share, MIN(Share) AS min_share\nFROM performance\nWHERE Type <> 'Live final';", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 101, "prompt_tokens": 424}}

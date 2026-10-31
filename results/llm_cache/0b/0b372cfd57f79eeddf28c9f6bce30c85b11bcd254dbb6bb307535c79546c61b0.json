@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT CountryCode FROM countrylanguage WHERE Language='Spanish' ORDER BY Percentage DESC;\"}", "name": "run_sql"}, "id": "fc_dcf247a4-a982-4007-b212-3b79ad87b9ee", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 77, "prompt_tokens": 1027}}

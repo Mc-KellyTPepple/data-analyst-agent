@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT COUNT(*) AS total_courses FROM Courses;\"}", "name": "run_sql"}, "id": "fc_018ecd78-38c1-4e94-8c3a-b8af03f56f51", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 42, "prompt_tokens": 1952}}

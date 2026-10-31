@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT COUNT(DISTINCT loser_name) AS distinct_loser_names FROM matches;\"}", "name": "run_sql"}, "id": "fc_e46fcaf0-1b58-4335-8d41-c26befa59ad6", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 49, "prompt_tokens": 1247}}

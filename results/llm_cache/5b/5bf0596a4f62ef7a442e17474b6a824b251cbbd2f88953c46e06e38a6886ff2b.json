@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT AVG(injured) FROM death\"}", "name": "run_sql"}, "id": "fc_5422a5b1-9861-4ff0-b85b-61db5572b3a3", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 53, "prompt_tokens": 738}}

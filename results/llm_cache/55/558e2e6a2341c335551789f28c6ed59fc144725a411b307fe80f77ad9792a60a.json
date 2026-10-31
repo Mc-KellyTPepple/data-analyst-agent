@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT Paragraph_ID, Document_ID, Paragraph_Text, Other_Details\nFROM Paragraphs\nWHERE Paragraph_Text = 'Korea ';\nFINAL SQL:\nSELECT Paragraph_ID, Document_ID, Paragraph_Text, Other_Details\nFROM Paragraphs\nWHERE Paragraph_Text = 'Korea ';", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 102, "prompt_tokens": 389}}

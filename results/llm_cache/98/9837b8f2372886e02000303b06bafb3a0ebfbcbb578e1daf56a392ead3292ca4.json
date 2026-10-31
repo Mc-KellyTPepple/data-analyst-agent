@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT StuID, COUNT(PetID) AS pet_count FROM Has_Pet GROUP BY StuID;\"}", "name": "run_sql"}, "id": "fc_110148ec-9e6d-48cf-9fe5-02cd742c231c", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 99, "prompt_tokens": 602}}

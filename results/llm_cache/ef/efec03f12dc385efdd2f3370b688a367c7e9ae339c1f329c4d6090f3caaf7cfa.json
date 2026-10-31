@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT COUNT(DISTINCT result) AS cnt FROM battle;\"}", "name": "run_sql"}, "id": "fc_abad8980-7e21-4c8c-b7bd-975349c10af4", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 56, "prompt_tokens": 737}}

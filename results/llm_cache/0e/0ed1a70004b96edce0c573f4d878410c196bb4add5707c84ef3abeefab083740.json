@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT contestant_name\nFROM CONTESTANTS\nWHERE contestant_name <> 'Jessie Alloway';\nFINAL SQL:\nSELECT contestant_name\nFROM CONTESTANTS\nWHERE contestant_name <> 'Jessie Alloway';", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 70, "prompt_tokens": 338}}

@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT winner_name, winner_rank_points\nFROM matches\nWHERE winner_id IN (\n    SELECT winner_id\n    FROM matches\n    GROUP BY winner_id\n    ORDER BY COUNT(*) DESC\n    LIMIT 1\n);", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 128, "prompt_tokens": 492}}

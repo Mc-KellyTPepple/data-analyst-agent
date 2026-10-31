@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT people.Name\nFROM people\nJOIN poker_player ON people.People_ID = poker_player.People_ID;\nFINAL SQL:\nSELECT people.Name\nFROM people\nJOIN poker_player ON people.People_ID = poker_player.People_ID;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 70, "prompt_tokens": 285}}

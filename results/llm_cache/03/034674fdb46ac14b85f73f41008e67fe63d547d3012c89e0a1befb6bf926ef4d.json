@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT AVG(loser_age) AS avg_loser_age, AVG(winner_age) AS avg_winner_age\nFROM matches;\nFINAL SQL:\nSELECT AVG(loser_age) AS avg_loser_age, AVG(winner_age) AS avg_winner_age\nFROM matches;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 133, "prompt_tokens": 489}}

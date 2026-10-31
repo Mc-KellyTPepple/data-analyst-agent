@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT PetType, AVG(pet_age) AS avg_age, MAX(pet_age) AS max_age\nFROM Pets\nGROUP BY PetType;\nFINAL SQL:\nSELECT PetType, AVG(pet_age) AS avg_age, MAX(pet_age) AS max_age\nFROM Pets\nGROUP BY PetType;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 88, "prompt_tokens": 282}}

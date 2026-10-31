@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT state, created FROM VOTES;\"}", "name": "run_sql"}, "id": "fc_cca7fade-6802-46a8-9499-83033142ac7e", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 110, "prompt_tokens": 721}}

@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT COUNT(DISTINCT result) AS different_results\nFROM battle;\nFINAL SQL:\nSELECT COUNT(DISTINCT result) AS different_results\nFROM battle;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 48, "prompt_tokens": 352}}

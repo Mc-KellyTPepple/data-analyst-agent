@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT e.Employee_ID, COUNT(*) as cnt FROM evaluation e GROUP BY e.Employee_ID ORDER BY cnt DESC LIMIT 5\"}", "name": "run_sql"}, "id": "fc_d3da50da-edb5-40f8-81ca-0ef280ddbf17", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 68, "prompt_tokens": 761}}

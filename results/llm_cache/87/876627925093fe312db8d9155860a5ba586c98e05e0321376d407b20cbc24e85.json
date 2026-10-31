@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Paragraph_Text FROM Paragraphs WHERE Document_ID = 2394;\"}", "name": "run_sql"}, "id": "fc_91d2d6d1-c40b-4115-b229-a88e662d29bf", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 47, "prompt_tokens": 837}}

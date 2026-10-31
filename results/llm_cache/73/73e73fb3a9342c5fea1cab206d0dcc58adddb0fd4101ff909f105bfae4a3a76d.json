@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT COUNT(*) AS flight_count FROM flights;\"}", "name": "run_sql"}, "id": "fc_585a5bd5-a80d-4cc3-8113-ab8bd0226f4f", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 42, "prompt_tokens": 579}}

@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Title, Directed_by FROM Cartoon ORDER BY Original_air_date;\"}", "name": "run_sql"}, "id": "fc_26e25440-7471-402e-b9b8-9a8df6ffa8ad", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 99, "prompt_tokens": 944}}

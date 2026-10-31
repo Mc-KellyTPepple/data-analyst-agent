@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Manager_name, District FROM shop WHERE Number_products = (SELECT MAX(Number_products) FROM shop);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 54, "prompt_tokens": 821}}

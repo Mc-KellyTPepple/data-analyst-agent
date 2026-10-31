@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT c.contestant_number, c.contestant_name\nFROM CONTESTANTS c\nJOIN VOTES v ON c.contestant_number = v.contestant_number\nGROUP BY c.contestant_number, c.contestant_name\nORDER BY COUNT(*) ASC\nLIMIT 1;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 83, "prompt_tokens": 728}}

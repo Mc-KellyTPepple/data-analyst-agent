@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Paragraph_Text FROM Paragraphs WHERE Document_ID = 2394 LIMIT 1000;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 234, "prompt_tokens": 890}}

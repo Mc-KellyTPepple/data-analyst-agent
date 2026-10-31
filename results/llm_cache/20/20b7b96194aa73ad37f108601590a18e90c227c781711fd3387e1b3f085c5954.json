@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT * FROM airports WHERE City LIKE '%Aberdeen%';\"}", "name": "run_sql"}, "id": "fc_8c1c9ec5-3c26-4836-990f-47b041717fe1", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 72, "prompt_tokens": 811}}

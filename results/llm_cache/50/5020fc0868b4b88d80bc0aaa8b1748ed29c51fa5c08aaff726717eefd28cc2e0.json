@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT COUNT(*) FROM cars_data WHERE CAST(Horsepower AS INTEGER) \\u003e 150;\"}", "name": "run_sql"}, "id": "fc_c0bce481-fa0f-4ade-934b-0a01b47482e5", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 74, "prompt_tokens": 876}}

@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT * FROM Paragraphs WHERE Paragraph_Text = 'Korea ';\"}", "name": "run_sql"}, "id": "fc_5d594a7f-5dca-4d73-9619-9a5100676be8", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 83, "prompt_tokens": 796}}

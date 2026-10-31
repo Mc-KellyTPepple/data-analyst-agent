@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Template_ID, Template_Type_Code FROM Templates;\"}", "name": "run_sql"}, "id": "fc_990efde6-a27c-498f-8539-b4b7c89c6627", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 57, "prompt_tokens": 797}}

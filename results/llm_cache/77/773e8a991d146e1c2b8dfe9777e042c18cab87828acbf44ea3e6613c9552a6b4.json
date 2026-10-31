@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Document_ID, COUNT(*) as cnt FROM Paragraphs GROUP BY Document_ID HAVING cnt \\u003e= 2;\"}", "name": "run_sql"}, "id": "fc_d897b6cc-149e-492c-98a5-1ae030501174", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 74, "prompt_tokens": 794}}

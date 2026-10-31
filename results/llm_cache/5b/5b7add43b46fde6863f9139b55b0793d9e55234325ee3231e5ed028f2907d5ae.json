@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT COUNT(*) AS num_countries FROM (SELECT c.CountryId FROM car_makers cm JOIN countries c ON cm.Country = c.CountryId GROUP BY c.CountryId HAVING COUNT(cm.Id) > 2);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 50, "prompt_tokens": 1059}}

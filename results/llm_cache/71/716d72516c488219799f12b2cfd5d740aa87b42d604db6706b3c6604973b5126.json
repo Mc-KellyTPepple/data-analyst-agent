@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT d.Document_ID, d.Document_Name, COUNT(p.Paragraph_ID) AS para_cnt\nFROM Documents d\nLEFT JOIN Paragraphs p ON d.Document_ID = p.Document_ID\nGROUP BY d.Document_ID\nORDER BY para_cnt DESC\nLIMIT 1;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 73, "prompt_tokens": 886}}

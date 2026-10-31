@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Document_ID FROM Documents WHERE Document_Name = 'Customer reviews';\"}", "name": "run_sql"}, "id": "fc_44a3cda4-73d3-47a9-a32e-4efa21931542", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 68, "prompt_tokens": 1563}}

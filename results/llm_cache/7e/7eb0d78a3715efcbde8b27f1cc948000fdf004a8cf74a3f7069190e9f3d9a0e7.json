@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT AVG(grade) FROM Highschooler WHERE ID IN (SELECT student_id FROM Friend);\nFINAL SQL:\nSELECT AVG(grade) FROM Highschooler WHERE ID IN (SELECT student_id FROM Friend);", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 100, "prompt_tokens": 285}}

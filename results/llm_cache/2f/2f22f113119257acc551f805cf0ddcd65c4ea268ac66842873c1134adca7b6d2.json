@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT AVG(Age) FROM visitor WHERE Level_of_membership \\u003c= 4;\"}", "name": "run_sql"}, "id": "fc_43dd8c8c-65c2-4054-8683-4788ce9831fa", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 58, "prompt_tokens": 634}}

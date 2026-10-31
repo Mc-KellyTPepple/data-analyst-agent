@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT s.Name, s.Capacity, COUNT(c.concert_ID) AS concert_count\nFROM concert c\nJOIN stadium s ON c.Stadium_ID = s.Stadium_ID\nWHERE CAST(c.Year AS INTEGER) >= 2014\nGROUP BY s.Stadium_ID\nORDER BY concert_count DESC\nLIMIT 1;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 86, "prompt_tokens": 924}}

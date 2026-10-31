@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT a.Airline\nFROM airlines a\nJOIN flights f ON a.uid = f.Airline\nGROUP BY a.Airline\nHAVING COUNT(*) < 200;\nFINAL SQL:\nSELECT a.Airline\nFROM airlines a\nJOIN flights f ON a.uid = f.Airline\nGROUP BY a.Airline\nHAVING COUNT(*) < 200;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 183, "prompt_tokens": 282}}

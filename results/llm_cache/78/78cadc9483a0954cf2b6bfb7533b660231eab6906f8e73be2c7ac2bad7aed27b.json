@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT charge_type, charge_amount\nFROM Charges;\nFINAL SQL:\nSELECT charge_type, charge_amount\nFROM Charges;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 44, "prompt_tokens": 783}}

@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT DISTINCT state FROM Owners\nINTERSECT\nSELECT DISTINCT state FROM Professionals;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 97, "prompt_tokens": 778}}

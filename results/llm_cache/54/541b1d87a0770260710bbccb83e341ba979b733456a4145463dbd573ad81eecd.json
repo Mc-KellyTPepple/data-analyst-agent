@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT District, MIN(Number_products) AS minp, MAX(Number_products) AS maxp FROM shop GROUP BY District\"}", "name": "run_sql"}, "id": "fc_1f1e47aa-b93c-4b09-a50f-23d8ba369973", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 90, "prompt_tokens": 772}}

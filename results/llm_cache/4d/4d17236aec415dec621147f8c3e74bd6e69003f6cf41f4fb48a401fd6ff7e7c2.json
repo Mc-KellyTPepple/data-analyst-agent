@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT AVG(loser_age) AS avg_loser_age, AVG(winner_age) AS avg_winner_age FROM matches\"}", "name": "run_sql"}, "id": "fc_9dc0b8c8-f10f-48f8-89a7-c1b5fbdb973e", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 93, "prompt_tokens": 1251}}

@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT City, COUNT(*) as cnt FROM employee WHERE Age \\u003c 30 GROUP BY City HAVING cnt \\u003e 1;\"}", "name": "run_sql"}, "id": "fc_12c11582-68a0-49a2-9f4e-e184fa253626", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 67, "prompt_tokens": 760}}

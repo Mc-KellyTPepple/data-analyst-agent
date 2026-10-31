@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT COUNT(*) AS NumberOfCars\nFROM cars_data\nWHERE CAST(Horsepower AS INTEGER) > 150;\nFINAL SQL:\nSELECT COUNT(*) AS NumberOfCars\nFROM cars_data\nWHERE CAST(Horsepower AS INTEGER) > 150;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 89, "prompt_tokens": 427}}

@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\n```sql\nSELECT DISTINCT c.Code\nFROM country c\nWHERE NOT EXISTS (\n    SELECT 1\n    FROM countrylanguage cl\n    WHERE cl.CountryCode = c.Code\n      AND cl.Language = 'English'\n);\n```", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 146, "prompt_tokens": 560}}

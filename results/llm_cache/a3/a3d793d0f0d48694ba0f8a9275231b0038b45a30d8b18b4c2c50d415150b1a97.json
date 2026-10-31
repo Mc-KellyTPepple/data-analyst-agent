@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT AVG(Age) FROM singer\"}", "name": "run_sql"}, "id": "fc_e1ab9902-69d6-44c7-bb6e-3de0f7cc9ba8", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 55, "prompt_tokens": 815}}

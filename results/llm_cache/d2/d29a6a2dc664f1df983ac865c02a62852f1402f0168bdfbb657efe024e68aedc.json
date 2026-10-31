@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT name, result, bulgarian_commander FROM battle\"}", "name": "run_sql"}, "id": "fc_2e274b09-e77d-4848-8b85-35a24613c3bb", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 128, "prompt_tokens": 749}}

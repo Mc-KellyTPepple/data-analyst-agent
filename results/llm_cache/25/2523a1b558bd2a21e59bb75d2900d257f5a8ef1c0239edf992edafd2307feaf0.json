@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT GovernmentForm, SUM(Population) AS TotalPopulation\nFROM country\nGROUP BY GovernmentForm\nHAVING AVG(LifeExpectancy) > 72;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 119, "prompt_tokens": 1284}}

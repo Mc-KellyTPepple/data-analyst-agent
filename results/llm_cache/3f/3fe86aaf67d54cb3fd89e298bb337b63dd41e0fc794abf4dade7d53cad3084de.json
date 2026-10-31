@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT * FROM flights;\"}", "name": "run_sql"}, "id": "fc_d1075bd2-f133-4619-99c9-b22e119bc69e", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 58, "prompt_tokens": 775}}

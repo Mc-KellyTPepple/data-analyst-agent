@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Teacher_ID, Name, Age, Hometown FROM teacher ORDER BY CAST(Age AS INTEGER) ASC LIMIT 1\"}", "name": "run_sql"}, "id": "fc_e5de0721-e3a5-4aaa-ac93-0dc8e44cb3ed", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 81, "prompt_tokens": 575}}

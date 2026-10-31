@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT Document_ID\nFROM Paragraphs\nGROUP BY Document_ID\nHAVING COUNT(*) >= 2;\nFINAL SQL:\nSELECT Document_ID\nFROM Paragraphs\nGROUP BY Document_ID\nHAVING COUNT(*) >= 2;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 81, "prompt_tokens": 387}}

@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT c.Course_ID, c.Course FROM course c\"}", "name": "run_sql"}, "id": "fc_b7604238-bcc5-4e0a-a597-6afcf6edb03a", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 63, "prompt_tokens": 578}}

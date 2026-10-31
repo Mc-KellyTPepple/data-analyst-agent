@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT s.Name\nFROM singer s\nLEFT JOIN song sy ON s.Singer_ID = sy.Singer_ID\nWHERE sy.Song_ID IS NULL;\nFINAL SQL:\nSELECT s.Name\nFROM singer s\nLEFT JOIN song sy ON s.Singer_ID = sy.Singer_ID\nWHERE sy.Song_ID IS NULL;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 95, "prompt_tokens": 285}}

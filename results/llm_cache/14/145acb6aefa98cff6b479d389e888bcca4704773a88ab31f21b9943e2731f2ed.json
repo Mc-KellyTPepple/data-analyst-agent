@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT AVG(Earnings) AS avg_earnings FROM poker_player;\"}", "name": "run_sql"}, "id": "fc_67d20bfc-5d14-4b7f-bd01-abd9620ba4da", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 47, "prompt_tokens": 604}}

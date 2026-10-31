@@ -1,0 +1,1 @@
+{"message": {"content": "The number of distinct loser names in the **matches** table is:\n\nFINAL SQL:\nSELECT COUNT(DISTINCT loser_name) AS distinct_loser_names FROM matches;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 52, "prompt_tokens": 1293}}

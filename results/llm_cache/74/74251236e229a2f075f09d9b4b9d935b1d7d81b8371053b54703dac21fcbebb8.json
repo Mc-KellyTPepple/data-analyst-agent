@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT AirportCode FROM (\n  SELECT SourceAirport AS AirportCode FROM flights\n  UNION ALL\n  SELECT DestAirport FROM flights\n) GROUP BY AirportCode ORDER BY COUNT(*) ASC LIMIT 1;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 60, "prompt_tokens": 654}}

@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT \"Citizenship\"\nFROM \"singer\"\nGROUP BY \"Citizenship\"\nORDER BY COUNT(*) DESC\nLIMIT 1;\nFINAL SQL:\nSELECT \"Citizenship\"\nFROM \"singer\"\nGROUP BY \"Citizenship\"\nORDER BY COUNT(*) DESC\nLIMIT 1;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 87, "prompt_tokens": 279}}

@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT Title, Directed_by FROM Cartoon ORDER BY Original_air_date;\nFINAL SQL:\nSELECT Title, Directed_by FROM Cartoon ORDER BY Original_air_date;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 53, "prompt_tokens": 398}}

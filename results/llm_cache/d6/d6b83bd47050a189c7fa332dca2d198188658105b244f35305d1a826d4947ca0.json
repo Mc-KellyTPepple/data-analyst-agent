@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT Package_Option, series_name\nFROM TV_Channel\nWHERE Hight_definition_TV IS NOT NULL;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 85, "prompt_tokens": 403}}

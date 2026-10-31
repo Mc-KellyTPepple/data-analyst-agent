@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT * FROM airports WHERE AirportCode = 'AHD';\"}", "name": "run_sql"}, "id": "fc_bb579a8d-24ce-4011-b68d-9c2a02a68285", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 65, "prompt_tokens": 624}}

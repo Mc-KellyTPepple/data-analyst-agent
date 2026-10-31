@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT winner_name, winner_rank FROM matches ORDER BY winner_age ASC LIMIT 3\"}", "name": "run_sql"}, "id": "fc_0a67501e-2101-4ec6-9523-9e7581494f7c", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 83, "prompt_tokens": 1254}}

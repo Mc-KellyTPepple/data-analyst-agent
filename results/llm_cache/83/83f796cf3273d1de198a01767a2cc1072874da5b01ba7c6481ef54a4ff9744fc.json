@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT MIN(Number_products) AS min_products, MAX(Number_products) AS max_products FROM shop;\"}", "name": "run_sql"}, "id": "fc_60041e36-0d4b-4d12-b288-fb00f66c6209", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 75, "prompt_tokens": 758}}

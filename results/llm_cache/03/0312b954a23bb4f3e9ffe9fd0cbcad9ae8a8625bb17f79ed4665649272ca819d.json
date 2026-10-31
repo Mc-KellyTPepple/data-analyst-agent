@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT * FROM Paragraphs WHERE TRIM(Paragraph_Text) = 'Korea';\"}", "name": "run_sql"}, "id": "fc_ee2d2527-4449-4795-91a4-e1e26bb74877", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 75, "prompt_tokens": 955}}

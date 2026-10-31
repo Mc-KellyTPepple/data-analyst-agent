@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Name FROM museum WHERE Museum_ID NOT IN (SELECT Museum_ID FROM visit);\"}", "name": "run_sql"}, "id": "fc_924b3e65-7e18-49b9-9a08-76ee5c91f8ae", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 70, "prompt_tokens": 629}}

@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT AirportCode, City FROM airports WHERE City IN ('Aberdeen','Ashley');\"}", "name": "run_sql"}, "id": "fc_70b87bce-5b27-418c-ac43-137243b1b54d", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 72, "prompt_tokens": 582}}

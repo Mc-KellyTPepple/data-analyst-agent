@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT * FROM flights WHERE SourceAirport IN ('APG','ABR') AND DestAirport='ASY';\"}", "name": "run_sql"}, "id": "fc_d6df2836-d286-405e-b5c4-575d4594ce78", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 65, "prompt_tokens": 894}}

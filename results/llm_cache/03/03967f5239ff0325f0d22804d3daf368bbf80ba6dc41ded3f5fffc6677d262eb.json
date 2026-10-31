@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT TV_series.Episode\nFROM TV_series\nJOIN TV_Channel ON TV_series.Channel = TV_Channel.id\nWHERE TV_Channel.series_name = 'Sky Radio';", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 63, "prompt_tokens": 1014}}

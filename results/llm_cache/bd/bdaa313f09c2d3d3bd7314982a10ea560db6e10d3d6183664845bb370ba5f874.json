@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT visitor_ID, SUM(Total_spent) AS total FROM visit GROUP BY visitor_ID\"}", "name": "run_sql"}, "id": "fc_6dc8d2d3-5815-468b-b7e3-e82faee7aac4", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 88, "prompt_tokens": 642}}

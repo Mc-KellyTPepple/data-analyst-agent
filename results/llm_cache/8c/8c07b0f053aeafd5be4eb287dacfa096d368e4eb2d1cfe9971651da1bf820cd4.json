@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT MAX(Share) AS max_share, MIN(Share) AS min_share FROM TV_series;\"}", "name": "run_sql"}, "id": "fc_e44e3ae2-5700-4720-bf02-f7d705b6e3ff", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 70, "prompt_tokens": 944}}

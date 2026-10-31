@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT Air_Date\nFROM TV_series\nWHERE Episode = 'A Love of a Lifetime';\nFINAL SQL:\nSELECT Air_Date\nFROM TV_series\nWHERE Episode = 'A Love of a Lifetime';", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 68, "prompt_tokens": 403}}

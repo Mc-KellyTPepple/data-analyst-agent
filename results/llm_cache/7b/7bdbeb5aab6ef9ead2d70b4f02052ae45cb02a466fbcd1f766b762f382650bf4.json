@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT COUNT(*) as match_count FROM matches WHERE year IN (2013,2016);\"}", "name": "run_sql"}, "id": "fc_b22f2b28-18df-4a1d-866f-47511e07f816", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 64, "prompt_tokens": 1253}}

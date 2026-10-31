@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT first_name\nFROM Students\nWHERE current_address_id <> permanent_address_id;\nFINAL SQL:\nSELECT first_name\nFROM Students\nWHERE current_address_id <> permanent_address_id;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 140, "prompt_tokens": 955}}

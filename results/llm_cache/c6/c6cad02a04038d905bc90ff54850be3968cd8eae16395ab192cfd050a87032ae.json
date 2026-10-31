@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Code FROM country WHERE HeadOfState='Beatrix';\"}", "name": "run_sql"}, "id": "fc_19377a3d-63c5-4973-8dd0-8752422a8531", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 66, "prompt_tokens": 1027}}

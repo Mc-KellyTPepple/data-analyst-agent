@@ -1,0 +1,1 @@
+{"message": {"content": "The query counts United Airlines (uid\u202f=\u202f1) flights whose source airport is AHD.\n\nFINAL SQL:\n```sql\nSELECT COUNT(*) AS flight_count\nFROM flights\nWHERE Airline = 1\n  AND SourceAirport = 'AHD';\n```\n", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 83, "prompt_tokens": 735}}

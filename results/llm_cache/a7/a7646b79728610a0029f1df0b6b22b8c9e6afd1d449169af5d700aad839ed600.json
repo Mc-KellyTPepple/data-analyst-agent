@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT ranking_date, SUM(tours) AS total_tours FROM rankings GROUP BY ranking_date\"}", "name": "run_sql"}, "id": "fc_93c59571-8697-47b1-a1dc-d1703f93ca4b", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 76, "prompt_tokens": 1250}}

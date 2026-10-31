@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT t.transcript_id, t.transcript_date\nFROM Transcripts t\nJOIN Transcript_Contents tc ON t.transcript_id = tc.transcript_id\nGROUP BY t.transcript_id, t.transcript_date\nHAVING COUNT(tc.student_course_id) >= 2;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 141, "prompt_tokens": 952}}

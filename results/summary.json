@@ -1,1 +1,136 @@
-{}
+{
+  "agent_1try_s1_n200": {
+    "databases_worst": [
+      [
+        "car_1",
+        54.5,
+        11
+      ],
+      [
+        "cre_Doc_Template_Mgt",
+        54.5,
+        11
+      ],
+      [
+        "concert_singer",
+        63.6,
+        11
+      ],
+      [
+        "wta_1",
+        70.0,
+        10
+      ],
+      [
+        "course_teach",
+        72.7,
+        11
+      ]
+    ],
+    "execution_accuracy": 78.4,
+    "mean_llm_calls": 2.41,
+    "mean_seconds": 4.3,
+    "mean_sql_errors": 0.0,
+    "mean_tokens": 2303,
+    "models": {
+      "openai/gpt-oss-120b": 86,
+      "openai/gpt-oss-20b": 25
+    },
+    "outcomes": {
+      "match": 87,
+      "mismatch": 24
+    },
+    "questions": 111
+  },
+  "agent_nosamples_s1_n200": {
+    "questions": 0
+  },
+  "agent_s1_n200": {
+    "databases_worst": [
+      [
+        "car_1",
+        45.5,
+        11
+      ],
+      [
+        "cre_Doc_Template_Mgt",
+        54.5,
+        11
+      ],
+      [
+        "concert_singer",
+        63.6,
+        11
+      ],
+      [
+        "world_1",
+        66.7,
+        9
+      ],
+      [
+        "wta_1",
+        70.0,
+        10
+      ]
+    ],
+    "execution_accuracy": 79.2,
+    "mean_llm_calls": 2.26,
+    "mean_seconds": 23.9,
+    "mean_sql_errors": 0.01,
+    "mean_tokens": 2195,
+    "models": {
+      "openai/gpt-oss-120b": 120,
+      "openai/gpt-oss-20b": 34
+    },
+    "outcomes": {
+      "match": 122,
+      "mismatch": 31,
+      "pred_error": 1
+    },
+    "questions": 154
+  },
+  "oneshot_s1_n200": {
+    "databases_worst": [
+      [
+        "car_1",
+        36.4,
+        11
+      ],
+      [
+        "real_estate_properties",
+        50.0,
+        4
+      ],
+      [
+        "world_1",
+        60.0,
+        10
+      ],
+      [
+        "tvshow",
+        70.0,
+        10
+      ],
+      [
+        "concert_singer",
+        72.7,
+        11
+      ]
+    ],
+    "execution_accuracy": 82.5,
+    "mean_llm_calls": 1.0,
+    "mean_seconds": 5.4,
+    "mean_sql_errors": 0.0,
+    "mean_tokens": 536,
+    "models": {
+      "openai/gpt-oss-20b": 200
+    },
+    "outcomes": {
+      "match": 165,
+      "mismatch": 31,
+      "no_sql": 3,
+      "pred_error": 1
+    },
+    "questions": 200
+  }
+}

@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT c.Name\nFROM country c\nJOIN (\n    SELECT CountryCode, COUNT(*) AS lang_count\n    FROM countrylanguage\n    GROUP BY CountryCode\n    ORDER BY lang_count DESC\n    LIMIT 1\n) t ON c.Code = t.CountryCode;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 71, "prompt_tokens": 1152}}

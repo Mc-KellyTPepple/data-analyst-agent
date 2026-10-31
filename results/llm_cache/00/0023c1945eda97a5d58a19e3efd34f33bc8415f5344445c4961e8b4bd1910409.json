@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT COUNT(*) AS pet_count FROM Has_Pet hp JOIN Student s ON hp.StuID = s.StuID WHERE s.Age \\u003e 20;\"}", "name": "run_sql"}, "id": "fc_906cfc28-b4a5-4bf2-a333-cbd99a0bb70a", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 96, "prompt_tokens": 597}}

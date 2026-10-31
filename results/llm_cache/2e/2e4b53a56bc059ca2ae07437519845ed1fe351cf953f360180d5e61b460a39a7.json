@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Airline, COUNT(*) as cnt FROM flights GROUP BY Airline ORDER BY cnt ASC LIMIT 1\"}", "name": "run_sql"}, "id": "fc_37b36a31-def9-433c-9253-bdf16cf05b61", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 90, "prompt_tokens": 594}}

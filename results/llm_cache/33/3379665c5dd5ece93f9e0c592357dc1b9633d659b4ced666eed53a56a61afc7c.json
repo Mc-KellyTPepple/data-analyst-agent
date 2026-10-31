@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Name FROM stadium\"}", "name": "run_sql"}, "id": "fc_5ae4429a-1c61-4efc-8388-88a3cd08e087", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 60, "prompt_tokens": 820}}

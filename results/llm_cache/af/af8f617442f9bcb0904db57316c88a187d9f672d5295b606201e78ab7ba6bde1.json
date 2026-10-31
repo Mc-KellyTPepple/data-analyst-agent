@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Name FROM people JOIN poker_player ON people.People_ID = poker_player.People_ID;\"}", "name": "run_sql"}, "id": "fc_a1c60f99-f5d5-415f-ac89-2af5bc16a751", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 71, "prompt_tokens": 604}}

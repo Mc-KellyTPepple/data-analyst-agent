@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT COUNT(*) AS total_courses FROM Courses;\nFINAL SQL:\nSELECT COUNT(*) AS total_courses FROM Courses;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 36, "prompt_tokens": 943}}

@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT zip_postcode\nFROM Addresses\nWHERE city = 'Port Chelsea';\nFINAL SQL:\nSELECT zip_postcode\nFROM Addresses\nWHERE city = 'Port Chelsea';", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 56, "prompt_tokens": 944}}

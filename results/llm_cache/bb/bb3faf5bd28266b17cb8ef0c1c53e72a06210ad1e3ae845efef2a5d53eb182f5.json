@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT m.Museum_ID, m.Name\nFROM museum m\nJOIN visit v ON m.Museum_ID = v.Museum_ID\nGROUP BY m.Museum_ID, m.Name\nORDER BY COUNT(*) DESC\nLIMIT 1", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 78, "prompt_tokens": 709}}

@@ -50,6 +50,29 @@ def cmd_report(args) -> None:
     print(table)
 
 
+def cmd_analyze(args) -> None:
+    """Re-grade stored results with diagnostics (needs the Spider data); writes results/diagnostics.jsonl."""
+    from collections import Counter
+
+    from .bench import diagnose, load_results
+    from .spider import db_path, load_dev
+    from .sqlguard import open_readonly
+
+    dev = {q["id"]: q for q in load_dev()}
+    rows, conns = [], {}
+    for path in sorted(RESULTS.glob("*_s*_n*.jsonl")):
+        for r in load_results(path).values():
+            q = dev[r["id"]]
+            if q["db_id"] not in conns:
+                conns[q["db_id"]] = open_readonly(db_path(q["db_id"]))
+            rows.append({"id": r["id"], "config": r["config"], "db_id": r["db_id"], "model": r["model"], "question": q["question"],
+                         "gold_sql": q["gold_sql"], "final_sql": r["final_sql"], "correct": r["correct"], "tool_calls": r["tool_calls"],
+                         **diagnose(conns[q["db_id"]], r["final_sql"], q["gold_sql"])})
+    (RESULTS / "diagnostics.jsonl").write_text("".join(json.dumps(x, sort_keys=True) + "\n" for x in rows))
+    for config in sorted({x["config"] for x in rows}):
+        print(config, dict(Counter(x["kind"] for x in rows if x["config"] == config)))
+
+
 def cmd_ask(args) -> None:
     from .agent import run_analyst
     from .sqlguard import open_readonly
@@ -79,6 +102,8 @@ def main(argv=None) -> int:
     b.set_defaults(fn=cmd_bench)
     r = sub.add_parser("report", help="summarise result files into results/RESULTS.md")
     r.set_defaults(fn=cmd_report)
+    an = sub.add_parser("analyze", help="categorise wrong answers (needs the Spider data)")
+    an.set_defaults(fn=cmd_analyze)
     a = sub.add_parser("ask", help="ask one question of a SQLite file")
     a.add_argument("db")
     a.add_argument("question")

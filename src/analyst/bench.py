@@ -38,6 +38,32 @@ def grade(conn, final_sql: str | None, gold_sql: str) -> tuple[bool, str]:
     return (True, "match") if same_result(pred["rows"], gold["rows"], is_ordered(gold_sql)) else (False, "mismatch")
 
 
+def diagnose(conn, final_sql: str | None, gold_sql: str) -> dict:
+    """Why a prediction differs from the gold query: wrong shape (columns/rows) or same shape with different values."""
+    gold = run_select(conn, gold_sql, max_rows=100_000, timeout_s=20)
+    out = {"gold_cols": len(gold["columns"]), "gold_rows": len(gold["rows"])}
+    if not final_sql:
+        return {**out, "kind": "no_sql"}
+    try:
+        pred = run_select(conn, final_sql, max_rows=100_000, timeout_s=20)
+    except QueryError:
+        return {**out, "kind": "error"}
+    out.update(pred_cols=len(pred["columns"]), pred_rows=len(pred["rows"]))
+    if same_result(pred["rows"], gold["rows"], is_ordered(gold_sql)):
+        kind = "match"
+    elif out["pred_cols"] > out["gold_cols"]:
+        kind = "extra_columns"
+    elif out["pred_cols"] < out["gold_cols"]:
+        kind = "missing_columns"
+    elif out["pred_rows"] > out["gold_rows"]:
+        kind = "more_rows"
+    elif out["pred_rows"] < out["gold_rows"]:
+        kind = "fewer_rows"
+    else:
+        kind = "same_shape_other_values"
+    return {**out, "kind": kind}
+
+
 def run_bench(questions: list[dict], config: str, llm, out_path: Path, root: Path = ROOT, limit: int | None = None, progress=print) -> dict:
     cfg = CONFIGS[config]
     out_path = Path(out_path)
@@ -62,6 +88,7 @@ def run_bench(questions: list[dict], config: str, llm, out_path: Path, root: Pat
                 ok, reason = grade(conn, run["final_sql"], q["gold_sql"])
                 rec = {"id": q["id"], "db_id": q["db_id"], "config": config, "prompt_version": run["prompt_version"], "correct": ok, "reason": reason,
                        "final_sql": run["final_sql"], "model": run["model"], "calls": run["calls"], "tool_calls": run["tool_calls"],
+                       "gold_sql": q["gold_sql"], "question": q["question"], "diag": diagnose(conn, run["final_sql"], q["gold_sql"]),
                        "sql_errors": run["sql_errors"], "prompt_tokens": run["prompt_tokens"], "completion_tokens": run["completion_tokens"],
                        "seconds": round(time.monotonic() - t0, 2), "error": None}
             except BudgetExhausted as exc:

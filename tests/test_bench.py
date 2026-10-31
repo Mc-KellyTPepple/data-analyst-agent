@@ -3,7 +3,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from analyst.bench import load_results, markdown_table, run_bench, summarize
+from analyst.bench import diagnose, load_results, markdown_table, run_bench, summarize
+from analyst.sqlguard import open_readonly
 from analyst.llm import BudgetExhausted
 from analyst.spider import db_path, sample
 from tests.helpers import FakeLLM, make_db
@@ -57,6 +58,22 @@ class BenchTests(unittest.TestCase):
         llm = FakeLLM(["FINAL SQL:\nSELECT COUNT(*) FROM singer"])
         run_bench(questions()[:1], "oneshot", llm, self.out, root=self.root, progress=lambda *_: None)
         self.assertTrue(load_results(self.out)["dev-0000"]["correct"])
+
+
+class DiagnoseTests(unittest.TestCase):
+    def test_kinds(self):
+        with tempfile.TemporaryDirectory() as d:
+            conn = open_readonly(make_db(Path(d) / "m.sqlite"))
+            gold = "SELECT name FROM singer WHERE country='France'"
+            k = lambda sql: diagnose(conn, sql, gold)["kind"]  # noqa: E731
+            self.assertEqual(k(gold), "match")
+            self.assertEqual(k("SELECT name, age FROM singer WHERE country='France'"), "extra_columns")
+            self.assertEqual(k("SELECT name FROM singer"), "more_rows")
+            self.assertEqual(k("SELECT name FROM singer WHERE country='France' AND age>30"), "fewer_rows")
+            self.assertEqual(k("SELECT country FROM singer WHERE country='France'"), "same_shape_other_values")
+            self.assertEqual(k("SELECT nope"), "error")
+            self.assertEqual(k(None), "no_sql")
+            conn.close()
 
 
 class SampleTests(unittest.TestCase):

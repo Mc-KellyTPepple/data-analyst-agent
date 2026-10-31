@@ -16,7 +16,7 @@ from .llm import LLMError
 from .schema import describe
 from .sqlguard import QueryError, run_select
 
-PROMPT_VERSION = "v1"
+PROMPT_VERSION = "v2"   # v1: first benchmark run; v2: exact-columns rule, last FINAL SQL marker (both from the v1 failure analysis)
 
 
 @dataclass(frozen=True)
@@ -41,7 +41,8 @@ _SYSTEM = """You are a careful data analyst answering a question about a SQLite 
 
 Rules:
 - Write SQLite SQL using only the tables and columns above, with their exact names.
-- Return exactly the columns the question asks for and no extras. Do not add LIMIT unless the question asks for a limited number.
+- Select ONLY the columns the question asks for, in the order it mentions them. Do not add counts, ids, sort keys or other helpful extras, and do not alias columns.
+- Do not add LIMIT unless the question asks for a limited number. Do not CAST columns unless a query error or the sample values show it is needed.
 {tool_rules}- Only SELECT statements work. Never try to change data.
 {clarify_rule}- End your reply with the final query, exactly like this:
 FINAL SQL:
@@ -69,8 +70,8 @@ def extract_final_sql(text: str) -> str | None:
     """The query after 'FINAL SQL:'; falls back to the last fenced block."""
     if not text:
         return None
-    m = re.search(r"FINAL SQL:\s*(.*)\Z", text, re.I | re.S)
-    body = m.group(1) if m else None
+    parts = re.split(r"FINAL SQL:", text, flags=re.I)   # the model may restate it after a cut-off draft; the last one wins
+    body = parts[-1] if len(parts) > 1 else None
     if body is None:
         blocks = re.findall(r"```(?:sql)?\s*(.*?)```", text, re.S | re.I)
         body = blocks[-1] if blocks else None

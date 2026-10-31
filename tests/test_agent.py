@@ -26,6 +26,7 @@ class ExtractTests(unittest.TestCase):
         self.assertEqual(extract_final_sql("Done.\nFINAL SQL:\nSELECT 1;"), "SELECT 1")
         self.assertEqual(extract_final_sql("FINAL SQL:\n```sql\nSELECT 2\n```"), "SELECT 2")
         self.assertEqual(extract_final_sql("try\n```sql\nSELECT 3\n```"), "SELECT 3")
+        self.assertEqual(extract_final_sql("FINAL SQL:\nSELECT 'cut\n\nSorry, cut off.FINAL SQL:\nSELECT 4"), "SELECT 4")
         self.assertIsNone(extract_final_sql("I cannot do that"))
         self.assertIsNone(extract_final_sql(""))
 

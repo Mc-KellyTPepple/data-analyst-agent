@@ -7,7 +7,7 @@ import os
 import sys
 from pathlib import Path
 
-from .agent import CONFIGS
+from .agent import CONFIGS, PROMPT_VERSION
 
 RESULTS = Path("results")
 LEDGER = RESULTS / "groq_ledger.json"
@@ -33,7 +33,7 @@ def cmd_bench(args) -> None:
 
     qs = sample(load_dev(), args.n, args.seed)
     llm = _llm(args, mode=args.mode, max_requests=args.max_requests)
-    res = run_bench(qs, args.config, llm, RESULTS / f"{args.config}_s{args.seed}_n{args.n}.jsonl")
+    res = run_bench(qs, args.config, llm, RESULTS / f"{args.config}_{PROMPT_VERSION}_s{args.seed}_n{args.n}.jsonl")
     print(json.dumps({**res, "network_requests": llm.usage.requests, "cache_hits": llm.usage.cache_hits}))
     llm.ledger.save()
 
@@ -96,7 +96,7 @@ def main(argv=None) -> int:
     b.add_argument("--config", choices=list(CONFIGS), default="agent")
     b.add_argument("--n", type=int, default=200, help="questions in the sample (spread across databases)")
     b.add_argument("--seed", type=int, default=1)
-    b.add_argument("--max-requests", type=int, default=400)
+    b.add_argument("--max-requests", type=int, default=900)
     b.add_argument("--models")
     b.add_argument("--mode", choices=["live", "replay"], default="live")
     b.set_defaults(fn=cmd_bench)

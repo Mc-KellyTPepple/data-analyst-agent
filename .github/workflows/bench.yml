@@ -22,11 +22,11 @@ on:
         default: "1"
       max_requests:
         description: "Max Groq requests per configuration this run"
-        default: "350"
+        default: "900"
       models:
-        description: "Comma-separated Groq models, preferred first (empty = defaults)"
+        description: "Comma-separated Groq models, preferred first (default: gpt-oss-120b only, so every configuration uses the same model)"
         required: false
-        default: ""
+        default: "openai/gpt-oss-120b"
 
 permissions:
   contents: write

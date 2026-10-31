@@ -1,0 +1,13 @@
+[project]
+name = "data-analyst-agent"
+version = "0.1.0"
+description = "A text-to-SQL data analyst agent with a read-only SQL guard, a self-correcting loop and a Spider execution-accuracy evaluation."
+requires-python = ">=3.11"
+dependencies = ["requests>=2.31"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

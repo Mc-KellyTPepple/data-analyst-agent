@@ -1,0 +1,22 @@
+# Free web service on Render (no paid plan). Create it with: Render dashboard > New > Blueprint > this repo.
+# Then set GROQ_API_KEY (a secret) in the service's Environment tab. The free service sleeps when idle; the
+# portfolio page wakes it when someone opens the demo.
+services:
+  - type: web
+    name: data-analyst-agent
+    runtime: python
+    plan: free
+    buildCommand: pip install requests
+    startCommand: python -m analyst serve
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: PYTHONPATH
+        value: src
+      - key: DEMO_DB
+        value: demo/demo.sqlite
+      - key: LEDGER_PATH
+        value: /tmp/groq_ledger.json
+      - key: GROQ_API_KEY
+        sync: false

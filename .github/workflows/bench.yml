@@ -1,0 +1,75 @@
+name: Benchmark on Spider
+
+# Runs the Spider development-set sample through Groq's free tier, grades execution accuracy, and commits the
+# results, the response cache and the daily request ledger. Runs are resumable: finished questions are skipped,
+# so when a daily quota runs out the run stops cleanly and the nightly run continues it.
+#
+# One-time setup: add the repository SECRET GROQ_API_KEY (from console.groq.com/keys).
+
+on:
+  schedule:
+    - cron: "15 2 * * *"      # after Groq's daily reset at 00:00 UTC, and after the EDGAR Analyst nightly run
+  workflow_dispatch:
+    inputs:
+      configs:
+        description: "Space-separated configurations: agent oneshot agent_1try agent_nosamples"
+        default: "agent oneshot agent_1try agent_nosamples"
+      n:
+        description: "Sample size (questions spread across databases)"
+        default: "200"
+      seed:
+        description: "Sample seed"
+        default: "1"
+      max_requests:
+        description: "Max Groq requests per configuration this run"
+        default: "350"
+      models:
+        description: "Comma-separated Groq models, preferred first (empty = defaults)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bench
+  cancel-in-progress: false
+
+jobs:
+  bench:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    env:
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      PYTHONPATH: src
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check setup
+        run: '[ -n "$GROQ_API_KEY" ] || { echo "::error::Add the GROQ_API_KEY repository secret."; exit 1; }'
+      - run: pip install -e .
+      - name: Fetch Spider development set
+        run: python scripts/fetch_spider.py
+      - name: Run benchmark
+        run: |
+          configs="${{ inputs.configs }}"; configs="${configs:-agent oneshot agent_1try agent_nosamples}"
+          n="${{ inputs.n }}"; n="${n:-200}"
+          seed="${{ inputs.seed }}"; seed="${seed:-1}"
+          max="${{ inputs.max_requests }}"; max="${max:-350}"
+          models="${{ inputs.models }}"
+          for c in $configs; do
+            python -m analyst bench --config $c --n $n --seed $seed --max-requests $max ${models:+--models "$models"}
+          done
+      - name: Report
+        if: always()
+        run: python -m analyst report | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Commit results
+        if: always()
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add -A results
+          git diff --cached --quiet || git commit -m "Benchmark results"
+          git pull --rebase -X theirs && git push

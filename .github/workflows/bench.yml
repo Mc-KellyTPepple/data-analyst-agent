@@ -16,7 +16,7 @@ on:
         default: "agent oneshot agent_1try agent_nosamples"
       n:
         description: "Sample size (questions spread across databases)"
-        default: "200"
+        default: "100"
       seed:
         description: "Sample seed"
         default: "1"
@@ -55,7 +55,7 @@ jobs:
       - name: Run benchmark
         run: |
           configs="${{ inputs.configs }}"; configs="${configs:-agent oneshot agent_1try agent_nosamples}"
-          n="${{ inputs.n }}"; n="${n:-200}"
+          n="${{ inputs.n }}"; n="${n:-100}"
           seed="${{ inputs.seed }}"; seed="${seed:-1}"
           max="${{ inputs.max_requests }}"; max="${max:-350}"
           models="${{ inputs.models }}"

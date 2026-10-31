@@ -94,7 +94,7 @@ def main(argv=None) -> int:
     sub = p.add_subparsers(dest="cmd", required=True)
     b = sub.add_parser("bench", help="run the Spider execution-accuracy benchmark (resumable)")
     b.add_argument("--config", choices=list(CONFIGS), default="agent")
-    b.add_argument("--n", type=int, default=200, help="questions in the sample (spread across databases)")
+    b.add_argument("--n", type=int, default=100, help="questions in the sample (spread across databases)")
     b.add_argument("--seed", type=int, default=1)
     b.add_argument("--max-requests", type=int, default=900)
     b.add_argument("--models")

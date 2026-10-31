@@ -1,5 +1,5 @@
 {
-  "agent_1try_s1_n200": {
+  "agent_1try_v1_s1_n200": {
     "databases_worst": [
       [
         "car_1",
@@ -42,10 +42,16 @@
     },
     "questions": 111
   },
-  "agent_nosamples_s1_n200": {
+  "agent_1try_v2_s1_n200": {
     "questions": 0
   },
-  "agent_s1_n200": {
+  "agent_nosamples_v1_s1_n200": {
+    "questions": 0
+  },
+  "agent_nosamples_v2_s1_n200": {
+    "questions": 0
+  },
+  "agent_v1_s1_n200": {
     "databases_worst": [
       [
         "car_1",
@@ -89,7 +95,10 @@
     },
     "questions": 154
   },
-  "oneshot_s1_n200": {
+  "agent_v2_s1_n200": {
+    "questions": 0
+  },
+  "oneshot_v1_s1_n200": {
     "databases_worst": [
       [
         "car_1",
@@ -132,5 +141,8 @@
       "pred_error": 1
     },
     "questions": 200
+  },
+  "oneshot_v2_s1_n200": {
+    "questions": 0
   }
 }

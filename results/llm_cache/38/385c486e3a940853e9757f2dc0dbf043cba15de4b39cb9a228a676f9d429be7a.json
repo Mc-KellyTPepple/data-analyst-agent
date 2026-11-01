@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Name FROM teacher WHERE Age IN ('32','33');\"}", "name": "run_sql"}, "id": "fc_75f9b521-df64-46a5-9cf3-dfe8dd3f1a13", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 54, "prompt_tokens": 625}}

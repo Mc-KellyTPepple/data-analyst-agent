@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT Nationality\nFROM people\nGROUP BY Nationality\nHAVING COUNT(*) >= 2;\nFINAL SQL:\nSELECT Nationality\nFROM people\nGROUP BY Nationality\nHAVING COUNT(*) >= 2;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 73, "prompt_tokens": 331}}

@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT max(Capacity), avg(Capacity) FROM stadium;\"}", "name": "run_sql"}, "id": "fc_386a8b3c-8faf-4111-a769-a47cb9cb0240", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 107, "prompt_tokens": 856}}

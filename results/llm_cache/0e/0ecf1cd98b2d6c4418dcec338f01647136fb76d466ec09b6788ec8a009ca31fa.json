@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT name, tonnage FROM ship ORDER BY name DESC;\"}", "name": "run_sql"}, "id": "fc_2ff082f0-e9fb-43c7-8ba8-f0e10c0018f9", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 51, "prompt_tokens": 787}}

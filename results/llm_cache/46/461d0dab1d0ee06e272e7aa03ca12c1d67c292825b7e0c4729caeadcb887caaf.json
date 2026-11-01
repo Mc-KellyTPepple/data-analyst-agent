@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT FullName, Id FROM car_makers WHERE Id IN (SELECT Maker FROM model_list GROUP BY Maker HAVING COUNT(*)>3);", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 55, "prompt_tokens": 993}}

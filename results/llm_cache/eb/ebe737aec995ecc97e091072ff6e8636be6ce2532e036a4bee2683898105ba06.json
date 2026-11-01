@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT count(*) FROM flights WHERE SourceAirport='APG';", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 82, "prompt_tokens": 324}}

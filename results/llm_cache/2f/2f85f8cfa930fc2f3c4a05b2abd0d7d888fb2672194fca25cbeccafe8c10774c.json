@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Name FROM visitor WHERE Level_of_membership \\u003e 4 ORDER BY Level_of_membership DESC;\"}", "name": "run_sql"}, "id": "fc_a5fa8eae-ce92-45b5-9a25-4af58c6805b6", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 61, "prompt_tokens": 685}}

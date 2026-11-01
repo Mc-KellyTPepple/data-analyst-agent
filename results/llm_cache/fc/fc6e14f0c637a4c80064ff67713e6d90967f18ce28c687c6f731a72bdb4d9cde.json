@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT COUNT(*) FROM Templates;\"}", "name": "run_sql"}, "id": "fc_a4f3b20c-b694-42a6-81d6-aff5890f74de", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 41, "prompt_tokens": 832}}

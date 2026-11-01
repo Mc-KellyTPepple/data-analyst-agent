@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT DISTINCT Country FROM singer WHERE Age>20;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 26, "prompt_tokens": 902}}

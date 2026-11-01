@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT DISTINCT ID, Name, Age\nFROM visitor\nJOIN visit ON visitor.ID = visit.visitor_ID\nWHERE Num_of_Ticket > 1;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 100, "prompt_tokens": 794}}

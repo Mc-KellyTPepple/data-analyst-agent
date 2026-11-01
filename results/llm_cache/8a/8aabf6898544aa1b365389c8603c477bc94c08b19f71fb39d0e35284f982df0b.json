@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Name, Age FROM visitor WHERE ID = (SELECT visitor_ID FROM visit ORDER BY Num_of_Ticket DESC LIMIT 1);\"}", "name": "run_sql"}, "id": "fc_554e89e7-7ea0-4439-a261-e53946ac83bb", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 71, "prompt_tokens": 674}}

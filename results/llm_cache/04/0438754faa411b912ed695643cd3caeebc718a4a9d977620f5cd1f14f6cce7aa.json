@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT battle.id, battle.name FROM battle JOIN ship ON battle.id = ship.lost_in_battle WHERE ship.ship_type='Brig';", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 57, "prompt_tokens": 881}}

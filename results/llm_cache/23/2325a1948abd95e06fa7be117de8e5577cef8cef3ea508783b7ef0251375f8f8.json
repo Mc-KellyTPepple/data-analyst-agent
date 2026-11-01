@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT DISTINCT Country FROM singer WHERE Age\\u003e20;\"}", "name": "run_sql"}, "id": "fc_581321fa-c6b5-4e4e-b17a-8cd0224f4f31", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 54, "prompt_tokens": 857}}

@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT property_name\nFROM Properties\nWHERE property_type_code IN (\n    SELECT property_type_code\n    FROM Ref_Property_Types\n    WHERE property_type_description IN ('House', 'Apartment')\n)\nAND room_count > 1;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 96, "prompt_tokens": 721}}

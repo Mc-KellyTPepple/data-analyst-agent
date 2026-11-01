@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT AVG(grade) FROM Highschooler h WHERE EXISTS (SELECT 1 FROM Friend f WHERE f.student_id = h.ID);", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 89, "prompt_tokens": 327}}

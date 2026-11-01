@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Name FROM museum m WHERE NOT EXISTS (SELECT 1 FROM visit v WHERE v.Museum_ID = m.Museum_ID);\"}", "name": "run_sql"}, "id": "fc_f16820b8-d312-42bb-b965-4725145bc363", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 91, "prompt_tokens": 733}}

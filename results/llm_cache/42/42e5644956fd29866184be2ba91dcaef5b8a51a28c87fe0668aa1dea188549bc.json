@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT City FROM airports WHERE AirportCode='AXG';\"}", "name": "run_sql"}, "id": "fc_36267182-a3ee-4997-a789-0071e0f472fe", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 41, "prompt_tokens": 680}}

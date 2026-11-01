@@ -1,0 +1,1 @@
+{"message": {"content": "The city with the most frequent destination airport is **Algona**.", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 65, "prompt_tokens": 720}}

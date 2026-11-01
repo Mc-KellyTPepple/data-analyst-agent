@@ -44,7 +44,7 @@ Rules:
 - Select ONLY the columns the question asks for, in the order it mentions them. Do not add counts, ids, sort keys or other helpful extras, and do not alias columns.
 - Do not add LIMIT unless the question asks for a limited number. Do not CAST columns unless a query error or the sample values show it is needed.
 {tool_rules}- Only SELECT statements work. Never try to change data.
-{clarify_rule}- End your reply with the final query, exactly like this:
+{clarify_rule}{answer_rule}- End your reply with the final query, exactly like this:
 FINAL SQL:
 <the query>"""
 
@@ -52,6 +52,8 @@ _TOOL_RULES = ("- Use run_sql to try queries. Read each result. If a query fails
                "wrong columns, duplicates), fix it and run it again. Explore values with run_sql first if you are unsure how data is stored.\n")
 _CLARIFY_RULE = ("- If the question is ambiguous in a way that would change the result, reply with one line starting 'CLARIFY:' and a short "
                  "question instead of querying.\n")
+
+_ANSWER_RULE = "- Before the final query, state the answer to the question in one short plain sentence, using the numbers or names from the result.\n"   # web app only
 
 TOOL_SQL = {"type": "function", "function": {
     "name": "run_sql",
@@ -63,7 +65,8 @@ _RECOVERABLE = ("tool_use_failed", "Failed to call a function", "Parsing failed"
 
 def build_system(schema_text: str, cfg: Config) -> str:
     return _SYSTEM.format(schema=schema_text, tool_rules=_TOOL_RULES if cfg.tools else "",
-                          clarify_rule=_CLARIFY_RULE if cfg.clarify else "")
+                          clarify_rule=_CLARIFY_RULE if cfg.clarify else "",
+                          answer_rule=_ANSWER_RULE if cfg.clarify else "")
 
 
 def extract_final_sql(text: str) -> str | None:

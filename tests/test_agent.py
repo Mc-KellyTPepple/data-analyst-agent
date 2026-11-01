@@ -61,6 +61,7 @@ class AgentTests(unittest.TestCase):
         run = run_analyst(llm, "How many singers?", self.conn, CONFIGS["oneshot"])
         self.assertIsNone(llm.calls[0]["tools"])
         self.assertNotIn("sample rows", llm.calls[0]["messages"][0]["content"])
+        self.assertNotIn("plain sentence", llm.calls[0]["messages"][0]["content"])   # benchmark prompt is unchanged
         self.assertEqual((run["final_sql"], run["calls"]), ("SELECT COUNT(*) FROM singer", 1))
 
     def test_falls_back_to_last_successful_query(self):
@@ -75,6 +76,7 @@ class AgentTests(unittest.TestCase):
         self.assertEqual(run["clarify"], "Do you mean the youngest or the oldest singer?")
         self.assertIsNone(run["final_sql"])
         self.assertIn("CLARIFY", llm.calls[0]["messages"][0]["content"])
+        self.assertIn("one short plain sentence", llm.calls[0]["messages"][0]["content"])
         off = FakeLLM(["CLARIFY: which?"])
         self.assertIsNone(run_analyst(off, "x", self.conn, CONFIGS["agent"])["clarify"])
 

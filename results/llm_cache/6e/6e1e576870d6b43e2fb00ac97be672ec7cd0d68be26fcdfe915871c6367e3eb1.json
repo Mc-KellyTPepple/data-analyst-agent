@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT DISTINCT DestAirport FROM flights LIMIT 20;\"}", "name": "run_sql"}, "id": "fc_a81e7dad-9451-4152-92bf-62ed141ed39e", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 47, "prompt_tokens": 987}}

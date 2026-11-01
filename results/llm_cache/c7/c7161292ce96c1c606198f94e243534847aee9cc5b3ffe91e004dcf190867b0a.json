@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT COUNT(*) FROM countries;\"}", "name": "run_sql"}, "id": "fc_5927c163-5642-4951-96ea-a14b685c06aa", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 55, "prompt_tokens": 909}}

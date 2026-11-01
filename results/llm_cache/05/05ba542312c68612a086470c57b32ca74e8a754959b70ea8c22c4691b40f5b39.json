@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT COUNT(*) FROM Pets WHERE weight \\u003e 10;\"}", "name": "run_sql"}, "id": "fc_5952b30a-26aa-47d6-bacc-67d6cabd0321", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 45, "prompt_tokens": 634}}

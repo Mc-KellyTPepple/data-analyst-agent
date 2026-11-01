@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Name, COUNT(Course_ID) FROM teacher LEFT JOIN course_arrange USING (Teacher_ID) GROUP BY Teacher_ID\"}", "name": "run_sql"}, "id": "fc_0c64c81f-12cf-4c37-9852-a5c073e41b38", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 91, "prompt_tokens": 623}}

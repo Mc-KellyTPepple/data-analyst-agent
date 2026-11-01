@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT visitor_ID, COUNT(*) as cnt FROM visit GROUP BY visitor_ID HAVING cnt \\u003e 1;\"}", "name": "run_sql"}, "id": "fc_92347bc9-b7e5-4850-9a90-4e7a68623227", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 151, "prompt_tokens": 675}}

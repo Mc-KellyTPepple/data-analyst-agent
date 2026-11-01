@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Template_Type_Code, COUNT(*) AS cnt FROM Templates GROUP BY Template_Type_Code ORDER BY cnt DESC LIMIT 1", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 44, "prompt_tokens": 893}}

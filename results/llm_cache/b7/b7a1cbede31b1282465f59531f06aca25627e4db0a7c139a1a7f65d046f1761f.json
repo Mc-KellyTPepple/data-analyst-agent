@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Name FROM museum LEFT JOIN visit USING (Museum_ID) WHERE visitor_ID IS NULL;\"}", "name": "run_sql"}, "id": "fc_50fc0b6b-49d8-48be-8673-fb709369759a", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 69, "prompt_tokens": 671}}

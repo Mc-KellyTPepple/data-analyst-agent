@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT DestAirport, COUNT(*) cnt FROM flights GROUP BY DestAirport ORDER BY cnt DESC LIMIT 5;\"}", "name": "run_sql"}, "id": "fc_89a9c473-cbf8-409e-b553-2867d3b8851b", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 108, "prompt_tokens": 1083}}

@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Paragraph_Text FROM Paragraphs WHERE Document_ID = (SELECT Document_ID FROM Documents WHERE Document_Name = 'Customer reviews');", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 31, "prompt_tokens": 927}}

@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Title FROM Cartoon WHERE Directed_by = 'Ben Jones';\"}", "name": "run_sql"}, "id": "fc_6942c456-445a-4890-91eb-be0a074dee4b", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 39, "prompt_tokens": 983}}

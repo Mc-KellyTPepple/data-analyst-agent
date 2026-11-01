@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Air_Date FROM TV_series WHERE Episode = 'A Love of a Lifetime';\"}", "name": "run_sql"}, "id": "fc_28bdfedc-524c-48fc-8c2e-6a17fb29a5bc", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 63, "prompt_tokens": 991}}

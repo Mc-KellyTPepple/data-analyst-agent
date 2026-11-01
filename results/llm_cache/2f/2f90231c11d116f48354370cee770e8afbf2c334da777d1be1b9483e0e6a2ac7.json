@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT v.ID, v.Name, v.Age\nFROM visitor v\nJOIN (\n    SELECT visitor_ID\n    FROM visit\n    GROUP BY visitor_ID\n    HAVING COUNT(*) > 1\n) sub ON v.ID = sub.visitor_ID;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 73, "prompt_tokens": 845}}

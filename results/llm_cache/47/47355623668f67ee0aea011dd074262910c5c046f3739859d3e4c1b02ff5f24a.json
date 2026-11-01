@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT PetType, AVG(weight) FROM Pets GROUP BY PetType;\"}", "name": "run_sql"}, "id": "fc_64ca5360-f531-49dd-a59f-52bce68a9056", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 68, "prompt_tokens": 634}}

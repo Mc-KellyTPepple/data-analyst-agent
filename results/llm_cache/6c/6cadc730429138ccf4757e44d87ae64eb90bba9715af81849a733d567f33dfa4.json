@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT COUNT(*) FROM Cartoon WHERE Written_by = 'Joseph Kuhr';\"}", "name": "run_sql"}, "id": "fc_fb19219f-4b37-4a66-b7e9-6a816521a584", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 59, "prompt_tokens": 988}}

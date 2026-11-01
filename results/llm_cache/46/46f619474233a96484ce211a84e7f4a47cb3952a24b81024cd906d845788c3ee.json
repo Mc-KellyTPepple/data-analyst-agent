@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT dp.degree_program_id, dp.degree_summary_name FROM Degree_Programs dp WHERE dp.degree_program_id = 9\"}", "name": "run_sql"}, "id": "fc_c79b8572-5e72-4ca5-93a5-8a3ef8ce72ef", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 85, "prompt_tokens": 2064}}

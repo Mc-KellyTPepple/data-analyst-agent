@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT * FROM employee;\"}", "name": "run_sql"}, "id": "fc_96e516b6-fa9b-4575-8c7c-f3e45c293545", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 76, "prompt_tokens": 865}}

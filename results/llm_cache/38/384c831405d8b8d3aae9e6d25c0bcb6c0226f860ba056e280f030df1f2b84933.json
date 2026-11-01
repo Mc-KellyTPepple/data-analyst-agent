@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Abbreviation, Country FROM airlines WHERE uid = 1", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 19, "prompt_tokens": 732}}

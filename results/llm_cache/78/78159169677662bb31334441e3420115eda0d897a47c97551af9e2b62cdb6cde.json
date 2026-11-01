@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Template_ID FROM Templates WHERE Template_Type_Code = 'PP' OR Template_Type_Code = 'PPT';\"}", "name": "run_sql"}, "id": "fc_c208f7d8-348b-4065-bd34-ce4bc7ff917b", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 66, "prompt_tokens": 839}}

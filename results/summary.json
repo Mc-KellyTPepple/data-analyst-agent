@@ -42,13 +42,31 @@
     },
     "questions": 111
   },
-  "agent_1try_v2_s1_n200": {
-    "questions": 0
+  "agent_1try_v2_s1_n100": {
+    "databases_worst": [
+      [
+        "concert_singer",
+        100.0,
+        1
+      ]
+    ],
+    "execution_accuracy": 100.0,
+    "mean_llm_calls": 2.0,
+    "mean_seconds": 0.0,
+    "mean_sql_errors": 0.0,
+    "mean_tokens": 1893,
+    "models": {
+      "openai/gpt-oss-120b": 1
+    },
+    "outcomes": {
+      "match": 1
+    },
+    "questions": 1
   },
   "agent_nosamples_v1_s1_n200": {
     "questions": 0
   },
-  "agent_nosamples_v2_s1_n200": {
+  "agent_nosamples_v2_s1_n100": {
     "questions": 0
   },
   "agent_v1_s1_n200": {
@@ -95,7 +113,49 @@
     },
     "questions": 154
   },
-  "agent_v2_s1_n200": {
+  "agent_v2_s1_n100": {
+    "databases_worst": [
+      [
+        "flight_2",
+        40.0,
+        5
+      ],
+      [
+        "concert_singer",
+        60.0,
+        5
+      ],
+      [
+        "car_1",
+        80.0,
+        5
+      ],
+      [
+        "cre_Doc_Template_Mgt",
+        80.0,
+        5
+      ],
+      [
+        "course_teach",
+        80.0,
+        5
+      ]
+    ],
+    "execution_accuracy": 85.5,
+    "mean_llm_calls": 2.23,
+    "mean_seconds": 25.3,
+    "mean_sql_errors": 0.02,
+    "mean_tokens": 2286,
+    "models": {
+      "openai/gpt-oss-120b": 62
+    },
+    "outcomes": {
+      "match": 53,
+      "mismatch": 9
+    },
+    "questions": 62
+  },
+  "agent_v2_s2_n100": {
     "questions": 0
   },
   "oneshot_v1_s1_n200": {
@@ -142,7 +202,10 @@
     },
     "questions": 200
   },
-  "oneshot_v2_s1_n200": {
+  "oneshot_v2_s1_n100": {
+    "questions": 0
+  },
+  "oneshot_v2_s2_n100": {
     "questions": 0
   }
 }

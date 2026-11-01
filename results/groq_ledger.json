@@ -8,5 +8,11 @@
    "exhausted": true,
    "requests": 322
   }
+ },
+ "2026-11-01": {
+  "openai/gpt-oss-120b": {
+   "exhausted": true,
+   "requests": 138
+  }
  }
 }

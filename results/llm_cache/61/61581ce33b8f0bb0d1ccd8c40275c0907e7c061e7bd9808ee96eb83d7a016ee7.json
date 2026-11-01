@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT visitor.Name, visitor.Age FROM visit JOIN visitor ON visit.visitor_ID = visitor.ID ORDER BY visit.Num_of_Ticket DESC LIMIT 1", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 50, "prompt_tokens": 739}}

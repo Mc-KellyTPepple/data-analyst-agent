@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT SUM(Bonus) FROM evaluation", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 14, "prompt_tokens": 839}}

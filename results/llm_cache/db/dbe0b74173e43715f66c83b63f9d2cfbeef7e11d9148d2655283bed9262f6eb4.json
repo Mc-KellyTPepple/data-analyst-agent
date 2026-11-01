@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Name, COUNT(Course_ID) FROM teacher LEFT JOIN course_arrange USING (Teacher_ID) GROUP BY Teacher_ID", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 53, "prompt_tokens": 731}}

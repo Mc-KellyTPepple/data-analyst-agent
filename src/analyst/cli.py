@@ -33,7 +33,9 @@ def cmd_bench(args) -> None:
 
     qs = sample(load_dev(), args.n, args.seed)
     llm = _llm(args, mode=args.mode, max_requests=args.max_requests)
-    res = run_bench(qs, args.config, llm, RESULTS / f"{args.config}_{PROMPT_VERSION}_s{args.seed}_n{args.n}.jsonl")
+    chain = _models(args.models) or ["default"]
+    slug = chain[0].split("/")[-1] + ("+fallback" if len(chain) > 1 else "")   # one result file per model, so runs on different models never mix
+    res = run_bench(qs, args.config, llm, RESULTS / f"{args.config}_{PROMPT_VERSION}_{slug}_s{args.seed}_n{args.n}.jsonl")
     print(json.dumps({**res, "network_requests": llm.usage.requests, "cache_hits": llm.usage.cache_hits}))
     llm.ledger.save()
 

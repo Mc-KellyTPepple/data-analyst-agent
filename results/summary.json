@@ -42,7 +42,7 @@
     },
     "questions": 111
   },
-  "agent_1try_v2_s1_n100": {
+  "agent_1try_v2_gpt-oss-120b_s1_n100": {
     "databases_worst": [
       [
         "concert_singer",
@@ -66,7 +66,7 @@
   "agent_nosamples_v1_s1_n200": {
     "questions": 0
   },
-  "agent_nosamples_v2_s1_n100": {
+  "agent_nosamples_v2_gpt-oss-120b_s1_n100": {
     "questions": 0
   },
   "agent_v1_s1_n200": {
@@ -113,7 +113,7 @@
     },
     "questions": 154
   },
-  "agent_v2_s1_n100": {
+  "agent_v2_gpt-oss-120b_s1_n100": {
     "databases_worst": [
       [
         "flight_2",
@@ -155,7 +155,7 @@
     },
     "questions": 62
   },
-  "agent_v2_s2_n100": {
+  "agent_v2_gpt-oss-120b_s2_n100": {
     "questions": 0
   },
   "oneshot_v1_s1_n200": {
@@ -202,10 +202,10 @@
     },
     "questions": 200
   },
-  "oneshot_v2_s1_n100": {
+  "oneshot_v2_gpt-oss-120b_s1_n100": {
     "questions": 0
   },
-  "oneshot_v2_s2_n100": {
+  "oneshot_v2_gpt-oss-120b_s2_n100": {
     "questions": 0
   }
 }

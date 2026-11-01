@@ -12,8 +12,8 @@ on:
   workflow_dispatch:
     inputs:
       configs:
-        description: "Space-separated configurations: agent oneshot agent_1try agent_nosamples"
-        default: "agent oneshot agent_1try agent_nosamples"
+        description: "Space-separated configurations: oneshot agent agent_1try agent_nosamples"
+        default: "oneshot agent agent_1try agent_nosamples"
       n:
         description: "Sample size (questions spread across databases)"
         default: "100"
@@ -24,9 +24,9 @@ on:
         description: "Max Groq requests per configuration this run"
         default: "900"
       models:
-        description: "Comma-separated Groq models, preferred first (default: gpt-oss-120b only, so every configuration uses the same model)"
+        description: "Comma-separated Groq models, preferred first (empty = both gpt-oss-120b and gpt-oss-20b, each on its own result files)"
         required: false
-        default: "openai/gpt-oss-120b"
+        default: ""
 
 permissions:
   contents: write
@@ -54,19 +54,26 @@ jobs:
         run: python scripts/fetch_spider.py
       - name: Run benchmark
         run: |
-          configs="${{ inputs.configs }}"; configs="${configs:-agent oneshot agent_1try agent_nosamples}"
+          configs="${{ inputs.configs }}"; configs="${configs:-oneshot agent agent_1try agent_nosamples}"
           n="${{ inputs.n }}"; n="${n:-100}"
           seed="${{ inputs.seed }}"; seed="${seed:-1}"
           max="${{ inputs.max_requests }}"; max="${max:-900}"
-          models="${{ inputs.models }}"; models="${models:-openai/gpt-oss-120b}"
-          for c in $configs; do
-            python -m analyst bench --config $c --n $n --seed $seed --max-requests $max --models "$models"
-          done
-          if [ "${{ github.event_name }}" = "schedule" ]; then   # held-out sample (different seed) for the two headline configurations
-            for c in agent oneshot; do
-              python -m analyst bench --config $c --n 100 --seed 2 --max-requests $max --models "$models"
-            done
+          models="${{ inputs.models }}"
+          if [ "${{ github.event_name }}" = "schedule" ] || [ -z "$models" ]; then
+            model_list="openai/gpt-oss-120b openai/gpt-oss-20b"   # each model has its own free daily quota, so both progress every night
+          else
+            model_list="$models"
           fi
+          for m in $model_list; do
+            for c in $configs; do
+              python -m analyst bench --config $c --n $n --seed $seed --max-requests $max --models "$m"
+            done
+            if [ "${{ github.event_name }}" = "schedule" ]; then   # held-out sample (different seed) for the two headline configurations
+              for c in agent oneshot; do
+                python -m analyst bench --config $c --n 100 --seed 2 --max-requests $max --models "$m"
+              done
+            fi
+          done
       - name: Report
         if: always()
         run: python -m analyst report | tee -a "$GITHUB_STEP_SUMMARY"

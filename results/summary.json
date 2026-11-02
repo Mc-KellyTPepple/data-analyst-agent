@@ -1,5 +1,6 @@
 {
   "agent_1try_v1_s1_n200": {
+    "accuracy_by_agreement": {},
     "databases_worst": [
       [
         "car_1",
@@ -43,6 +44,7 @@
     "questions": 111
   },
   "agent_1try_v2_gpt-oss-120b_s1_n100": {
+    "accuracy_by_agreement": {},
     "databases_worst": [
       [
         "concert_singer",
@@ -64,6 +66,7 @@
     "questions": 1
   },
   "agent_1try_v2_gpt-oss-20b_s1_n100": {
+    "accuracy_by_agreement": {},
     "databases_worst": [
       [
         "concert_singer",
@@ -94,6 +97,7 @@
     "questions": 0
   },
   "agent_v1_s1_n200": {
+    "accuracy_by_agreement": {},
     "databases_worst": [
       [
         "car_1",
@@ -138,6 +142,7 @@
     "questions": 154
   },
   "agent_v2_gpt-oss-120b_s1_n100": {
+    "accuracy_by_agreement": {},
     "databases_worst": [
       [
         "flight_2",
@@ -183,6 +188,7 @@
     "questions": 0
   },
   "agent_v2_gpt-oss-20b_s1_n100": {
+    "accuracy_by_agreement": {},
     "databases_worst": [
       [
         "flight_2",
@@ -225,7 +231,11 @@
     },
     "questions": 86
   },
+  "agent_v2_gpt-oss-20b_s2_n100": {
+    "questions": 0
+  },
   "oneshot_v1_s1_n200": {
+    "accuracy_by_agreement": {},
     "databases_worst": [
       [
         "car_1",
@@ -270,6 +280,7 @@
     "questions": 200
   },
   "oneshot_v2_gpt-oss-120b_s1_n100": {
+    "accuracy_by_agreement": {},
     "databases_worst": [
       [
         "world_1",
@@ -315,6 +326,7 @@
     "questions": 0
   },
   "oneshot_v2_gpt-oss-20b_s1_n100": {
+    "accuracy_by_agreement": {},
     "databases_worst": [
       [
         "car_1",
@@ -357,5 +369,20 @@
       "pred_error": 1
     },
     "questions": 100
+  },
+  "oneshot_v2_gpt-oss-20b_s2_n100": {
+    "questions": 0
+  },
+  "vote_v2_gpt-oss-120b_s1_n100": {
+    "questions": 0
+  },
+  "vote_v2_gpt-oss-120b_s2_n100": {
+    "questions": 0
+  },
+  "vote_v2_gpt-oss-20b_s1_n100": {
+    "questions": 0
+  },
+  "vote_v2_gpt-oss-20b_s2_n100": {
+    "questions": 0
   }
 }

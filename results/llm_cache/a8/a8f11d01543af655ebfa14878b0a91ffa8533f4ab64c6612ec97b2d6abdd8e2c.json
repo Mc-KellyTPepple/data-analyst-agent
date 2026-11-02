@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT max(replace(Share, '%', '')) as max_share, min(replace(Share, '%', '')) as min_share FROM performance WHERE Type <> 'Live final';", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 57, "prompt_tokens": 1019}}

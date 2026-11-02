@@ -18,5 +18,15 @@
    "exhausted": true,
    "requests": 240
   }
+ },
+ "2026-11-02": {
+  "openai/gpt-oss-120b": {
+   "exhausted": true,
+   "requests": 174
+  },
+  "openai/gpt-oss-20b": {
+   "exhausted": true,
+   "requests": 56
+  }
  }
 }

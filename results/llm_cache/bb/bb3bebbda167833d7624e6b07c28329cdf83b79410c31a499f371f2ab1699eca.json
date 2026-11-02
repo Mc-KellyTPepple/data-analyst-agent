@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT winner_name\nFROM matches\nWHERE year IN (2013, 2016)\nGROUP BY winner_name\nHAVING COUNT(DISTINCT year) = 2;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 127, "prompt_tokens": 537}}

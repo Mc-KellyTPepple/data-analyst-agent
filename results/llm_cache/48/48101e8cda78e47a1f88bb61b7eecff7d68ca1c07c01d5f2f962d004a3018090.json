@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT AVG(grade) FROM Highschooler WHERE ID IN (SELECT DISTINCT student_id FROM Friend);\"}", "name": "run_sql"}, "id": "fc_eb77f937-f3b6-4442-a665-71bfb67cdb2c", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 138, "prompt_tokens": 560}}

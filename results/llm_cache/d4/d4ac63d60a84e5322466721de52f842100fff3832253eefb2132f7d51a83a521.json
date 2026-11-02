@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT name FROM Dogs WHERE owner_id IN (SELECT owner_id FROM (SELECT d.owner_id, SUM(t.cost_of_treatment) AS total FROM Dogs d JOIN Treatments t ON d.dog_id=t.dog_id GROUP BY d.owner_id) WHERE total <= 1000);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 99, "prompt_tokens": 2025}}

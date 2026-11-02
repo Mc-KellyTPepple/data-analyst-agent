@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT contestant_name FROM CONTESTANTS WHERE contestant_name \\u003c\\u003e 'Jessie Alloway';\"}", "name": "run_sql"}, "id": "fc_63725a6d-85b0-4d9b-a4fa-51cc4fc8b274", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 63, "prompt_tokens": 667}}

@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT MAX(Percentage) as maxperc FROM countrylanguage WHERE Language='Spanish';\"}", "name": "run_sql"}, "id": "fc_a6c87166-f9a1-4d67-a2e1-a29d77280a0a", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 68, "prompt_tokens": 1170}}

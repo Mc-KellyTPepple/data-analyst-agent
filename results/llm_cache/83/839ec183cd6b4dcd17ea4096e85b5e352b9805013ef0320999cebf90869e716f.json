@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT airlines.Abbreviation, airlines.Country\nFROM airlines\nJOIN (\n    SELECT Airline, COUNT(*) AS cnt\n    FROM flights\n    GROUP BY Airline\n    ORDER BY cnt ASC\n    LIMIT 1\n) AS f ON airlines.uid = f.Airline;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 151, "prompt_tokens": 336}}

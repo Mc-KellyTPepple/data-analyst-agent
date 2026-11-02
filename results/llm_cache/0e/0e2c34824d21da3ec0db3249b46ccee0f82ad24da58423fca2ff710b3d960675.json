@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT liked_id, COUNT(*) as cnt FROM Likes GROUP BY liked_id ORDER BY cnt DESC LIMIT 5\"}", "name": "run_sql"}, "id": "fc_80f1bde4-e3a4-4467-9197-3758e9e4c30f", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 78, "prompt_tokens": 559}}

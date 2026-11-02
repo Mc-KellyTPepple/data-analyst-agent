@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Language FROM countrylanguage WHERE CountryCode = 'ABW' AND IsOfficial = 'T'\"}", "name": "run_sql"}, "id": "fc_6fdfb53d-1aa5-4cfa-8302-2f6c74806aca", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 77, "prompt_tokens": 1115}}

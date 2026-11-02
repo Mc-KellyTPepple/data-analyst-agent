@@ -1,0 +1,1 @@
+{"message": {"content": "There are no countries in the database that satisfy both conditions (continent = Europe and population = 80000).", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 72, "prompt_tokens": 1167}}

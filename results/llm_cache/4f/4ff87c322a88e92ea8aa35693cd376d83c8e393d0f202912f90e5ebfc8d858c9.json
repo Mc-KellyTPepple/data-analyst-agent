@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Nationality FROM people GROUP BY Nationality HAVING COUNT(*) \\u003e= 2;\"}", "name": "run_sql"}, "id": "fc_fac4c791-a9a1-469d-81f9-34e2ef938cf0", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 71, "prompt_tokens": 650}}

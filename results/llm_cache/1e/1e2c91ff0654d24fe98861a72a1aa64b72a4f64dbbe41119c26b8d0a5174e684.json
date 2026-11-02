@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Citizenship, MAX(Net_Worth_Millions) FROM singer GROUP BY Citizenship;\"}", "name": "run_sql"}, "id": "fc_2f7a814e-361d-4035-ac8c-326902ce41d3", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 64, "prompt_tokens": 623}}

@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Name FROM conductor WHERE Year_of_Work = (SELECT MAX(Year_of_Work) FROM conductor);\"}", "name": "run_sql"}, "id": "fc_d7cfc796-550d-4ad3-a72c-63352397e0cb", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 87, "prompt_tokens": 979}}

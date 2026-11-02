@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT h.name\nFROM Highschooler h\nJOIN (\n    SELECT liked_id, COUNT(*) AS cnt\n    FROM Likes\n    GROUP BY liked_id\n    ORDER BY cnt DESC\n    LIMIT 1\n) l ON h.ID = l.liked_id;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 92, "prompt_tokens": 638}}

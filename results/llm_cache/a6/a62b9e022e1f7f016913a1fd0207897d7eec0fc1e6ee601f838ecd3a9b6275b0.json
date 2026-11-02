@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Code, Name, Population FROM country WHERE Population=80000;\"}", "name": "run_sql"}, "id": "fc_c10e376f-2cfe-46a5-97b0-18fd4d8d9781", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 92, "prompt_tokens": 1120}}

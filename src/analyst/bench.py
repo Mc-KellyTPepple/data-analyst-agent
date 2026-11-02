@@ -87,7 +87,7 @@ def run_bench(questions: list[dict], config: str, llm, out_path: Path, root: Pat
                 run = run_analyst(llm, q["question"], conn, cfg, schema_text=schema_text)
                 ok, reason = grade(conn, run["final_sql"], q["gold_sql"])
                 rec = {"id": q["id"], "db_id": q["db_id"], "config": config, "prompt_version": run["prompt_version"], "correct": ok, "reason": reason,
-                       "final_sql": run["final_sql"], "model": run["model"], "calls": run["calls"], "tool_calls": run["tool_calls"],
+                       "final_sql": run["final_sql"], "agreement": run.get("agreement"), "model": run["model"], "calls": run["calls"], "tool_calls": run["tool_calls"],
                        "gold_sql": q["gold_sql"], "question": q["question"], "diag": diagnose(conn, run["final_sql"], q["gold_sql"]),
                        "sql_errors": run["sql_errors"], "prompt_tokens": run["prompt_tokens"], "completion_tokens": run["completion_tokens"],
                        "seconds": round(time.monotonic() - t0, 2), "error": None}
@@ -124,8 +124,13 @@ def summarize(results: list[dict]) -> dict:
     models: dict[str, int] = defaultdict(int)
     for r in results:
         models[r["model"] or "none"] += 1
+    by_agreement: dict[str, list[bool]] = defaultdict(list)
+    for r in results:
+        if r.get("agreement") is not None:
+            by_agreement["unanimous" if r["agreement"] >= 1.0 else "split"].append(r["correct"])
     return {
         "questions": n,
+        "accuracy_by_agreement": {k: {"n": len(v), "accuracy": round(100 * sum(v) / len(v), 1)} for k, v in sorted(by_agreement.items())},
         "execution_accuracy": round(100 * ok / n, 1),
         "outcomes": dict(sorted(reasons.items())),
         "mean_llm_calls": round(sum(r["calls"] for r in results) / n, 2),

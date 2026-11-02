@@ -5,6 +5,7 @@ Configurations (used for the ablation study):
   agent_1try      tools, but only one query may be run (no self-correction)
   agent_nosamples tools and self-correction, schema without sample rows
   agent           tools, self-correction, schema with sample rows (the default)
+  vote            five candidate queries from one-shot prompts; run all, answer with the most common result
 """
 from __future__ import annotations
 
@@ -12,7 +13,8 @@ import json
 import re
 from dataclasses import dataclass
 
-from .llm import LLMError
+from .compare import _row_key
+from .llm import BudgetExhausted, CacheMiss, LLMError
 from .schema import describe
 from .sqlguard import QueryError, run_select
 
@@ -26,6 +28,7 @@ class Config:
     attempts: int = 5          # how many run_sql calls the model may make
     samples: bool = True       # include sample rows in the schema
     clarify: bool = False      # allow a clarifying question instead of an answer (off in the benchmark)
+    votes: int = 1             # >1: write this many candidate queries, run them all, and answer with the most common result
 
 
 CONFIGS = {
@@ -33,7 +36,12 @@ CONFIGS = {
     "agent_1try": Config("agent_1try", attempts=1),
     "agent_nosamples": Config("agent_nosamples", samples=False),
     "agent": Config("agent"),
+    "vote": Config("vote", tools=False, attempts=0, samples=False, votes=5),
 }
+
+# Candidate temperatures: the first is greedy (identical to the one-shot request, so its cached answer is reused).
+# Different temperatures also make each request distinct, so the response cache cannot return one answer five times.
+VOTE_TEMPERATURES = (0.0, 0.5, 0.7, 0.9, 1.0)
 
 _SYSTEM = """You are a careful data analyst answering a question about a SQLite database.
 
@@ -112,9 +120,64 @@ def _chat(llm, messages, tools, max_tokens):
     return llm.chat(messages, tools=None, max_tokens=max_tokens, temperature=0.4)
 
 
+def _signature(rows: list) -> tuple:
+    """Order-insensitive fingerprint of a result set (column order and row order ignored)."""
+    return tuple(sorted(_row_key(r) for r in rows))
+
+
+def run_vote(llm, question: str, conn, cfg: Config, schema_text: str) -> dict:
+    """Execution-based majority vote: candidates that return the same rows vote together; ties go to the greedy candidate."""
+    messages = [{"role": "system", "content": build_system(schema_text, cfg)}, {"role": "user", "content": question}]
+    prompt = completion = calls = errors = 0
+    model = ""
+    cands: list[dict] = []
+    for temp in VOTE_TEMPERATURES[: cfg.votes]:
+        try:
+            resp = llm.chat(messages, tools=None, max_tokens=1200, temperature=temp)
+        except (BudgetExhausted, CacheMiss):
+            raise
+        except LLMError:
+            continue   # one failed sample should not sink the question
+        calls += 1
+        model = resp["model"]
+        prompt += resp["usage"]["prompt_tokens"]
+        completion += resp["usage"]["completion_tokens"]
+        text = resp["message"].get("content") or ""
+        sql = extract_final_sql(text)
+        cand = {"temp": temp, "text": text, "sql": sql, "ok": False, "sig": None, "result": None}
+        if sql:
+            try:
+                res = run_select(conn, sql, max_rows=200)
+                cand.update(ok=True, sig=_signature(res["rows"]), result=res)
+            except QueryError:
+                errors += 1
+        else:
+            errors += 1
+        cands.append(cand)
+    good = [c for c in cands if c["ok"]]
+    winner, agreement = None, 0.0
+    if good:
+        groups: dict[tuple, list[dict]] = {}
+        for c in good:
+            groups.setdefault(c["sig"], []).append(c)
+        # biggest group wins; among equal groups, the one containing the earliest (greedy) candidate
+        best = max(groups.values(), key=lambda g: (len(g), -min(cands.index(c) for c in g)))
+        winner, agreement = best[0], len(best) / len(cands)
+    elif cands:
+        winner = cands[0]
+    return {"text": winner["text"] if winner else "", "final_sql": winner["sql"] if winner else None, "clarify": None, "tool_calls": 0,
+            "calls": calls, "sql_errors": errors, "model": model, "prompt_tokens": prompt, "completion_tokens": completion,
+            "trace": [{"sql": c["sql"], "ok": c["ok"], "out": f"temp {c['temp']}: " + ("agrees with winner" if winner and c["sig"] == winner["sig"] and c["ok"] else "different or failed")}
+                      for c in cands],
+            "last_ok_sql": winner["sql"] if winner and winner["ok"] else None, "last_ok_result": winner["result"] if winner else None,
+            "agreement": round(agreement, 2), "prompt_version": PROMPT_VERSION}
+
+
 def run_analyst(llm, question: str, conn, cfg: Config = CONFIGS["agent"], schema_text: str | None = None, max_steps: int = 7) -> dict:
     if schema_text is None:
         schema_text = describe(conn, sample_rows=3 if cfg.samples else 0)
+    if cfg.votes > 1:
+        return run_vote(llm, question, conn, cfg, schema_text)
     messages = [{"role": "system", "content": build_system(schema_text, cfg)}, {"role": "user", "content": question}]
     prompt = completion = calls = tool_calls = errors = 0
     model, text = "", ""

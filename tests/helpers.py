@@ -22,7 +22,7 @@ class FakeLLM:
         self.script, self.calls = list(script), []
 
     def chat(self, messages, tools=None, tool_choice=None, max_tokens=1024, temperature=0.0):
-        self.calls.append({"messages": list(messages), "tools": tools})
+        self.calls.append({"messages": list(messages), "tools": tools, "temperature": temperature})
         step = self.script.pop(0)
         if isinstance(step, Exception):
             raise step

@@ -31,6 +31,61 @@ class ExtractTests(unittest.TestCase):
         self.assertIsNone(extract_final_sql(""))
 
 
+class VoteTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.conn = open_readonly(make_db(Path(self.tmp.name) / "d.sqlite"))
+        self.cfg = CONFIGS["vote"]
+
+    def tearDown(self):
+        self.conn.close()
+        self.tmp.cleanup()
+
+    def fin(self, sql):
+        return f"FINAL SQL:\n{sql}"
+
+    def test_majority_result_wins_over_the_greedy_answer(self):
+        young = "SELECT name FROM singer WHERE age < 30"
+        old = "SELECT name FROM singer WHERE age > 30"
+        llm = FakeLLM([self.fin(young), self.fin(old), self.fin("SELECT name FROM singer WHERE age >= 35 OR age = 41"), self.fin(old), self.fin("SELECT nope")])
+        run = run_analyst(llm, "Which singers are over 30?", self.conn, self.cfg)
+        self.assertEqual(run["final_sql"], old)                      # three candidates return the same rows (Cy, Di)
+        self.assertEqual((run["calls"], run["sql_errors"], run["agreement"]), (5, 1, 0.6))
+        self.assertEqual([c["temperature"] for c in llm.calls], [0.0, 0.5, 0.7, 0.9, 1.0])   # distinct requests, first is greedy
+        self.assertTrue(all(c["tools"] is None for c in llm.calls))
+
+    def test_row_and_column_order_do_not_split_votes(self):
+        llm = FakeLLM([self.fin("SELECT name, age FROM singer ORDER BY age"), self.fin("SELECT age, name FROM singer ORDER BY age DESC"),
+                       self.fin("SELECT name, age FROM singer"), self.fin("SELECT 1"), self.fin("SELECT 2")])
+        run = run_analyst(llm, "q", self.conn, self.cfg)
+        self.assertEqual(run["agreement"], 0.6)
+        self.assertEqual(run["final_sql"], "SELECT name, age FROM singer ORDER BY age")
+
+    def test_tie_goes_to_the_greedy_candidate(self):
+        llm = FakeLLM([self.fin("SELECT 1"), self.fin("SELECT 2"), self.fin("SELECT 2"), self.fin("SELECT 1"), self.fin("SELECT 3")])
+        self.assertEqual(run_analyst(llm, "q", self.conn, self.cfg)["final_sql"], "SELECT 1")
+
+    def test_all_candidates_failing_returns_no_answer_gracefully(self):
+        llm = FakeLLM([self.fin("SELECT nope")] * 5)
+        run = run_analyst(llm, "q", self.conn, self.cfg)
+        self.assertEqual((run["agreement"], run["sql_errors"]), (0.0, 5))
+        self.assertIsNone(run["last_ok_sql"])
+
+    def test_budget_exhaustion_propagates_but_one_bad_sample_does_not(self):
+        from analyst.llm import BudgetExhausted, LLMError
+        llm = FakeLLM([self.fin("SELECT 1"), LLMError("500 server error"), self.fin("SELECT 1"), self.fin("SELECT 1"), self.fin("SELECT 1")])
+        run = run_analyst(llm, "q", self.conn, self.cfg)
+        self.assertEqual((run["calls"], run["agreement"]), (4, 1.0))   # agreement is over the samples received
+        with self.assertRaises(BudgetExhausted):
+            run_analyst(FakeLLM([BudgetExhausted("quota")]), "q", self.conn, self.cfg)
+
+    def test_vote_prompt_matches_the_one_shot_prompt(self):
+        a, b = FakeLLM([self.fin("SELECT 1")] * 5), FakeLLM([self.fin("SELECT 1")])
+        run_analyst(a, "same question", self.conn, self.cfg)
+        run_analyst(b, "same question", self.conn, CONFIGS["oneshot"])
+        self.assertEqual(a.calls[0]["messages"], b.calls[0]["messages"])   # so the greedy candidate reuses the cached one-shot response
+
+
 class AgentTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()

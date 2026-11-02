@@ -65,14 +65,17 @@ jobs:
             model_list="$models"
           fi
           for m in $model_list; do
-            for c in $configs; do
+            # headline comparison first (cheap baseline, then the agent), on the main sample and on a held-out sample with another seed
+            for c in oneshot agent; do
               python -m analyst bench --config $c --n $n --seed $seed --max-requests $max --models "$m"
             done
-            if [ "${{ github.event_name }}" = "schedule" ]; then   # held-out sample (different seed) for the two headline configurations
-              for c in agent oneshot; do
-                python -m analyst bench --config $c --n 100 --seed 2 --max-requests $max --models "$m"
-              done
-            fi
+            for c in oneshot agent; do
+              python -m analyst bench --config $c --n $n --seed 2 --max-requests $max --models "$m"
+            done
+            # ablation arms last: they cost the most tokens
+            for c in $configs; do
+              case $c in oneshot|agent) ;; *) python -m analyst bench --config $c --n $n --seed $seed --max-requests $max --models "$m";; esac
+            done
           done
       - name: Report
         if: always()

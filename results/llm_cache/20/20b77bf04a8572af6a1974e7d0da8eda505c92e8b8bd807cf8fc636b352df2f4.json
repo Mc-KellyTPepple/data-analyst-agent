@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT teacher.Name\nFROM teacher\nJOIN course_arrange ON teacher.Teacher_ID = course_arrange.Teacher_ID\nJOIN course ON course_arrange.Course_ID = course.Course_ID\nWHERE course.Course = 'math';", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 103, "prompt_tokens": 350}}

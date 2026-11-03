@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Template_ID FROM Templates WHERE Template_Type_Code = 'PP' OR Template_Type_Code = 'PPT';", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 65, "prompt_tokens": 432}}

@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT shop.Name\nFROM shop\nWHERE shop.Shop_ID = (\n    SELECT Shop_ID\n    FROM (\n        SELECT Shop_ID, COUNT(*) AS cnt\n        FROM hiring\n        GROUP BY Shop_ID\n        ORDER BY cnt DESC\n        LIMIT 1\n    )\n);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 135, "prompt_tokens": 420}}

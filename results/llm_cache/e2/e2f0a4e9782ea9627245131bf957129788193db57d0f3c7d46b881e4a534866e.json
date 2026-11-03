@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Package_Option, series_name\nFROM TV_Channel\nWHERE Hight_definition_TV = 'Yes';", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 154, "prompt_tokens": 445}}

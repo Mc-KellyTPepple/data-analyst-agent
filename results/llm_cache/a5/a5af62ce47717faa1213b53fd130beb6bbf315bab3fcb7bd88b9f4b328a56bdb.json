@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT DISTINCT winner_name FROM matches WHERE year=2013\nINTERSECT\nSELECT DISTINCT winner_name FROM matches WHERE year=2016;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 111, "prompt_tokens": 537}}

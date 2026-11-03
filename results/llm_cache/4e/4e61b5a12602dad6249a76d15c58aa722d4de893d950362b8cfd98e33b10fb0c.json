@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Student.Fname, Student.Sex\nFROM Student\nJOIN Has_Pet ON Student.StuID = Has_Pet.StuID\nGROUP BY Student.StuID\nHAVING COUNT(Has_Pet.PetID) > 1;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 99, "prompt_tokens": 331}}

@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT Title FROM Cartoon WHERE Directed_by = 'Ben Jones';\nFINAL SQL:\nSELECT Title FROM Cartoon WHERE Directed_by = 'Ben Jones';", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 110, "prompt_tokens": 437}}

@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT COUNT(*) FROM model_list WHERE Maker = (SELECT Id FROM car_makers WHERE FullName='American Motor Company');", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 214, "prompt_tokens": 471}}

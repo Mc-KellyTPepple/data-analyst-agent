@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT DISTINCT Name FROM singer JOIN song ON singer.Singer_ID=song.Singer_ID WHERE song.Sales\\u003e300000;\"}", "name": "run_sql"}, "id": "fc_3816fcdb-0c14-434d-b122-3df1ebba4e34", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 93, "prompt_tokens": 629}}

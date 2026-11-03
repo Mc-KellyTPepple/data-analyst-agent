@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT Name\nFROM museum m\nLEFT JOIN visit v ON m.Museum_ID = v.Museum_ID\nWHERE v.visitor_ID IS NULL;\nFINAL SQL:\nSELECT Name\nFROM museum m\nLEFT JOIN visit v ON m.Museum_ID = v.Museum_ID\nWHERE v.visitor_ID IS NULL;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 87, "prompt_tokens": 364}}

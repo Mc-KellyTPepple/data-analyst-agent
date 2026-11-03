@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT visitor.ID, visitor.Name, visitor.Age\nFROM visitor\nWHERE ID IN (\n    SELECT visitor_ID\n    FROM visit\n    WHERE Num_of_Ticket > 1\n);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 188, "prompt_tokens": 368}}

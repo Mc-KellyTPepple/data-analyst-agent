@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT DISTINCT Name FROM singer JOIN song ON singer.Singer_ID=song.Singer_ID WHERE song.Sales>300000;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 78, "prompt_tokens": 697}}

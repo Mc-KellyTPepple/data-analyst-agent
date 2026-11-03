@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Name\nFROM conductor\nWHERE Year_of_Work = (SELECT MAX(Year_of_Work) FROM conductor);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 77, "prompt_tokens": 465}}

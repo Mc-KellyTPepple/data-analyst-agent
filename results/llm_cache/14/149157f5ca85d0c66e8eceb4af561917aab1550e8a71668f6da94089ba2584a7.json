@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Template_Type_Code\nFROM Templates\nGROUP BY Template_Type_Code\nHAVING COUNT(*) = (\n    SELECT MAX(cnt)\n    FROM (\n        SELECT COUNT(*) AS cnt\n        FROM Templates\n        GROUP BY Template_Type_Code\n    )\n);", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 171, "prompt_tokens": 429}}

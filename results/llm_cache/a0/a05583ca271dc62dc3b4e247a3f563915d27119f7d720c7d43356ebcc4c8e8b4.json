@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT name, result FROM battle WHERE bulgarian_commander != 'Boril';\nFINAL SQL:\nSELECT name, result FROM battle WHERE bulgarian_commander != 'Boril';", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 65, "prompt_tokens": 405}}

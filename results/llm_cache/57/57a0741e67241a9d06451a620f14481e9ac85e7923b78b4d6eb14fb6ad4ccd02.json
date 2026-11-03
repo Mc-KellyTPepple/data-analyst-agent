@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT teacher.Name, COUNT(course_arrange.Course_ID) \nFROM teacher \nJOIN course_arrange ON teacher.Teacher_ID = course_arrange.Teacher_ID \nGROUP BY teacher.Name;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 78, "prompt_tokens": 353}}

@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT degree_program_id, degree_summary_name\nFROM Degree_Programs\nWHERE degree_program_id = (\n    SELECT degree_program_id\n    FROM Student_Enrolment\n    GROUP BY degree_program_id\n    ORDER BY COUNT(*) DESC\n    LIMIT 1\n);", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 185, "prompt_tokens": 995}}

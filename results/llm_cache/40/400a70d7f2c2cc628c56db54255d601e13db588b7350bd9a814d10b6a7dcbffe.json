@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Code FROM country\nWHERE Code NOT IN (\n    SELECT CountryCode FROM countrylanguage\n    WHERE Language = 'English'\n);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 73, "prompt_tokens": 602}}

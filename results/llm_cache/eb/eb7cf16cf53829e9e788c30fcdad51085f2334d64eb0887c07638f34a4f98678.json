@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT battle.id, battle.name\nFROM battle\nWHERE EXISTS (\n    SELECT 1\n    FROM ship\n    WHERE ship.lost_in_battle = battle.id\n      AND ship.ship_type = 'Brig'\n);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 148, "prompt_tokens": 405}}

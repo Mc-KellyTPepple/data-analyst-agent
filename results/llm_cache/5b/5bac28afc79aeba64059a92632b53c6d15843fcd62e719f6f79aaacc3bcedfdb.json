@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT AVG((julianday('now') - julianday(date_of_birth)) / 365.25) FROM Dogs;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 79, "prompt_tokens": 819}}

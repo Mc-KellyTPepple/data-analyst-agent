@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT property_name\nFROM Properties\nJOIN Ref_Property_Types USING (property_type_code)\nWHERE room_count > 1\n  AND (property_type_description LIKE '%house%' OR property_type_description LIKE '%apartment%');", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 139, "prompt_tokens": 721}}

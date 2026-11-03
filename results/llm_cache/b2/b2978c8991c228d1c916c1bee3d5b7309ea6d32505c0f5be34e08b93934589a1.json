@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT feature_type_name\nFROM Ref_Feature_Types\nJOIN Other_Available_Features USING (feature_type_code)\nWHERE feature_name = 'AirCon';", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 105, "prompt_tokens": 713}}

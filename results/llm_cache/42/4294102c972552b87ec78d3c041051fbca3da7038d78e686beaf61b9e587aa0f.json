@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT transcript_date\nFROM Transcripts\nORDER BY transcript_date DESC\nLIMIT 1;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 71, "prompt_tokens": 985}}

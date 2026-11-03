@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT id, Title, Directed_by, Written_by, Original_air_date, Production_code, Channel\nFROM Cartoon\nWHERE Directed_by = 'Ben Jones';", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 182, "prompt_tokens": 437}}

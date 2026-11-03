@@ -155,6 +155,11 @@
         5
       ],
       [
+        "real_estate_properties",
+        50.0,
+        4
+      ],
+      [
         "concert_singer",
         60.0,
         5
@@ -163,26 +168,21 @@
         "network_1",
         60.0,
         5
-      ],
-      [
-        "car_1",
-        80.0,
-        5
       ]
     ],
-    "execution_accuracy": 82.3,
-    "mean_llm_calls": 2.2,
-    "mean_seconds": 24.5,
+    "execution_accuracy": 81.0,
+    "mean_llm_calls": 2.19,
+    "mean_seconds": 24.7,
     "mean_sql_errors": 0.01,
-    "mean_tokens": 2259,
+    "mean_tokens": 2294,
     "models": {
-      "openai/gpt-oss-120b": 96
+      "openai/gpt-oss-120b": 100
     },
     "outcomes": {
-      "match": 79,
-      "mismatch": 17
+      "match": 81,
+      "mismatch": 19
     },
-    "questions": 96
+    "questions": 100
   },
   "agent_v2_gpt-oss-120b_s2_n100": {
     "questions": 0
@@ -194,6 +194,11 @@
         "flight_2",
         40.0,
         5
+      ],
+      [
+        "real_estate_properties",
+        50.0,
+        4
       ],
       [
         "concert_singer",
@@ -209,27 +214,22 @@
         "world_1",
         60.0,
         5
-      ],
-      [
-        "car_1",
-        80.0,
-        5
       ]
     ],
     "execution_accuracy": 86.0,
-    "mean_llm_calls": 2.26,
-    "mean_seconds": 24.5,
-    "mean_sql_errors": 0.01,
-    "mean_tokens": 2257,
+    "mean_llm_calls": 2.22,
+    "mean_seconds": 24.7,
+    "mean_sql_errors": 0.02,
+    "mean_tokens": 2355,
     "models": {
-      "openai/gpt-oss-20b": 86
+      "openai/gpt-oss-20b": 100
     },
     "outcomes": {
-      "match": 74,
-      "mismatch": 11,
+      "match": 86,
+      "mismatch": 13,
       "pred_error": 1
     },
-    "questions": 86
+    "questions": 100
   },
   "agent_v2_gpt-oss-20b_s2_n100": {
     "questions": 0
@@ -323,7 +323,37 @@
     "questions": 100
   },
   "oneshot_v2_gpt-oss-120b_s2_n100": {
-    "questions": 0
+    "accuracy_by_agreement": {},
+    "databases_worst": [
+      [
+        "car_1",
+        33.3,
+        3
+      ],
+      [
+        "concert_singer",
+        60.0,
+        5
+      ],
+      [
+        "pets_1",
+        100.0,
+        5
+      ]
+    ],
+    "execution_accuracy": 69.2,
+    "mean_llm_calls": 1.0,
+    "mean_seconds": 0.4,
+    "mean_sql_errors": 0.0,
+    "mean_tokens": 516,
+    "models": {
+      "openai/gpt-oss-120b": 13
+    },
+    "outcomes": {
+      "match": 9,
+      "mismatch": 4
+    },
+    "questions": 13
   },
   "oneshot_v2_gpt-oss-20b_s1_n100": {
     "accuracy_by_agreement": {},
@@ -374,13 +404,112 @@
     "questions": 0
   },
   "vote_v2_gpt-oss-120b_s1_n100": {
-    "questions": 0
+    "accuracy_by_agreement": {
+      "split": {
+        "accuracy": 33.3,
+        "n": 15
+      },
+      "unanimous": {
+        "accuracy": 90.6,
+        "n": 85
+      }
+    },
+    "databases_worst": [
+      [
+        "world_1",
+        40.0,
+        5
+      ],
+      [
+        "real_estate_properties",
+        50.0,
+        4
+      ],
+      [
+        "concert_singer",
+        60.0,
+        5
+      ],
+      [
+        "flight_2",
+        60.0,
+        5
+      ],
+      [
+        "network_1",
+        60.0,
+        5
+      ]
+    ],
+    "execution_accuracy": 82.0,
+    "mean_llm_calls": 5.0,
+    "mean_seconds": 23.5,
+    "mean_sql_errors": 0.01,
+    "mean_tokens": 2821,
+    "models": {
+      "openai/gpt-oss-120b": 100
+    },
+    "outcomes": {
+      "match": 82,
+      "mismatch": 18
+    },
+    "questions": 100
   },
   "vote_v2_gpt-oss-120b_s2_n100": {
     "questions": 0
   },
   "vote_v2_gpt-oss-20b_s1_n100": {
-    "questions": 0
+    "accuracy_by_agreement": {
+      "split": {
+        "accuracy": 70.4,
+        "n": 27
+      },
+      "unanimous": {
+        "accuracy": 96.6,
+        "n": 59
+      }
+    },
+    "databases_worst": [
+      [
+        "car_1",
+        40.0,
+        5
+      ],
+      [
+        "world_1",
+        60.0,
+        5
+      ],
+      [
+        "concert_singer",
+        80.0,
+        5
+      ],
+      [
+        "flight_2",
+        80.0,
+        5
+      ],
+      [
+        "course_teach",
+        80.0,
+        5
+      ]
+    ],
+    "execution_accuracy": 88.4,
+    "mean_llm_calls": 5.0,
+    "mean_seconds": 22.5,
+    "mean_sql_errors": 0.26,
+    "mean_tokens": 2751,
+    "models": {
+      "openai/gpt-oss-20b": 86
+    },
+    "outcomes": {
+      "match": 76,
+      "mismatch": 9,
+      "pred_error": 1
+    },
+    "questions": 86
   },
   "vote_v2_gpt-oss-20b_s2_n100": {
     "questions": 0

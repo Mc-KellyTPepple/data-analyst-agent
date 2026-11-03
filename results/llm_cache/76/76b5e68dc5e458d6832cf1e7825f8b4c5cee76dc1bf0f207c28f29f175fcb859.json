@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT AVG(poker_player.Earnings)\nFROM poker_player\nJOIN people ON poker_player.People_ID = people.People_ID\nWHERE people.Height > 200;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 65, "prompt_tokens": 333}}

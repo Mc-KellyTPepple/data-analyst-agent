@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT winner_name\nFROM matches\nWHERE tourney_name = 'Australian Open'\n  AND winner_rank_points = (\n        SELECT MAX(winner_rank_points)\n        FROM matches\n        WHERE tourney_name = 'Australian Open'\n      );", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 229, "prompt_tokens": 539}}

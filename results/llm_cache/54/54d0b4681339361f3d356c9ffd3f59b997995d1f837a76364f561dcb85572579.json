@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT ID\nFROM Highschooler\nWHERE ID NOT IN (SELECT student_id FROM Friend);\nFINAL SQL:\nSELECT ID\nFROM Highschooler\nWHERE ID NOT IN (SELECT student_id FROM Friend);", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 144, "prompt_tokens": 329}}

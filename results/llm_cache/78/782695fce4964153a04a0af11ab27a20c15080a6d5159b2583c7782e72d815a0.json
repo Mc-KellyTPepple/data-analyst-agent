@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT COUNT(*) \nFROM CONTESTANTS c\nLEFT JOIN VOTES v ON c.contestant_number = v.contestant_number\nWHERE v.vote_id IS NULL;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 199, "prompt_tokens": 371}}

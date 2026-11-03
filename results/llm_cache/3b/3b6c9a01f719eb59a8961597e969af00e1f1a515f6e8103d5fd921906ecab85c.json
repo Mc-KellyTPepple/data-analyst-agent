@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT winner_name\nFROM matches\nWHERE tourney_name LIKE '%Australian Open%'\nGROUP BY winner_id, winner_name\nORDER BY SUM(winner_rank_points) DESC\nLIMIT 1;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 180, "prompt_tokens": 539}}

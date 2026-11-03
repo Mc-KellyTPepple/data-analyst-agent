@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT ID, Name, Age\nFROM visitor\nWHERE ID IN (\n    SELECT visitor_ID\n    FROM visit\n    GROUP BY visitor_ID\n    HAVING COUNT(*) > 1\n);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 183, "prompt_tokens": 368}}

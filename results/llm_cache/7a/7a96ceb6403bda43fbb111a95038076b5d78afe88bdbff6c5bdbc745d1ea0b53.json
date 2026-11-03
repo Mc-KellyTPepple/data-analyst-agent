@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT Name FROM teacher WHERE Age IN ('32','33');\nFINAL SQL:\nSELECT Name FROM teacher WHERE Age IN ('32','33');", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 59, "prompt_tokens": 355}}

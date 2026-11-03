@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT name\nFROM Highschooler h\nJOIN Likes l ON h.ID = l.student_id\nGROUP BY h.ID, h.name\nHAVING COUNT(*) >= 2;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 154, "prompt_tokens": 328}}

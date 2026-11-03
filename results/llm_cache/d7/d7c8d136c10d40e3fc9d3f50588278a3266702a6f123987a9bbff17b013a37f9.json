@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT COUNT(*) FROM model_list ml JOIN car_makers cm ON ml.Maker = cm.Id WHERE cm.FullName = 'American Motor Company';", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 115, "prompt_tokens": 471}}

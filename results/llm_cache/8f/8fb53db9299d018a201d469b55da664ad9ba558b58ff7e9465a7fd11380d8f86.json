@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Fname\nFROM Student\nWHERE StuID IN (\n  SELECT StuID\n  FROM Has_Pet\n  JOIN Pets ON Has_Pet.PetID = Pets.PetID\n  WHERE PetType IN ('cat','dog')\n  GROUP BY StuID\n  HAVING COUNT(DISTINCT PetType)=2\n);", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 214, "prompt_tokens": 326}}

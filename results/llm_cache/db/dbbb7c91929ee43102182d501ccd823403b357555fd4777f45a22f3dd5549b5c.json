@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT DISTINCT name FROM battle WHERE bulgarian_commander='Kaloyan' AND latin_commander='Baldwin I';", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 90, "prompt_tokens": 411}}

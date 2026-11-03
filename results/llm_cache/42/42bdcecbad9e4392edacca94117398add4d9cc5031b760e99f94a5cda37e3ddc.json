@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Name, COUNT(concert_ID)\nFROM singer\nLEFT JOIN singer_in_concert ON singer.Singer_ID = singer_in_concert.Singer_ID\nGROUP BY Singer_ID, Name;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 94, "prompt_tokens": 449}}

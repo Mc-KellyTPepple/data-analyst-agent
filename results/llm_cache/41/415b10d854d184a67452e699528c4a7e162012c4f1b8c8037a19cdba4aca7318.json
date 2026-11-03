@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT winner_name\nFROM matches\nWHERE year IN (2013, 2016)\nGROUP BY winner_name\nHAVING SUM(CASE WHEN year = 2013 THEN 1 ELSE 0 END) > 0\n   AND SUM(CASE WHEN year = 2016 THEN 1 ELSE 0 END) > 0;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 158, "prompt_tokens": 1049}}

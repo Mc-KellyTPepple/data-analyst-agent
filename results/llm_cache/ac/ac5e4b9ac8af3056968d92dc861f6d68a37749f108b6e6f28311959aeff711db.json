@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT AVG(Age), MIN(Age), MAX(Age) FROM singer WHERE Country='France';", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 91, "prompt_tokens": 450}}

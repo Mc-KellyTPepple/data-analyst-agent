@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT s.StuID\nFROM Student s\nWHERE NOT EXISTS (\n    SELECT 1\n    FROM Has_Pet hp\n    JOIN Pets p ON hp.PetID = p.PetID\n    WHERE hp.StuID = s.StuID\n      AND p.PetType = 'cat'\n);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 101, "prompt_tokens": 325}}

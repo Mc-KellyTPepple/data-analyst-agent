@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT COUNT(*) FROM CONTESTANTS c WHERE NOT EXISTS (SELECT 1 FROM VOTES v WHERE v.contestant_number = c.contestant_number);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 86, "prompt_tokens": 371}}

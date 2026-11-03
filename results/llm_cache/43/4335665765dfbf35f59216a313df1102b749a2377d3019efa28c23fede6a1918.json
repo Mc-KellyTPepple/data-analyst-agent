@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT COUNT(*) FROM matches\nWHERE winner_hand = 'L'\n  AND tourney_name = 'WTA Championships';", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 111, "prompt_tokens": 534}}

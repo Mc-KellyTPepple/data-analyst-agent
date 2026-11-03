@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT min(Number_products), max(Number_products) FROM shop;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 83, "prompt_tokens": 416}}

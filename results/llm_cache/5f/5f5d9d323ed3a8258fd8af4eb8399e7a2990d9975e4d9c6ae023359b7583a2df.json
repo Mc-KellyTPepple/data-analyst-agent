@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT Name FROM people WHERE Nationality <> 'Russia';\nFINAL SQL:\nSELECT Name FROM people WHERE Nationality <> 'Russia';", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 51, "prompt_tokens": 329}}

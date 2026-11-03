@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT a.Abbreviation, a.Country\nFROM airlines a\nWHERE a.uid = (\n    SELECT Airline\n    FROM flights\n    GROUP BY Airline\n    ORDER BY COUNT(*) ASC\n    LIMIT 1\n);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 173, "prompt_tokens": 336}}

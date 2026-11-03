@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT COUNT(*) FROM flights WHERE Airline = (SELECT uid FROM airlines WHERE Airline = 'United Airlines') AND SourceAirport = 'AHD';", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 140, "prompt_tokens": 328}}

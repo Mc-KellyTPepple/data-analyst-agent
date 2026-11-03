@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\n```sql\nSELECT Dogs.name\nFROM Dogs\nLEFT JOIN Treatments ON Dogs.dog_id = Treatments.dog_id\nGROUP BY Dogs.dog_id, Dogs.name\nHAVING COALESCE(SUM(Treatments.cost_of_treatment), 0) <= 1000;\n```", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 308, "prompt_tokens": 832}}

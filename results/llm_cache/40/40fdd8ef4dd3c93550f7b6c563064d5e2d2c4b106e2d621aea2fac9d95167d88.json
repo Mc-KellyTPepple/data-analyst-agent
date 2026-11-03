@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT visitor.ID, visitor.Name, visitor.Age\nFROM visitor\nJOIN (\n    SELECT Museum_ID, visitor_ID\n    FROM visit\n    GROUP BY Museum_ID, visitor_ID\n    HAVING COUNT(*) > 1\n) AS dup\nON visitor.ID = dup.visitor_ID;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 86, "prompt_tokens": 368}}

@@ -6,8 +6,26 @@ text-to-SQL benchmark, including an ablation that shows what each part of the de
 
 Runs on free Groq models and free hosting. No paid plan is needed anywhere.
 
-> **Status:** code, tests and the benchmark pipeline are done. Benchmark numbers appear in
-> [`results/RESULTS.md`](results/RESULTS.md) as the nightly runs finish; this README states only what has been measured.
+> **Status:** code, tests, benchmark pipeline and the main results are done. A second, unseen sample (seed 2) and two ablation
+> arms are still running on the free daily quota; the full tables are in [`results/RESULTS.md`](results/RESULTS.md).
+
+## Results so far (Spider dev sample, 100 questions, prompt v2)
+
+| Configuration | `gpt-oss-120b` | `gpt-oss-20b` (86 finished) | Tokens / question |
+|---|---|---|---|
+| One shot, no tools | 82.0% | 86.0% | ~550 |
+| Agent, self-correcting | 81.0% | 86.0% | ~2,300 |
+| Five candidates, majority result | 82.0% | 88.4% | ~2,800 |
+
+* **The three approaches tie.** On 100 questions a difference of a few points is noise. Tools and retries do not raise accuracy on
+  Spider; they cost about four times the tokens. The agent hits ~0.01 SQL errors per question, so retry-on-error rarely fires:
+  wrong answers are mostly valid SQL returning the wrong rows.
+* **Agreement predicts correctness.** When all five candidates return the same rows, accuracy was 90.6% (120b) and 96.6% (20b);
+  when they split, 33.3% and 70.4%. That is a usable confidence signal.
+* **History.** The first run (prompt v1, kept in `results/*_v1_*`) had the agent ~3 points behind the baseline. The failure
+  analysis (`python -m analyst analyze`) found 13 of 32 wrong answers added helpful extra columns that strict scoring rejects,
+  plus a parsing bug. Both were fixed in prompt v2.
+* The live web app runs the single agent, not five-way voting (too expensive for the free quota).
 
 ## How it works
 

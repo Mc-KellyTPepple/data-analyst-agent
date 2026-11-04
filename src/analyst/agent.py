@@ -62,8 +62,10 @@ FINAL SQL:
 
 _TOOL_RULES = ("- Use run_sql to try queries. Read each result. If a query fails, or the result looks wrong (empty when it should not be, "
                "wrong columns, duplicates), fix it and run it again. Explore values with run_sql first if you are unsure how data is stored.\n")
-_CLARIFY_RULE = ("- If the question is ambiguous in a way that would change the result, reply with one line starting 'CLARIFY:' and a short "
-                 "question instead of querying.\n")
+_CLARIFY_RULE = ("- Ask first only when the question has no sensible default reading and the readings would give different answers: reply with "
+                 "one line starting 'CLARIFY:' and a short question instead of querying. A broad request (a summary, an overview, 'tell me about "
+                 "the data') is NOT ambiguous: answer it with a sensible default, for example totals and counts grouped by the main category "
+                 "columns, and let the person narrow it.\n")
 
 _ANSWER_RULE = "- Before the final query, state the answer to the question in one short plain sentence, using the numbers or names from the result.\n"   # web app only
 

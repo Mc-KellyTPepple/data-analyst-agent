@@ -23,13 +23,12 @@ from collections import OrderedDict, defaultdict, deque
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
-from .agent import Config, run_analyst
+from .agent import APP_CONFIG, run_analyst
 from .llm import LLMError
 from .sqlguard import QueryError, open_readonly, run_select
 
 ALLOWED_ORIGIN = os.environ.get("ALLOWED_ORIGIN", "*")
 DEMO_DB = Path(os.environ.get("DEMO_DB", "demo/demo.sqlite"))
-APP_CONFIG = Config("app", clarify=True)
 MAX_CSV_BYTES, MAX_CSV_ROWS, MAX_COLUMNS = 400_000, 5_000, 30
 
 

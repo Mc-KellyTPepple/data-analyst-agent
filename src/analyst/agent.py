@@ -6,6 +6,7 @@ Configurations (used for the ablation study):
   agent_nosamples tools and self-correction, schema without sample rows
   agent           tools, self-correction, schema with sample rows (the default)
   vote            five candidate queries from one-shot prompts; run all, answer with the most common result
+  lean            one call with sample rows, run it, and ask again only on an error or an empty result (what the web app runs)
 """
 from __future__ import annotations
 
@@ -29,6 +30,7 @@ class Config:
     samples: bool = True       # include sample rows in the schema
     clarify: bool = False      # allow a clarifying question instead of an answer (off in the benchmark)
     votes: int = 1             # >1: write this many candidate queries, run them all, and answer with the most common result
+    retries: int = 0           # >0 (no tools): one call, run the query, and ask again with the error or "no rows" at most this many times
 
 
 CONFIGS = {
@@ -37,7 +39,9 @@ CONFIGS = {
     "agent_nosamples": Config("agent_nosamples", samples=False),
     "agent": Config("agent"),
     "vote": Config("vote", tools=False, attempts=0, samples=False, votes=5),
+    "lean": Config("lean", tools=False, attempts=0, samples=True, retries=1),   # ~1/4 of the agent's tokens
 }
+APP_CONFIG = Config("app", tools=False, attempts=0, samples=True, clarify=True, retries=1)   # what the web service runs
 
 # Candidate temperatures: the first is greedy (identical to the one-shot request, so its cached answer is reused).
 # Different temperatures also make each request distinct, so the response cache cannot return one answer five times.
@@ -74,7 +78,7 @@ _RECOVERABLE = ("tool_use_failed", "Failed to call a function", "Parsing failed"
 def build_system(schema_text: str, cfg: Config) -> str:
     return _SYSTEM.format(schema=schema_text, tool_rules=_TOOL_RULES if cfg.tools else "",
                           clarify_rule=_CLARIFY_RULE if cfg.clarify else "",
-                          answer_rule=_ANSWER_RULE if cfg.clarify else "")
+                          answer_rule=_ANSWER_RULE if cfg.clarify and cfg.tools else "")
 
 
 def extract_final_sql(text: str) -> str | None:
@@ -173,11 +177,60 @@ def run_vote(llm, question: str, conn, cfg: Config, schema_text: str) -> dict:
             "agreement": round(agreement, 2), "prompt_version": PROMPT_VERSION}
 
 
+def run_lean(llm, question: str, conn, cfg: Config, schema_text: str) -> dict:
+    """One model call in the normal case. A second call happens only when the query fails or returns no rows."""
+    messages = [{"role": "system", "content": build_system(schema_text, cfg)}, {"role": "user", "content": question}]
+    prompt = completion = calls = errors = 0
+    model, text = "", ""
+    trace: list[dict] = []
+    best_sql, best_result, last_sql = None, None, None
+    for attempt in range(1 + cfg.retries):
+        resp = _chat(llm, messages, None, 1000)
+        calls += 1
+        model = resp["model"]
+        prompt += resp["usage"]["prompt_tokens"]
+        completion += resp["usage"]["completion_tokens"]
+        msg = resp["message"]
+        messages.append(msg)
+        text = msg.get("content") or ""
+        sql = extract_final_sql(text)
+        m = re.search(r"^\s*CLARIFY:\s*(.+)$", text, re.M)
+        if cfg.clarify and m and not sql:
+            return {"text": text, "final_sql": None, "clarify": m.group(1).strip(), "tool_calls": 0, "calls": calls, "sql_errors": errors,
+                    "model": model, "prompt_tokens": prompt, "completion_tokens": completion, "trace": trace, "last_ok_sql": None,
+                    "last_ok_result": None, "prompt_version": PROMPT_VERSION}
+        last_sql = sql or last_sql
+        problem = None
+        if not sql:
+            problem = "did not end with a FINAL SQL query"
+        else:
+            try:
+                res = run_select(conn, sql, max_rows=200)
+                best_sql, best_result = sql, res
+                if not res["rows"]:
+                    problem = "ran but returned no rows"
+            except QueryError as exc:
+                problem = f"failed with: {exc}"
+                errors += 1
+            trace.append({"sql": sql, "ok": problem is None, "out": (problem or "ok")[:200]})
+        if problem is None:
+            break
+        if attempt < cfg.retries:
+            messages.append({"role": "user", "content": f"That query {problem}. If it is wrong, reply with a corrected query ending with FINAL SQL:. "
+                                                       "If it is right (for example the answer really is empty), repeat the same FINAL SQL."})
+    final_sql = best_sql or last_sql
+    return {"text": f"FINAL SQL:\n{final_sql}" if final_sql else text, "final_sql": final_sql, "clarify": None, "tool_calls": 0, "calls": calls,
+            "sql_errors": errors, "model": model, "prompt_tokens": prompt, "completion_tokens": completion, "trace": trace,
+            "last_ok_sql": best_sql, "last_ok_result": best_result, "prompt_version": PROMPT_VERSION}
+
+
 def run_analyst(llm, question: str, conn, cfg: Config = CONFIGS["agent"], schema_text: str | None = None, max_steps: int = 7) -> dict:
     if schema_text is None:
         schema_text = describe(conn, sample_rows=3 if cfg.samples else 0)
     if cfg.votes > 1:
         return run_vote(llm, question, conn, cfg, schema_text)
+    if cfg.retries > 0 and not cfg.tools:
+        return run_lean(llm, question, conn, cfg, schema_text)
     messages = [{"role": "system", "content": build_system(schema_text, cfg)}, {"role": "user", "content": question}]
     prompt = completion = calls = tool_calls = errors = 0
     model, text = "", ""

@@ -149,3 +149,47 @@ class AgentTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class LeanTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.conn = open_readonly(make_db(Path(self.tmp.name) / "d.sqlite"))
+        self.cfg = CONFIGS["lean"]
+
+    def tearDown(self):
+        self.conn.close()
+        self.tmp.cleanup()
+
+    def test_one_call_when_the_query_works(self):
+        llm = FakeLLM(["FINAL SQL:\nSELECT COUNT(*) FROM singer"])
+        run = run_analyst(llm, "How many singers?", self.conn, self.cfg)
+        self.assertEqual((run["calls"], run["final_sql"], run["sql_errors"]), (1, "SELECT COUNT(*) FROM singer", 0))
+        self.assertIsNone(llm.calls[0]["tools"])
+        self.assertIn("sample rows", llm.calls[0]["messages"][0]["content"])
+
+    def test_second_call_only_on_error_and_shows_the_error(self):
+        llm = FakeLLM(["FINAL SQL:\nSELECT nme FROM singer", "FINAL SQL:\nSELECT name FROM singer"])
+        run = run_analyst(llm, "Names?", self.conn, self.cfg)
+        self.assertEqual((run["calls"], run["final_sql"], run["sql_errors"]), (2, "SELECT name FROM singer", 1))
+        self.assertIn("no such column", llm.calls[1]["messages"][-1]["content"])
+
+    def test_empty_result_triggers_one_retry_and_a_confirmed_empty_answer_is_kept(self):
+        llm = FakeLLM(["FINAL SQL:\nSELECT name FROM singer WHERE age > 99", "FINAL SQL:\nSELECT name FROM singer WHERE age > 99"])
+        run = run_analyst(llm, "Singers over 99?", self.conn, self.cfg)
+        self.assertEqual((run["calls"], run["final_sql"]), (2, "SELECT name FROM singer WHERE age > 99"))
+        self.assertIn("no rows", llm.calls[1]["messages"][-1]["content"])
+
+    def test_never_more_than_one_retry_and_a_working_earlier_query_beats_a_broken_retry(self):
+        llm = FakeLLM(["FINAL SQL:\nSELECT name FROM singer WHERE age > 99", "FINAL SQL:\nSELECT nope"])
+        run = run_analyst(llm, "q", self.conn, self.cfg)
+        self.assertEqual((run["calls"], run["final_sql"]), (2, "SELECT name FROM singer WHERE age > 99"))
+
+    def test_web_app_config_asks_for_clarification_and_gives_no_prose_answer(self):
+        from analyst.agent import APP_CONFIG
+        asks = run_analyst(FakeLLM(["CLARIFY: Which singer?"]), "Show the singer", self.conn, APP_CONFIG)
+        self.assertEqual((asks["clarify"], asks["final_sql"], asks["calls"]), ("Which singer?", None, 1))
+        llm = FakeLLM(["Sure, there are 4.\nFINAL SQL:\nSELECT COUNT(*) FROM singer"])
+        run = run_analyst(llm, "How many?", self.conn, APP_CONFIG)
+        self.assertEqual(run["text"], "FINAL SQL:\nSELECT COUNT(*) FROM singer")   # prose written before seeing results is never shown
+        self.assertNotIn("plain sentence", llm.calls[0]["messages"][0]["content"])

@@ -30,7 +30,9 @@ Runs on free Groq models and free hosting. No paid plan is needed anywhere.
 ## How it works
 
 1. **Schema in the prompt.** `CREATE` statements plus three sample rows per table, so the model sees how values are really stored.
-2. **`run_sql` tool.** The model tries queries and reads the results or the error message, then corrects itself (up to 5 queries).
+2. **Two ways to run it.** The *web app* uses the cheap `lean` mode: one model call, the query runs read-only, and the model is asked
+   again only if the query errors or returns no rows (about a quarter of the tokens of the tool-using agent). The *benchmark* also
+   measures a tool-using `agent` (a `run_sql` tool, up to 5 queries) and five-candidate `vote`, and found no accuracy gain from them.
 3. **Safe execution** (`src/analyst/sqlguard.py`). Model-written SQL is untrusted: the database opens read-only, a SQLite
    authorizer allows only `SELECT`-type operations (no `PRAGMA`, `ATTACH`, writes or extension loading), only one statement
    runs, rows are capped, and a 5 second limit stops runaway queries. Tests try `DROP`, `DELETE`, `PRAGMA`, `ATTACH` and

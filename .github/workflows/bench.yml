@@ -13,7 +13,7 @@ on:
     inputs:
       configs:
         description: "Space-separated configurations: oneshot agent agent_1try agent_nosamples"
-        default: "oneshot agent vote agent_1try agent_nosamples"
+        default: "oneshot lean agent vote agent_1try agent_nosamples"
       n:
         description: "Sample size (questions spread across databases)"
         default: "100"
@@ -54,7 +54,7 @@ jobs:
         run: python scripts/fetch_spider.py
       - name: Run benchmark
         run: |
-          configs="${{ inputs.configs }}"; configs="${configs:-oneshot agent vote agent_1try agent_nosamples}"
+          configs="${{ inputs.configs }}"; configs="${configs:-oneshot lean agent vote agent_1try agent_nosamples}"
           n="${{ inputs.n }}"; n="${n:-100}"
           seed="${{ inputs.seed }}"; seed="${seed:-1}"
           max="${{ inputs.max_requests }}"; max="${max:-900}"
@@ -66,15 +66,15 @@ jobs:
           fi
           for m in $model_list; do
             # headline comparison first (cheap baseline, then the agent), on the main sample and on a held-out sample with another seed
-            for c in oneshot agent vote; do
+            for c in oneshot lean agent vote; do
               python -m analyst bench --config $c --n $n --seed $seed --max-requests $max --models "$m"
             done
-            for c in oneshot agent vote; do
+            for c in oneshot lean agent vote; do
               python -m analyst bench --config $c --n $n --seed 2 --max-requests $max --models "$m"
             done
             # ablation arms last: they cost the most tokens
             for c in $configs; do
-              case $c in oneshot|agent|vote) ;; *) python -m analyst bench --config $c --n $n --seed $seed --max-requests $max --models "$m";; esac
+              case $c in oneshot|lean|agent|vote) ;; *) python -m analyst bench --config $c --n $n --seed $seed --max-requests $max --models "$m";; esac
             done
           done
       - name: Report

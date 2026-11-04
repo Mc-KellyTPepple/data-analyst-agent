@@ -11,17 +11,20 @@ Runs on free Groq models and free hosting. No paid plan is needed anywhere.
 
 ## Results so far (Spider dev sample, 100 questions, prompt v2)
 
-| Configuration | `gpt-oss-120b` | `gpt-oss-20b` (86 finished) | Tokens / question |
+| Configuration | `gpt-oss-120b` | `gpt-oss-20b` | Tokens / question |
 |---|---|---|---|
-| One shot, no tools | 82.0% | 86.0% | ~550 |
-| Agent, self-correcting | 81.0% | 86.0% | ~2,300 |
-| Five candidates, majority result | 82.0% | 88.4% | ~2,800 |
+| One shot, no tools | 82.0% | 86.0% | ~560 |
+| Lean: one query, one retry on error (the live demo) | 81.0% | 88.0% | ~960 |
+| Agent, self-correcting (up to 5 tries) | 81.0% | 86.0% | ~2,300 |
+| Five candidates, majority result | 82.0% | 88.0% | ~2,800 |
 
-* **The three approaches tie.** On 100 questions a difference of a few points is noise. Tools and retries do not raise accuracy on
-  Spider; they cost about four times the tokens. The agent hits ~0.01 SQL errors per question, so retry-on-error rarely fires:
-  wrong answers are mostly valid SQL returning the wrong rows.
-* **Agreement predicts correctness.** When all five candidates return the same rows, accuracy was 90.6% (120b) and 96.6% (20b);
-  when they split, 33.3% and 70.4%. That is a usable confidence signal.
+A second 100-question sample (seed 2) is still filling under the free quota. So far, on `gpt-oss-120b`: one shot 77.0%, lean 79.0%.
+
+* **The approaches tie.** On 100 questions a difference of a few points is noise (and the second sample moved by about 5 points). Tools and
+  retries do not raise accuracy on Spider. The agent hits ~0.01 SQL errors per question, so retry-on-error rarely fires:
+  wrong answers are mostly valid SQL returning the wrong rows. Lean matches the agent at about 40% of its tokens, which is why the demo uses it.
+* **Agreement predicts correctness.** When all five candidates return the same rows, accuracy was 90.6% (120b, 77 of 85) and 94.4% (20b, 68 of 72);
+  when they split, 33.3% (5 of 15) and 71.4% (20 of 28). That is a usable confidence signal.
 * **History.** The first run (prompt v1, kept in `results/*_v1_*`) had the agent ~3 points behind the baseline. The failure
   analysis (`python -m analyst analyze`) found 13 of 32 wrong answers added helpful extra columns that strict scoring rejects,
   plus a parsing bug. Both were fixed in prompt v2.

@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Money_Rank\nFROM poker_player\nJOIN people ON poker_player.People_ID = people.People_ID\nWHERE Height = (SELECT MAX(Height) FROM people);", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 102, "prompt_tokens": 329}}

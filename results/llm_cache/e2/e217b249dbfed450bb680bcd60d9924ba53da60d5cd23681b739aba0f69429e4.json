@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT employee.Name\nFROM employee\nJOIN (\n    SELECT Employee_ID, COUNT(*) AS cnt\n    FROM evaluation\n    GROUP BY Employee_ID\n    ORDER BY cnt DESC\n    LIMIT 1\n) AS top_emp ON employee.Employee_ID = top_emp.Employee_ID;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 143, "prompt_tokens": 419}}

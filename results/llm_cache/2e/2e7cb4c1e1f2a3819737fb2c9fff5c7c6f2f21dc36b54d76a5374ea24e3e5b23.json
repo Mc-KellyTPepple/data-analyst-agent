@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT r.Template_Type_Code, COUNT(d.Document_ID)\nFROM Ref_Template_Types r\nJOIN Templates t ON r.Template_Type_Code = t.Template_Type_Code\nJOIN Documents d ON t.Template_ID = d.Template_ID\nGROUP BY r.Template_Type_Code;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 96, "prompt_tokens": 724}}

@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT contestant_number, contestant_name\nFROM CONTESTANTS\nWHERE contestant_number IN (\n    SELECT contestant_number\n    FROM VOTES\n    GROUP BY contestant_number\n    HAVING COUNT(*) >= 2\n);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 81, "prompt_tokens": 380}}

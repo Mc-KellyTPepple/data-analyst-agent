@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT phone_number / 10000000\nFROM VOTES\nGROUP BY phone_number / 10000000\nORDER BY COUNT(*) DESC\nLIMIT 1;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 295, "prompt_tokens": 546}}

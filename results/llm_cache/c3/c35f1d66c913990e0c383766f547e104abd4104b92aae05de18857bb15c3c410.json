@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT FullName, Id\nFROM car_makers\nJOIN model_list ON car_makers.Id = model_list.Maker\nGROUP BY Id, FullName\nHAVING COUNT(*) > 3;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 130, "prompt_tokens": 805}}

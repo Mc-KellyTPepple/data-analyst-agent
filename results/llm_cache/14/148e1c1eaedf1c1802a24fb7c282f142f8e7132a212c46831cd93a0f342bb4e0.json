@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT AVG(age)\nFROM Dogs;\nFINAL SQL:\nSELECT AVG(age)\nFROM Dogs;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 60, "prompt_tokens": 819}}

@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT ranking_date, SUM(tours) FROM rankings GROUP BY ranking_date;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 51, "prompt_tokens": 1176}}

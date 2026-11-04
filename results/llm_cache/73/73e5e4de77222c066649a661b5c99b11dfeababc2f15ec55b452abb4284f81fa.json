@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT date_of_treatment, first_name\nFROM Treatments\nJOIN Professionals ON Treatments.professional_id = Professionals.professional_id;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 77, "prompt_tokens": 825}}

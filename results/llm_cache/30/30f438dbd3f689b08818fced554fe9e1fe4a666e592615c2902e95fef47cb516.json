@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Share FROM TV_series ORDER BY Share DESC LIMIT 1\nUNION ALL\nSELECT Share FROM TV_series ORDER BY Share ASC LIMIT 1;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 153, "prompt_tokens": 870}}

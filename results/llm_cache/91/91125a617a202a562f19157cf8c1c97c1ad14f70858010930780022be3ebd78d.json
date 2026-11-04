@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT a.City\nFROM flights f\nJOIN airports a ON f.SourceAirport = a.AirportCode\nGROUP BY a.City\nORDER BY COUNT(*) DESC\nLIMIT 1;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 244, "prompt_tokens": 508}}

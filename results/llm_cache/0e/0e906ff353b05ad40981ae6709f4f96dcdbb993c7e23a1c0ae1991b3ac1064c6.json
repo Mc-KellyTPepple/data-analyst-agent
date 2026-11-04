@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Name\nFROM employee\nWHERE NOT EXISTS (\n    SELECT 1\n    FROM evaluation\n    WHERE evaluation.Employee_ID = employee.Employee_ID\n);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 54, "prompt_tokens": 685}}

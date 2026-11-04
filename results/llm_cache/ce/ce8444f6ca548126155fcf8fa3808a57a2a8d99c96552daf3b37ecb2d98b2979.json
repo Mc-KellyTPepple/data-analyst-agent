@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT count(DISTINCT dog_id) FROM Treatments;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 75, "prompt_tokens": 818}}

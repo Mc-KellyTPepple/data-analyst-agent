@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT COUNT(*) \nFROM flights \nJOIN airports ON flights.DestAirport = airports.AirportCode \nWHERE airports.City IN ('Aberdeen','Abilene');", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 142, "prompt_tokens": 326}}

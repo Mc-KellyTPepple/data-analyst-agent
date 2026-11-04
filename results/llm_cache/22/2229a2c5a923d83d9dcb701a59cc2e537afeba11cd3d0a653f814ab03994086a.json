@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT professional_id, cell_number\nFROM Professionals p\nJOIN Treatments t ON p.professional_id = t.professional_id\nGROUP BY professional_id, cell_number\nHAVING COUNT(DISTINCT t.treatment_type_code) >= 2;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 115, "prompt_tokens": 828}}

@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT COUNT(*) FROM museum WHERE Open_Year > '2013' OR Open_Year < '2008';\nFINAL SQL:\nSELECT COUNT(*) FROM museum WHERE Open_Year > '2013' OR Open_Year < '2008';", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 91, "prompt_tokens": 366}}

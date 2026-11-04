@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT owner_id, last_name\nFROM Owners\nJOIN Dogs USING(owner_id)\nJOIN Treatments USING(dog_id)\nGROUP BY owner_id, last_name\nORDER BY SUM(cost_of_treatment) DESC\nLIMIT 1;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 103, "prompt_tokens": 832}}

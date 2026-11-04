@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT name, COUNT(*) FROM Friend f JOIN Highschooler h ON f.student_id = h.ID GROUP BY h.ID, h.name;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 100, "prompt_tokens": 332}}

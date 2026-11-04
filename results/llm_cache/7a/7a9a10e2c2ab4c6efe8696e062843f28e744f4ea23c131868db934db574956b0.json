@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT CountryName\nFROM countries\nWHERE CountryId NOT IN (SELECT Country FROM car_makers);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 48, "prompt_tokens": 800}}

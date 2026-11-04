@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT Citizenship, MAX(Net_Worth_Millions) \nFROM singer \nGROUP BY Citizenship;\nFINAL SQL:\nSELECT Citizenship, MAX(Net_Worth_Millions) FROM singer GROUP BY Citizenship;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 64, "prompt_tokens": 507}}

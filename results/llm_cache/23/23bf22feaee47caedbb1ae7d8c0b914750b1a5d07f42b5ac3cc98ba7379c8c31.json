@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Name, Country, Age FROM singer ORDER BY Age DESC;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 40, "prompt_tokens": 745}}

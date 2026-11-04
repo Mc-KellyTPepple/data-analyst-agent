@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT AVG(Age), MIN(Age), MAX(Age) FROM singer WHERE Country='France';\"}", "name": "run_sql"}, "id": "fc_ac800028-0de8-49ae-8048-0b93f77eb9a5", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 81, "prompt_tokens": 858}}

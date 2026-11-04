@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT pp.\"Money_Rank\"\nFROM \"poker_player\" pp\nJOIN \"people\" p ON pp.\"People_ID\" = p.\"People_ID\"\nORDER BY p.\"Height\" DESC\nLIMIT 1;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 80, "prompt_tokens": 329}}

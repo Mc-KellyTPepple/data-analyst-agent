@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT max(created) FROM VOTES WHERE state = 'CA';", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 83, "prompt_tokens": 376}}

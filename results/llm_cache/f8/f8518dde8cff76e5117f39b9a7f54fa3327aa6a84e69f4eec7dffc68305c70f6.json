@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT CountryName FROM countries WHERE CountryId NOT IN (SELECT Country FROM car_makers);\"}", "name": "run_sql"}, "id": "fc_c50014fa-6f23-4422-bf6a-f48568e30401", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 70, "prompt_tokens": 916}}

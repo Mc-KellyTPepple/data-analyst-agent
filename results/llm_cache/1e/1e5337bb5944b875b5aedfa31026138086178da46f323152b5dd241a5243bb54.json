@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Name, Continent FROM country WHERE Name = 'Anguilla'\"}", "name": "run_sql"}, "id": "fc_0f703c16-01e6-4ea0-9af2-2e7450b6235c", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 63, "prompt_tokens": 1060}}

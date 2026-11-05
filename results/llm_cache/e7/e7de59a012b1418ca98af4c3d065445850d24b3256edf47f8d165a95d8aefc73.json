@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT COUNT(DISTINCT state) FROM AREA_CODE_STATE;\"}", "name": "run_sql"}, "id": "fc_aed5292c-0290-4c11-bd9b-170fcff30880", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 66, "prompt_tokens": 692}}

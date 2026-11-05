@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT * FROM death;\"}", "name": "run_sql"}, "id": "fc_159637c6-e46a-41ce-a393-d510d6388d51", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 75, "prompt_tokens": 855}}

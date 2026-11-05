@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT country_code FROM players GROUP BY country_code HAVING COUNT(*)>50;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 48, "prompt_tokens": 1399}}

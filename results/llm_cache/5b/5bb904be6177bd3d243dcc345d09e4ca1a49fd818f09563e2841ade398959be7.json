@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Template_Type_Code, COUNT(*) FROM Templates GROUP BY Template_Type_Code;\"}", "name": "run_sql"}, "id": "fc_73bd3dfe-00d8-4ffa-a919-f79e8f15bf22", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 52, "prompt_tokens": 838}}

@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT country_code, COUNT(*) as cnt FROM players GROUP BY country_code HAVING cnt \\u003e 50;\"}", "name": "run_sql"}, "id": "fc_1ecb03e8-9992-4c2d-9516-43577351f4ee", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 65, "prompt_tokens": 1294}}

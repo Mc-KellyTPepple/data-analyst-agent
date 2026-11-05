@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT AVG(Age) FROM Student WHERE NOT EXISTS (SELECT 1 FROM Has_Pet WHERE Has_Pet.StuID = Student.StuID);\"}", "name": "run_sql"}, "id": "fc_cce2af0a-1f53-4b72-b47e-7d93ae6617f3", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 77, "prompt_tokens": 636}}

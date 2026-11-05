@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Name, Orchestra FROM conductor JOIN orchestra USING (Conductor_ID);\"}", "name": "run_sql"}, "id": "fc_3d7e5f8a-5fcb-4718-93c5-55f56718ab31", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 57, "prompt_tokens": 942}}

@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT PetID FROM Student JOIN Has_Pet USING (StuID) WHERE LName='Smith';\"}", "name": "run_sql"}, "id": "fc_a3024acd-43b1-4b24-878d-8d9b701e1ef8", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 88, "prompt_tokens": 641}}

@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Name FROM employee WHERE Employee_ID NOT IN (SELECT Employee_ID FROM evaluation);\"}", "name": "run_sql"}, "id": "fc_2f8204d9-2fd1-4adc-b916-971f57d8ea62", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 55, "prompt_tokens": 801}}

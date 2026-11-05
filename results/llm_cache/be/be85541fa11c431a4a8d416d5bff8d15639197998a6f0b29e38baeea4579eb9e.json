@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Channel, COUNT(*) c FROM Cartoon GROUP BY Channel\"}", "name": "run_sql"}, "id": "fc_2c71f649-6e56-4e22-b5ea-daf4f5175ebd", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 111, "prompt_tokens": 991}}

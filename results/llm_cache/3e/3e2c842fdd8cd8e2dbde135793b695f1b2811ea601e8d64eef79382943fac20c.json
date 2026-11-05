@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT COUNT(*) \nFROM concert \nWHERE Stadium_ID IN (\n    SELECT Stadium_ID \n    FROM stadium \n    WHERE Capacity = (SELECT MAX(Capacity) FROM stadium)\n);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 138, "prompt_tokens": 448}}

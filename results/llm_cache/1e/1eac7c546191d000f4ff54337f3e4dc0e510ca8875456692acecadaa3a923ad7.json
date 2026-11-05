@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Name FROM employee JOIN evaluation USING (Employee_ID) GROUP BY Employee_ID, Name ORDER BY COUNT(*) DESC LIMIT 1;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 58, "prompt_tokens": 858}}

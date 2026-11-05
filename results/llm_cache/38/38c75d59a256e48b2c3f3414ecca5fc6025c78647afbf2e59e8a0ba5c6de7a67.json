@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT PetType, weight\nFROM Pets\nWHERE pet_age = (SELECT MIN(pet_age) FROM Pets);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 73, "prompt_tokens": 322}}

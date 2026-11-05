@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Package_Option FROM TV_Channel WHERE series_name = 'Sky Radio';\"}", "name": "run_sql"}, "id": "fc_9e577c0f-693c-470e-acda-43e9a5befd3f", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 58, "prompt_tokens": 989}}

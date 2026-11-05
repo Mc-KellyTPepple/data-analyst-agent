@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT COUNT(*) FROM concert WHERE Stadium_ID = (SELECT Stadium_ID FROM stadium ORDER BY Capacity DESC LIMIT 1);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 57, "prompt_tokens": 1006}}

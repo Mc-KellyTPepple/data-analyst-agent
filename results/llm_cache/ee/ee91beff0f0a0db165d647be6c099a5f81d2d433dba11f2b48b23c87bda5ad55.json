@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Name, Orchestra FROM conductor JOIN orchestra ON conductor.Conductor_ID = orchestra.Conductor_ID;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 58, "prompt_tokens": 826}}

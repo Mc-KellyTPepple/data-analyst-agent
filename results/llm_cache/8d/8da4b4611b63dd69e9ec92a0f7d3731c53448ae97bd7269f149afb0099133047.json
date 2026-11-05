@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nselect contestant_number, contestant_name from CONTESTANTS where contestant_number in (select contestant_number from VOTES group by contestant_number having count(*)>=2);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 99, "prompt_tokens": 738}}

@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Model\nFROM car_names\nJOIN car_makers ON car_names.Make = car_makers.Maker\nJOIN cars_data ON car_names.MakeId = cars_data.Id\nWHERE car_makers.Maker = 'General Motors' OR cars_data.Weight > 3500;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 209, "prompt_tokens": 476}}

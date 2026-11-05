@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Name, Age, Hometown FROM teacher ORDER BY CAST(Age AS INTEGER) ASC LIMIT 1", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 38, "prompt_tokens": 680}}

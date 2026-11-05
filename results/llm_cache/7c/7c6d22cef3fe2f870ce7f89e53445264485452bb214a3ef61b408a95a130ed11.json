@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Record_Company FROM orchestra ORDER BY Year_of_Founded DESC\"}", "name": "run_sql"}, "id": "fc_c8d01631-be5b-48bf-ace4-909d42fc7579", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 71, "prompt_tokens": 940}}

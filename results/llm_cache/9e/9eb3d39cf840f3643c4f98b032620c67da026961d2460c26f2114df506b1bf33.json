@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Name FROM teacher WHERE Hometown \\u003c\\u003e ' Little Lever Urban District ';\"}", "name": "run_sql"}, "id": "fc_6e6b387f-c799-4313-b00a-5ee69adb7e91", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 103, "prompt_tokens": 626}}

@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT first_name, country_code FROM players ORDER BY birth_date ASC LIMIT 1", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 54, "prompt_tokens": 1344}}

@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Nationality, COUNT(*) FROM people GROUP BY Nationality;\"}", "name": "run_sql"}, "id": "fc_e4777a39-ab27-4303-a8aa-3682c9cb4574", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 62, "prompt_tokens": 646}}

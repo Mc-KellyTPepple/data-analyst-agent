@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT COUNT(*) FROM Friend WHERE student_id = 1934;\"}", "name": "run_sql"}, "id": "fc_b01a5da2-74a4-4dfa-bfb3-8b4633bed840", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 86, "prompt_tokens": 599}}

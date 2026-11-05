@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT car_names.Model FROM car_names JOIN cars_data ON car_names.MakeId = cars_data.Id ORDER BY CAST(cars_data.MPG AS REAL) DESC LIMIT 1;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 137, "prompt_tokens": 1065}}

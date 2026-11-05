@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Model FROM car_names WHERE MakeId = (SELECT Id FROM cars_data WHERE CAST(MPG AS INTEGER) = (SELECT MAX(CAST(MPG AS INTEGER)) FROM cars_data));", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 87, "prompt_tokens": 988}}

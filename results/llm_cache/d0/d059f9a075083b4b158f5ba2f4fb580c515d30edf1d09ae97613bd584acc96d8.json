@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT contestant_number, contestant_name FROM CONTESTANTS ORDER BY contestant_name DESC\"}", "name": "run_sql"}, "id": "fc_46343757-0f50-44e6-9b30-b3a259e36afe", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 67, "prompt_tokens": 663}}

@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT * FROM Addresses WHERE state_province_county LIKE '%North Carolina%';\"}", "name": "run_sql"}, "id": "fc_edff77eb-c019-41f1-850c-8751e00e80f0", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 47, "prompt_tokens": 2188}}

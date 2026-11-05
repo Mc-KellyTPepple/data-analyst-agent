@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Fname, Sex FROM Student JOIN Has_Pet USING(StuID) GROUP BY StuID HAVING COUNT(*)\\u003e1;\"}", "name": "run_sql"}, "id": "fc_14ae338f-7753-42b7-abdb-f8c3a13c14b7", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 76, "prompt_tokens": 642}}

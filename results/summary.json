@@ -188,24 +188,45 @@
     "accuracy_by_agreement": {},
     "databases_worst": [
       [
-        "concert_singer",
-        75.0,
+        "car_1",
+        40.0,
+        5
+      ],
+      [
+        "real_estate_properties",
+        50.0,
         4
+      ],
+      [
+        "course_teach",
+        60.0,
+        5
+      ],
+      [
+        "student_transcripts_tracking",
+        60.0,
+        5
+      ],
+      [
+        "dog_kennels",
+        60.0,
+        5
       ]
     ],
-    "execution_accuracy": 75.0,
-    "mean_llm_calls": 2.0,
-    "mean_seconds": 15.6,
+    "execution_accuracy": 78.0,
+    "mean_llm_calls": 2.19,
+    "mean_seconds": 20.5,
     "mean_sql_errors": 0.0,
-    "mean_tokens": 1937,
+    "mean_tokens": 2327,
     "models": {
-      "openai/gpt-oss-120b": 4
+      "openai/gpt-oss-120b": 100
     },
     "outcomes": {
-      "match": 3,
-      "mismatch": 1
+      "match": 78,
+      "mismatch": 21,
+      "pred_error": 1
     },
-    "questions": 4
+    "questions": 100
   },
   "agent_v2_gpt-oss-20b_s1_n100": {
     "accuracy_by_agreement": {},
@@ -252,7 +273,48 @@
     "questions": 100
   },
   "agent_v2_gpt-oss-20b_s2_n100": {
-    "questions": 0
+    "accuracy_by_agreement": {},
+    "databases_worst": [
+      [
+        "car_1",
+        40.0,
+        5
+      ],
+      [
+        "cre_Doc_Template_Mgt",
+        60.0,
+        5
+      ],
+      [
+        "concert_singer",
+        80.0,
+        5
+      ],
+      [
+        "flight_2",
+        80.0,
+        5
+      ],
+      [
+        "course_teach",
+        80.0,
+        5
+      ]
+    ],
+    "execution_accuracy": 81.9,
+    "mean_llm_calls": 2.24,
+    "mean_seconds": 23.5,
+    "mean_sql_errors": 0.03,
+    "mean_tokens": 2317,
+    "models": {
+      "openai/gpt-oss-20b": 72
+    },
+    "outcomes": {
+      "match": 59,
+      "mismatch": 12,
+      "pred_error": 1
+    },
+    "questions": 72
   },
   "lean_v2_gpt-oss-120b_s1_n100": {
     "accuracy_by_agreement": {},
@@ -393,9 +455,9 @@
         5
       ],
       [
-        "course_teach",
+        "real_estate_properties",
         50.0,
-        2
+        4
       ],
       [
         "cre_Doc_Template_Mgt",
@@ -403,29 +465,29 @@
         5
       ],
       [
-        "concert_singer",
-        80.0,
+        "dog_kennels",
+        60.0,
         5
       ],
       [
-        "flight_2",
+        "concert_singer",
         80.0,
         5
       ]
     ],
-    "execution_accuracy": 75.0,
-    "mean_llm_calls": 1.12,
-    "mean_seconds": 7.6,
-    "mean_sql_errors": 0.06,
-    "mean_tokens": 854,
+    "execution_accuracy": 81.0,
+    "mean_llm_calls": 1.07,
+    "mean_seconds": 7.9,
+    "mean_sql_errors": 0.03,
+    "mean_tokens": 994,
     "models": {
-      "openai/gpt-oss-20b": 32
+      "openai/gpt-oss-20b": 100
     },
     "outcomes": {
-      "match": 24,
-      "mismatch": 8
+      "match": 81,
+      "mismatch": 19
     },
-    "questions": 32
+    "questions": 100
   },
   "oneshot_v1_s1_n200": {
     "accuracy_by_agreement": {},
@@ -701,7 +763,56 @@
     "questions": 100
   },
   "vote_v2_gpt-oss-120b_s2_n100": {
-    "questions": 0
+    "accuracy_by_agreement": {
+      "split": {
+        "accuracy": 0.0,
+        "n": 3
+      },
+      "unanimous": {
+        "accuracy": 83.3,
+        "n": 18
+      }
+    },
+    "databases_worst": [
+      [
+        "car_1",
+        40.0,
+        5
+      ],
+      [
+        "concert_singer",
+        60.0,
+        5
+      ],
+      [
+        "flight_2",
+        80.0,
+        5
+      ],
+      [
+        "pets_1",
+        100.0,
+        5
+      ],
+      [
+        "employee_hire_evaluation",
+        100.0,
+        1
+      ]
+    ],
+    "execution_accuracy": 71.4,
+    "mean_llm_calls": 5.0,
+    "mean_seconds": 17.4,
+    "mean_sql_errors": 0.0,
+    "mean_tokens": 2459,
+    "models": {
+      "openai/gpt-oss-120b": 21
+    },
+    "outcomes": {
+      "match": 15,
+      "mismatch": 6
+    },
+    "questions": 21
   },
   "vote_v2_gpt-oss-20b_s1_n100": {
     "accuracy_by_agreement": {

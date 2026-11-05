@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT course_name FROM Courses WHERE course_id IN (SELECT course_id FROM Student_Enrolment_Courses);\"}", "name": "run_sql"}, "id": "fc_517fbcab-ddcf-4e40-a3f3-659a44244ec3", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 113, "prompt_tokens": 1999}}

@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT created FROM VOTES WHERE state='CA' ORDER BY created DESC LIMIT 1;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 35, "prompt_tokens": 719}}

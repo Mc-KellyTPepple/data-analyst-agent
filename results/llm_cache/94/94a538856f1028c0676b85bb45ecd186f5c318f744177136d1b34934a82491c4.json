@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT AVG(Age) FROM Student LEFT JOIN Has_Pet ON Student.StuID = Has_Pet.StuID WHERE Has_Pet.PetID IS NULL;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 110, "prompt_tokens": 325}}

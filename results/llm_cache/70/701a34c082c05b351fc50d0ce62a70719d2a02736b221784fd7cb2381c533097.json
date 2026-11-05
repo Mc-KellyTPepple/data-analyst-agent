@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT COUNT(*) FROM airlines WHERE Country='USA';\"}", "name": "run_sql"}, "id": "fc_3c51033c-9386-42e3-9e31-3b5e01f38076", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 46, "prompt_tokens": 624}}

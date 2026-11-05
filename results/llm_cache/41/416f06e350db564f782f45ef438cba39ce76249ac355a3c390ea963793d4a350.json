@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT CountryCode FROM countrylanguage WHERE Language IN ('English','Dutch')\"}", "name": "run_sql"}, "id": "fc_aa9a48a6-6986-41df-b1fe-5f36f48262d9", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 82, "prompt_tokens": 1064}}

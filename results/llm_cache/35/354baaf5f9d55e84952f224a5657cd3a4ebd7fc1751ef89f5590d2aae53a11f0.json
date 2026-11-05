@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT year, COUNT(*) FROM matches GROUP BY year;\"}", "name": "run_sql"}, "id": "fc_a7824385-17c3-4085-bcf4-90c6cba04efb", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 44, "prompt_tokens": 1291}}

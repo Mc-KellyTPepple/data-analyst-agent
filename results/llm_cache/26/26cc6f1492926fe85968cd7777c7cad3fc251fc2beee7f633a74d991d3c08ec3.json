@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT avg(Age) FROM Student WHERE StuID NOT IN (SELECT StuID FROM Has_Pet);", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 40, "prompt_tokens": 688}}

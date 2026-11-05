@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT COUNT(*) FROM visitor WHERE Age < 30;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 38, "prompt_tokens": 828}}

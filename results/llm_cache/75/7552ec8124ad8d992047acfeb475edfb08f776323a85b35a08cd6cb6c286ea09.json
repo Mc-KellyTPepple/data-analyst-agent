@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT * FROM car_makers LIMIT 5;\"}", "name": "run_sql"}, "id": "fc_ee86bc51-aba9-4dcf-be83-d785f05e6f78", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 154, "prompt_tokens": 925}}

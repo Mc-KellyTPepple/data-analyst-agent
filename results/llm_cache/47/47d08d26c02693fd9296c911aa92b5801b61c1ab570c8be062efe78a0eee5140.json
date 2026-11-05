@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT DISTINCT c.course_name FROM Courses c JOIN Student_Enrolment_Courses sec ON c.course_id = sec.course_id", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 45, "prompt_tokens": 2074}}

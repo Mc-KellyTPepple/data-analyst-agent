@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Hometown, COUNT(*) FROM teacher GROUP BY Hometown;\"}", "name": "run_sql"}, "id": "fc_3b1cd057-465b-456d-9d07-82ec5ca263d9", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 58, "prompt_tokens": 622}}

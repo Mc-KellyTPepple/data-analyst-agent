@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT d.Template_ID, t.Template_Type_Code\nFROM Documents d\nJOIN Templates t ON d.Template_ID = t.Template_ID\nGROUP BY d.Template_ID\nORDER BY COUNT(*) DESC\nLIMIT 1", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 48, "prompt_tokens": 969}}

@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT transcript_id, COUNT(*) as cnt FROM Transcript_Contents GROUP BY transcript_id\"}", "name": "run_sql"}, "id": "fc_44c26287-46fa-4276-b4f2-6b78fdf986c6", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 82, "prompt_tokens": 2005}}

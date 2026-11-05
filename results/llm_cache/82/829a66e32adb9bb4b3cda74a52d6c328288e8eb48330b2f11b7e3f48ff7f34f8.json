@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT MAX(killed+injured), MIN(killed+injured) FROM death\"}", "name": "run_sql"}, "id": "fc_7d3a223d-b369-4d96-9c69-4f97fb15493a", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 93, "prompt_tokens": 780}}

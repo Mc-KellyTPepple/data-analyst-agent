@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT PetType, weight FROM Pets ORDER BY pet_age ASC LIMIT 1;\"}", "name": "run_sql"}, "id": "fc_5eca1f59-314b-430a-8a23-b821bb0a302c", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 70, "prompt_tokens": 633}}

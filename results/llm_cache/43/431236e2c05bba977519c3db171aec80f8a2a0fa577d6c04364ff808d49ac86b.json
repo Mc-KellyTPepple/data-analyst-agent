@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT ship.id, ship.name FROM ship JOIN death ON ship.id = death.caused_by_ship_id GROUP BY ship.id, ship.name ORDER BY SUM(death.injured) DESC LIMIT 1;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 87, "prompt_tokens": 1234}}

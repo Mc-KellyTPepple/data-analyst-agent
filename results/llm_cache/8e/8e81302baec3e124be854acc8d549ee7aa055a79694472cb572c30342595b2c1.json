@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT MIN(birth_date) FROM players;\"}", "name": "run_sql"}, "id": "fc_7a541f9e-c5fb-421e-8ee9-b8ccd0955f28", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 79, "prompt_tokens": 1380}}

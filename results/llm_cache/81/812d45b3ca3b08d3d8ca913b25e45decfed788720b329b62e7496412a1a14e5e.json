@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Name FROM museum WHERE Num_of_Staff > (SELECT MIN(Num_of_Staff) FROM museum WHERE CAST(Open_Year AS INTEGER) > 2010);", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 134, "prompt_tokens": 817}}

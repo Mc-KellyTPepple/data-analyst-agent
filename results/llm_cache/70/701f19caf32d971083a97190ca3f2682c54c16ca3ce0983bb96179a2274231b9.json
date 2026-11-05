@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT DISTINCT state, created FROM VOTES;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 50, "prompt_tokens": 763}}

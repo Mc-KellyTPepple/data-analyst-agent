@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT AVG(Age) FROM Student WHERE NOT EXISTS (SELECT 1 FROM Has_Pet WHERE Has_Pet.StuID = Student.StuID);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 53, "prompt_tokens": 698}}

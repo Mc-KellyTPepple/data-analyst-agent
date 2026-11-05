@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT first_name, country_code FROM players ORDER BY birth_date ASC LIMIT 1\"}", "name": "run_sql"}, "id": "fc_8fa4fbf4-a861-4ac2-9ee6-08c98d46c3a5", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 65, "prompt_tokens": 1293}}

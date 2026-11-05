@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT name FROM Highschooler WHERE ID IN (SELECT student_id FROM Friend) AND ID IN (SELECT liked_id FROM Likes);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 46, "prompt_tokens": 637}}

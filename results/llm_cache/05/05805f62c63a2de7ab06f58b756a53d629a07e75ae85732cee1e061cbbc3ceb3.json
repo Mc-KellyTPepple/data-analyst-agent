@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT avg(Age) FROM Student WHERE StuID NOT IN (SELECT StuID FROM Has_Pet);\"}", "name": "run_sql"}, "id": "fc_a27b401a-0589-49bc-8196-29b0d7af9c1d", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 80, "prompt_tokens": 636}}

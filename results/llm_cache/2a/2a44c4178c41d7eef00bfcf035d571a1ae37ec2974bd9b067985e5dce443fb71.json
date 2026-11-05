@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Template_ID FROM Documents GROUP BY Template_ID HAVING COUNT(*)\\u003e1;\"}", "name": "run_sql"}, "id": "fc_e1c94b11-95c2-481f-94aa-ad6fd399ff99", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 57, "prompt_tokens": 842}}

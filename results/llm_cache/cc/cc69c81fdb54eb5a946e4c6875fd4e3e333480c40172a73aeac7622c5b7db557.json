@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Abbreviation FROM airlines WHERE Airline = 'JetBlue Airways';\"}", "name": "run_sql"}, "id": "fc_b99e95c5-f280-4036-b9a4-3c73dd3da4e1", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 57, "prompt_tokens": 626}}

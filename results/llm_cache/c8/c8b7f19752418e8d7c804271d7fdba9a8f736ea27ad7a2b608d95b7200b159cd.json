@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT FlightNo FROM flights WHERE DestAirport='APG';\"}", "name": "run_sql"}, "id": "fc_3fc8d799-d1d9-41f2-bcac-90c53cec82a2", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 61, "prompt_tokens": 626}}

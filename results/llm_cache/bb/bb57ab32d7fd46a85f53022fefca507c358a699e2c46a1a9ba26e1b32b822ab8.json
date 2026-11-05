@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT MAX(created) FROM VOTES WHERE state = 'CA';\"}", "name": "run_sql"}, "id": "fc_7dfc5c7e-f746-495a-84b3-9708d8374522", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 54, "prompt_tokens": 663}}

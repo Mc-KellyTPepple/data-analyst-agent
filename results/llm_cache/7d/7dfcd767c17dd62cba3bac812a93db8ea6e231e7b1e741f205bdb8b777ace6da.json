@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT AVG(Num_of_Staff) FROM museum WHERE CAST(Open_Year AS INTEGER) \\u003c 2009;\"}", "name": "run_sql"}, "id": "fc_0f595b27-6539-40ef-a089-ff300072e611", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 84, "prompt_tokens": 676}}

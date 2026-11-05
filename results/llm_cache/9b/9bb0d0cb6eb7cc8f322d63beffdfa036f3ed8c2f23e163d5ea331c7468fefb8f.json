@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT professional_id, cell_number FROM Professionals WHERE professional_id IN (SELECT professional_id FROM Treatments GROUP BY professional_id HAVING COUNT(DISTINCT treatment_type_code) >= 2)", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 57, "prompt_tokens": 2043}}

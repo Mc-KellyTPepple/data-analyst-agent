@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT CountryName FROM countries WHERE NOT EXISTS (SELECT 1 FROM car_makers WHERE car_makers.Country = countries.CountryId);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 118, "prompt_tokens": 467}}

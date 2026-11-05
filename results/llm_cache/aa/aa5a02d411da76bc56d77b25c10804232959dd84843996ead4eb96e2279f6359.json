@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Poker_Player_ID, Earnings, Money_Rank FROM poker_player ORDER BY Earnings DESC;\"}", "name": "run_sql"}, "id": "fc_475e89ee-4622-4c21-98ca-e7508bf8eba9", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 67, "prompt_tokens": 697}}

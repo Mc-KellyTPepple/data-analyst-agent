@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Paragraph_Text FROM Paragraphs JOIN Documents ON Paragraphs.Document_ID = Documents.Document_ID WHERE Document_Name = 'Customer reviews';", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 47, "prompt_tokens": 605}}

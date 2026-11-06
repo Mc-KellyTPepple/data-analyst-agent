@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT City FROM employee WHERE Age < 30 GROUP BY City HAVING COUNT(*) > 1", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 40, "prompt_tokens": 586}}

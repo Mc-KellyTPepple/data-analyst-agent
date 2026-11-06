@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT CountryCode FROM countrylanguage WHERE Language='Spanish' ORDER BY Percentage DESC;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 23, "prompt_tokens": 1206}}

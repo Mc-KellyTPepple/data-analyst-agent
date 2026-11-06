@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT PetID FROM Has_Pet WHERE StuID = (SELECT StuID FROM Student WHERE LName = 'Smith');", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 81, "prompt_tokens": 330}}

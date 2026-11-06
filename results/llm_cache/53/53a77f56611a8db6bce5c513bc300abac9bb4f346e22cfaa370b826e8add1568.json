@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT series_name FROM TV_Channel WHERE id = (SELECT Channel FROM Cartoon WHERE Title = 'The Rise of the Blue Beetle');", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 90, "prompt_tokens": 450}}

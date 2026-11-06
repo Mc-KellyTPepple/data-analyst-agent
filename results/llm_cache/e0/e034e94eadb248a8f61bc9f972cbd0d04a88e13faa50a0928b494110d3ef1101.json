@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT first_name, middle_name, last_name\nFROM Students\nWHERE date_left = (SELECT MIN(date_left) FROM Students WHERE date_left IS NOT NULL);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 82, "prompt_tokens": 997}}

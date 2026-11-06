@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Document_Name FROM Documents JOIN Templates ON Documents.Template_ID = Templates.Template_ID WHERE Templates.Template_Type_Code = 'BK';", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 45, "prompt_tokens": 616}}

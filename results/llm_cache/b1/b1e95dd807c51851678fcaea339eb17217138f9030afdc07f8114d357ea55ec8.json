@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT COUNT(*) FROM country c JOIN countrylanguage cl1 ON c.Code=cl1.CountryCode AND cl1.Language='English' JOIN countrylanguage cl2 ON c.Code=cl2.CountryCode AND cl2.Language='Dutch';", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 87, "prompt_tokens": 1138}}

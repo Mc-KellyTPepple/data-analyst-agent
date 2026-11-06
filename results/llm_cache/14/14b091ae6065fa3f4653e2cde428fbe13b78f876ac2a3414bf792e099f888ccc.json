@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT MAX(killed + injured) AS max_deaths, MIN(killed + injured) AS min_deaths FROM death;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 209, "prompt_tokens": 395}}

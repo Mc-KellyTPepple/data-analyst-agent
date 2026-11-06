@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT SUM(Bonus) FROM evaluation\"}", "name": "run_sql"}, "id": "fc_52479546-8e41-40d1-8f13-86620cfea294", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 45, "prompt_tokens": 532}}

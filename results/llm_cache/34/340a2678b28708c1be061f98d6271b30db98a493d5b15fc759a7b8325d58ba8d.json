@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT shop.Name FROM shop JOIN (SELECT Shop_ID, COUNT(*) cnt FROM hiring GROUP BY Shop_ID) h ON shop.Shop_ID=h.Shop_ID ORDER BY cnt DESC LIMIT 1", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 56, "prompt_tokens": 601}}

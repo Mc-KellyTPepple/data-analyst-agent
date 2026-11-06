@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Record_Company FROM orchestra ORDER BY Year_of_Founded DESC;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 52, "prompt_tokens": 468}}

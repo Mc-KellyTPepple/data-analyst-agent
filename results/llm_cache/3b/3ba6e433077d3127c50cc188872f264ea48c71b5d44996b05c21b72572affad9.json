@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Template_ID\nFROM Documents\nGROUP BY Template_ID\nHAVING COUNT(DISTINCT Document_ID) > 1;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 62, "prompt_tokens": 435}}

@@ -47,23 +47,44 @@
     "accuracy_by_agreement": {},
     "databases_worst": [
       [
+        "world_1",
+        40.0,
+        5
+      ],
+      [
+        "real_estate_properties",
+        50.0,
+        4
+      ],
+      [
         "concert_singer",
-        100.0,
-        1
+        60.0,
+        5
+      ],
+      [
+        "flight_2",
+        60.0,
+        5
+      ],
+      [
+        "network_1",
+        60.0,
+        5
       ]
     ],
-    "execution_accuracy": 100.0,
-    "mean_llm_calls": 2.0,
-    "mean_seconds": 0.0,
-    "mean_sql_errors": 0.0,
-    "mean_tokens": 1893,
+    "execution_accuracy": 82.0,
+    "mean_llm_calls": 2.15,
+    "mean_seconds": 1.2,
+    "mean_sql_errors": 0.01,
+    "mean_tokens": 2246,
     "models": {
-      "openai/gpt-oss-120b": 1
+      "openai/gpt-oss-120b": 100
     },
     "outcomes": {
-      "match": 1
+      "match": 82,
+      "mismatch": 18
     },
-    "questions": 1
+    "questions": 100
   },
   "agent_1try_v2_gpt-oss-20b_s1_n100": {
     "accuracy_by_agreement": {},
@@ -91,7 +112,47 @@
     "questions": 0
   },
   "agent_nosamples_v2_gpt-oss-120b_s1_n100": {
-    "questions": 0
+    "accuracy_by_agreement": {},
+    "databases_worst": [
+      [
+        "flight_2",
+        60.0,
+        5
+      ],
+      [
+        "concert_singer",
+        80.0,
+        5
+      ],
+      [
+        "car_1",
+        80.0,
+        5
+      ],
+      [
+        "pets_1",
+        100.0,
+        5
+      ],
+      [
+        "employee_hire_evaluation",
+        100.0,
+        5
+      ]
+    ],
+    "execution_accuracy": 90.7,
+    "mean_llm_calls": 2.28,
+    "mean_seconds": 15.4,
+    "mean_sql_errors": 0.02,
+    "mean_tokens": 1456,
+    "models": {
+      "openai/gpt-oss-120b": 43
+    },
+    "outcomes": {
+      "match": 39,
+      "mismatch": 4
+    },
+    "questions": 43
   },
   "agent_nosamples_v2_gpt-oss-20b_s1_n100": {
     "questions": 0
@@ -281,7 +342,17 @@
         5
       ],
       [
+        "real_estate_properties",
+        50.0,
+        4
+      ],
+      [
         "cre_Doc_Template_Mgt",
+        60.0,
+        5
+      ],
+      [
+        "dog_kennels",
         60.0,
         5
       ],
@@ -289,32 +360,22 @@
         "concert_singer",
         80.0,
         5
-      ],
-      [
-        "flight_2",
-        80.0,
-        5
-      ],
-      [
-        "course_teach",
-        80.0,
-        5
       ]
     ],
-    "execution_accuracy": 81.9,
-    "mean_llm_calls": 2.24,
-    "mean_seconds": 23.5,
+    "execution_accuracy": 80.0,
+    "mean_llm_calls": 2.18,
+    "mean_seconds": 21.7,
     "mean_sql_errors": 0.03,
-    "mean_tokens": 2317,
+    "mean_tokens": 2350,
     "models": {
-      "openai/gpt-oss-20b": 72
+      "openai/gpt-oss-20b": 100
     },
     "outcomes": {
-      "match": 59,
-      "mismatch": 12,
+      "match": 80,
+      "mismatch": 19,
       "pred_error": 1
     },
-    "questions": 72
+    "questions": 100
   },
   "lean_v2_gpt-oss-120b_s1_n100": {
     "accuracy_by_agreement": {},
@@ -765,12 +826,12 @@
   "vote_v2_gpt-oss-120b_s2_n100": {
     "accuracy_by_agreement": {
       "split": {
-        "accuracy": 0.0,
-        "n": 3
+        "accuracy": 14.3,
+        "n": 14
       },
       "unanimous": {
-        "accuracy": 83.3,
-        "n": 18
+        "accuracy": 84.9,
+        "n": 86
       }
     },
     "databases_worst": [
@@ -780,39 +841,39 @@
         5
       ],
       [
+        "real_estate_properties",
+        50.0,
+        4
+      ],
+      [
         "concert_singer",
         60.0,
         5
       ],
       [
-        "flight_2",
-        80.0,
+        "cre_Doc_Template_Mgt",
+        60.0,
         5
       ],
       [
-        "pets_1",
-        100.0,
+        "student_transcripts_tracking",
+        60.0,
         5
-      ],
-      [
-        "employee_hire_evaluation",
-        100.0,
-        1
       ]
     ],
-    "execution_accuracy": 71.4,
+    "execution_accuracy": 75.0,
     "mean_llm_calls": 5.0,
-    "mean_seconds": 17.4,
-    "mean_sql_errors": 0.0,
-    "mean_tokens": 2459,
+    "mean_seconds": 18.8,
+    "mean_sql_errors": 0.01,
+    "mean_tokens": 2850,
     "models": {
-      "openai/gpt-oss-120b": 21
+      "openai/gpt-oss-120b": 100
     },
     "outcomes": {
-      "match": 15,
-      "mismatch": 6
+      "match": 75,
+      "mismatch": 25
     },
-    "questions": 21
+    "questions": 100
   },
   "vote_v2_gpt-oss-20b_s1_n100": {
     "accuracy_by_agreement": {
@@ -868,6 +929,55 @@
     "questions": 100
   },
   "vote_v2_gpt-oss-20b_s2_n100": {
-    "questions": 0
+    "accuracy_by_agreement": {
+      "split": {
+        "accuracy": 64.3,
+        "n": 28
+      },
+      "unanimous": {
+        "accuracy": 86.0,
+        "n": 57
+      }
+    },
+    "databases_worst": [
+      [
+        "car_1",
+        20.0,
+        5
+      ],
+      [
+        "concert_singer",
+        60.0,
+        5
+      ],
+      [
+        "cre_Doc_Template_Mgt",
+        60.0,
+        5
+      ],
+      [
+        "tvshow",
+        60.0,
+        5
+      ],
+      [
+        "flight_2",
+        80.0,
+        5
+      ]
+    ],
+    "execution_accuracy": 78.8,
+    "mean_llm_calls": 5.0,
+    "mean_seconds": 20.5,
+    "mean_sql_errors": 0.26,
+    "mean_tokens": 2783,
+    "models": {
+      "openai/gpt-oss-20b": 85
+    },
+    "outcomes": {
+      "match": 67,
+      "mismatch": 18
+    },
+    "questions": 85
   }
 }

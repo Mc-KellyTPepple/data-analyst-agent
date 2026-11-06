@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Name\nFROM employee\nWHERE Employee_ID NOT IN (SELECT Employee_ID FROM evaluation);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 101, "prompt_tokens": 417}}

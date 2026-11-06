@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Episode, Rating\nFROM TV_series\nORDER BY CAST(Rating AS REAL) DESC\nLIMIT 3;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 83, "prompt_tokens": 447}}

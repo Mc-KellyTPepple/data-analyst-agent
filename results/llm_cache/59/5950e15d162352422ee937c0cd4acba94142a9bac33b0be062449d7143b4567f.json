@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT Stadium_ID, COUNT(*) FROM concert GROUP BY Stadium_ID;\nFINAL SQL:\nSELECT Stadium_ID, COUNT(*) FROM concert GROUP BY Stadium_ID;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 136, "prompt_tokens": 444}}

@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Course.course_name\nFROM Courses AS Course\nJOIN Student_Enrolment_Courses AS SEC\n  ON SEC.course_id = Course.course_id;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 82, "prompt_tokens": 990}}

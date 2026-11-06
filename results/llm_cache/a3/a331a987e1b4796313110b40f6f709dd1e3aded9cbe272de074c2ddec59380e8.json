@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT DISTINCT PetType FROM Pets;\"}", "name": "run_sql"}, "id": "fc_0e91c930-7e67-4936-8374-6125278f461d", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 38, "prompt_tokens": 537}}

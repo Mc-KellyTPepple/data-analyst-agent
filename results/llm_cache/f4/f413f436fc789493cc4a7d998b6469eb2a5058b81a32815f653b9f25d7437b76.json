@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT uid, Airline FROM airlines WHERE Airline LIKE '%United%';\"}", "name": "run_sql"}, "id": "fc_e904ef3b-8009-4b75-a59e-45ce59b43acb", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 51, "prompt_tokens": 498}}

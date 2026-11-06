@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT MIN(Age) FROM singer\"}", "name": "run_sql"}, "id": "fc_46e44ec4-f5e8-4406-9b59-412220f351b4", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 44, "prompt_tokens": 640}}

@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Major_Record_Format\nFROM orchestra\nGROUP BY Major_Record_Format\nORDER BY COUNT(*) DESC;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 197, "prompt_tokens": 464}}

@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Name, COUNT(concert_ID) FROM singer_in_concert JOIN singer USING (Singer_ID) GROUP BY Singer_ID\"}", "name": "run_sql"}, "id": "fc_de0e0f67-971f-4b73-8bba-c9f741b96996", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 115, "prompt_tokens": 565}}

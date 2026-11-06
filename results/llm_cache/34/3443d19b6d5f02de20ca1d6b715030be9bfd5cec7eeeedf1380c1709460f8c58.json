@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Name\nFROM people\nJOIN poker_player USING (People_ID)\nORDER BY Final_Table_Made ASC;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 73, "prompt_tokens": 338}}

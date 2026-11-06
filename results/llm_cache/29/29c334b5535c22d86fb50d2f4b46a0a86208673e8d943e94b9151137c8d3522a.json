@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT * FROM flights LIMIT 5;\"}", "name": "run_sql"}, "id": "fc_50d4ce76-5f20-4014-b5ea-9e6929af7886", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 63, "prompt_tokens": 496}}

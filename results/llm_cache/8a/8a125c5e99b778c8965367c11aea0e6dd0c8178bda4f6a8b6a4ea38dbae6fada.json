@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT PetType, weight\nFROM Pets\nORDER BY pet_age ASC\nLIMIT 1;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 73, "prompt_tokens": 328}}

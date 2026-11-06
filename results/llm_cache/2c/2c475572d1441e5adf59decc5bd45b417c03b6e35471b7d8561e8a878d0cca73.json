@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Money_Rank FROM poker_player WHERE Earnings = (SELECT MAX(Earnings) FROM poker_player);", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 95, "prompt_tokens": 332}}

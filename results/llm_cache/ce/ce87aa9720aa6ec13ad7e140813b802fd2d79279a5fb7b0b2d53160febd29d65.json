@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT c.ContId, c.Continent, COUNT(co.CountryId) FROM continents c LEFT JOIN countries co ON c.ContId = co.Continent GROUP BY c.ContId, c.Continent;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 52, "prompt_tokens": 767}}

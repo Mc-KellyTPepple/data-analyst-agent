@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Name, Age FROM singer ORDER BY Age ASC LIMIT 5\"}", "name": "run_sql"}, "id": "fc_0f831140-d68f-426e-84cf-cf81069e4336", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 72, "prompt_tokens": 566}}

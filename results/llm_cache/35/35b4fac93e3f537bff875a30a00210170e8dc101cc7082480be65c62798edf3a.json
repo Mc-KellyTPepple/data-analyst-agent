@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT name\nFROM Highschooler h\nWHERE EXISTS (SELECT 1 FROM Friend f WHERE f.student_id = h.ID)\n  AND EXISTS (SELECT 1 FROM Likes l WHERE l.liked_id = h.ID);", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 136, "prompt_tokens": 565}}

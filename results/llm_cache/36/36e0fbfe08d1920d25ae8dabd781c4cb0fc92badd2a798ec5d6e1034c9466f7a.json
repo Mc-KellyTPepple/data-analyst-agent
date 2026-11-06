@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT COUNT(*) FROM airlines WHERE Country = 'USA';\nFINAL SQL:\nSELECT COUNT(*) FROM airlines WHERE Country = 'USA';", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 52, "prompt_tokens": 324}}

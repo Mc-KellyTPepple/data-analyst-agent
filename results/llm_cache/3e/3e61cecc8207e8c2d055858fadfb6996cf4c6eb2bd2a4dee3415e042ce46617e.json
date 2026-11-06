@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT avg(Num_of_Staff) FROM museum WHERE CAST(Open_Year AS integer) < 2009;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 118, "prompt_tokens": 369}}

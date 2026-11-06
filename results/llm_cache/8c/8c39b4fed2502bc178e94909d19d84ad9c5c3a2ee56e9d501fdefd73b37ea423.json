@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT PetType, AVG(pet_age), MAX(pet_age) FROM Pets GROUP BY PetType;\"}", "name": "run_sql"}, "id": "fc_26742816-0613-4ef9-bbcc-50aec3cc0c77", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 120, "prompt_tokens": 440}}

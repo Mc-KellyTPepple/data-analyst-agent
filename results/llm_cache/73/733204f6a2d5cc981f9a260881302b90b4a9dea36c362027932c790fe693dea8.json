@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT ID FROM Highschooler WHERE name = 'Kyle';\nFINAL SQL:\nSELECT ID FROM Highschooler WHERE name = 'Kyle';", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 51, "prompt_tokens": 326}}

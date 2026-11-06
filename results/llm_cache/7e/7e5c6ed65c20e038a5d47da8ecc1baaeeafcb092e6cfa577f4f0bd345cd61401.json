@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT course_name\nFROM Courses\nWHERE course_id IN (SELECT course_id FROM Student_Enrolment_Courses);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 75, "prompt_tokens": 990}}

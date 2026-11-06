@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Name, SUM(Sales) FROM singer JOIN song USING (Singer_ID) GROUP BY Singer_ID;\"}", "name": "run_sql"}, "id": "fc_d775bd46-4efa-4087-abdc-94851285432d", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 58, "prompt_tokens": 625}}

@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT TV_Channel.id\nFROM TV_Channel\nJOIN Cartoon ON Cartoon.Channel = TV_Channel.id\nGROUP BY TV_Channel.id\nHAVING COUNT(Cartoon.id) > 2;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 118, "prompt_tokens": 445}}

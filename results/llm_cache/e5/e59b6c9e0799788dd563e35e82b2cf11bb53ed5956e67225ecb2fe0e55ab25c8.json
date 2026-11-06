@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT COUNT(DISTINCT Location) FROM shop;\"}", "name": "run_sql"}, "id": "fc_407f8f88-dbd1-4bbc-9912-5d32d6ceb99b", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 54, "prompt_tokens": 528}}

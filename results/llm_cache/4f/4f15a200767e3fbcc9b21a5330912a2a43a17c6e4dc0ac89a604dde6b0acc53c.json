@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Model FROM cars_data JOIN car_names ON cars_data.Id = car_names.MakeId ORDER BY mpg DESC LIMIT 1;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 194, "prompt_tokens": 474}}

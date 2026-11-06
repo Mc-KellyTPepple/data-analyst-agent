@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT COUNT(*) FROM country WHERE Continent='Asia';\"}", "name": "run_sql"}, "id": "fc_d86dc95c-7043-489e-a4d6-1269708a5752", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 96, "prompt_tokens": 1059}}

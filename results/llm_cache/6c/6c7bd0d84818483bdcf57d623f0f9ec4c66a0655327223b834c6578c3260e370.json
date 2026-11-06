@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT degree_program_id, degree_summary_name\nFROM Degree_Programs\nWHERE degree_program_id = 9\nFINAL SQL:\nSELECT degree_program_id, degree_summary_name\nFROM Degree_Programs\nWHERE degree_program_id = 9", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 50, "prompt_tokens": 2126}}

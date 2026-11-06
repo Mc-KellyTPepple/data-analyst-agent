@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Major_Record_Format, COUNT(*) as cnt FROM orchestra GROUP BY Major_Record_Format ORDER BY cnt DESC;\"}", "name": "run_sql"}, "id": "fc_eeddb397-fb7f-40d3-aafd-2b70eb015c85", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 60, "prompt_tokens": 936}}

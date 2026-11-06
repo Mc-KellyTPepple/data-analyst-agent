@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT name, COUNT(*) FROM Friend f JOIN Highschooler h ON f.student_id = h.ID GROUP BY h.ID, h.name;\"}", "name": "run_sql"}, "id": "fc_29703764-d287-4937-bd47-e54a0e5c5369", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 105, "prompt_tokens": 565}}

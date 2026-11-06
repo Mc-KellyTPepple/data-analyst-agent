@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT c.contestant_number, c.contestant_name\nFROM CONTESTANTS c\nWHERE (\n    SELECT COUNT(*)\n    FROM VOTES v\n    WHERE v.contestant_number = c.contestant_number\n) >= 2;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 100, "prompt_tokens": 380}}

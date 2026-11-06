@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Model\nFROM car_names\nJOIN cars_data ON car_names.MakeId = cars_data.Id\nWHERE cast(MPG AS real) = (SELECT MAX(cast(MPG AS real)) FROM cars_data);", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 176, "prompt_tokens": 474}}

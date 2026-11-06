@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT CountryName\nFROM countries\nLEFT JOIN car_makers ON countries.CountryId = car_makers.Country\nWHERE car_makers.Id IS NULL;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 106, "prompt_tokens": 467}}

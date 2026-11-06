@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT id FROM TV_Channel\nWHERE id IN (\n  SELECT Channel FROM TV_series\n  GROUP BY Channel\n  HAVING COUNT(*) > 2\n);", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 94, "prompt_tokens": 445}}

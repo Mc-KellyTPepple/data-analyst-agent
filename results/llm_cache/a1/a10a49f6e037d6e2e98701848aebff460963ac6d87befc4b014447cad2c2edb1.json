@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Package_Option FROM TV_Channel WHERE series_name = 'Sky Radio';", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 47, "prompt_tokens": 443}}

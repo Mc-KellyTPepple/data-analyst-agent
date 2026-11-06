@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT DISTINCT course_name\nFROM Courses\nJOIN Student_Enrolment_Courses USING (course_id);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 52, "prompt_tokens": 990}}

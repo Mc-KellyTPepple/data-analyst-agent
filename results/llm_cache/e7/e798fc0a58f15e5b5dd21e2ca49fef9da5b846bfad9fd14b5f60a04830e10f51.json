@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT COUNT(*) \nFROM (\n    SELECT CountryCode \n    FROM countrylanguage \n    WHERE Language IN ('English','Dutch') \n    GROUP BY CountryCode \n    HAVING COUNT(DISTINCT Language) = 2\n);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 202, "prompt_tokens": 601}}

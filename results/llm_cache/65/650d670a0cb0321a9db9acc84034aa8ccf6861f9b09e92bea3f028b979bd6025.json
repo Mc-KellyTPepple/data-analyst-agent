@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Song_Name, Song_release_year FROM singer WHERE Age = (SELECT MIN(Age) FROM singer);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 59, "prompt_tokens": 676}}

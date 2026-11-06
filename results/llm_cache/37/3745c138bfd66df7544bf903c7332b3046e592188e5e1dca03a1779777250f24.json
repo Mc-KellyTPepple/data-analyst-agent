@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT DISTINCT StuID FROM Student\"}", "name": "run_sql"}, "id": "fc_697a2088-141b-48fb-a35b-18c4c7eb6e09", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 71, "prompt_tokens": 441}}

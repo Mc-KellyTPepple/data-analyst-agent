@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT last_name\nFROM Students s\nJOIN Addresses a ON s.current_address_id = a.address_id\nWHERE a.state_province_county = 'North Carolina'\n  AND NOT EXISTS (SELECT 1 FROM Student_Enrolment e WHERE e.student_id = s.student_id);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 180, "prompt_tokens": 1002}}

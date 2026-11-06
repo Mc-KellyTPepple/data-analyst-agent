@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT Channel FROM TV_series GROUP BY Channel HAVING COUNT(*) > 2;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 69, "prompt_tokens": 445}}

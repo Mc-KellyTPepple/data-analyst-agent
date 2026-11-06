@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT Continent FROM country WHERE Name='Anguilla';\nFINAL SQL:\nSELECT Continent FROM country WHERE Name='Anguilla';", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 131, "prompt_tokens": 597}}

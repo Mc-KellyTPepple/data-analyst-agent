@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Template_Type_Code, Template_Type_Description\nFROM Ref_Template_Types;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 47, "prompt_tokens": 427}}

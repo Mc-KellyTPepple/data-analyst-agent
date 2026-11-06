@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Template_Type_Code, COUNT(*) FROM Templates GROUP BY Template_Type_Code;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 51, "prompt_tokens": 431}}

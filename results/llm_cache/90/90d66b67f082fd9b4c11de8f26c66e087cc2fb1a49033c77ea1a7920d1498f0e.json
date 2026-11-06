@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT Name FROM teacher WHERE Hometown <> 'Little Lever Urban District';\nFINAL SQL:\nSELECT Name FROM teacher WHERE Hometown <> 'Little Lever Urban District';", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 57, "prompt_tokens": 356}}

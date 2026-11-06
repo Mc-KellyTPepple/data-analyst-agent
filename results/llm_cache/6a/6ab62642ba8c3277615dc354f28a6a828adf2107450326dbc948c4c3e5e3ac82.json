@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT a.AirportCode FROM airports a LEFT JOIN flights f ON a.AirportCode = f.SourceAirport OR a.AirportCode = f.DestAirport GROUP BY a.AirportCode ORDER BY COUNT(f.Airline) ASC LIMIT 1", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 60, "prompt_tokens": 815}}

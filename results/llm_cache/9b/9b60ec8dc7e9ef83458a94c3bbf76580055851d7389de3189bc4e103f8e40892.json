@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT COUNT(*) FROM (\n    SELECT CountryCode FROM countrylanguage WHERE Language = 'English'\n    INTERSECT\n    SELECT CountryCode FROM countrylanguage WHERE Language = 'Dutch'\n);", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 107, "prompt_tokens": 601}}

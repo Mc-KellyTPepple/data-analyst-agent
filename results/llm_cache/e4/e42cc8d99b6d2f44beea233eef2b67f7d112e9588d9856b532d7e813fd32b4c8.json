@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Template_ID, Template_Type_Code\nFROM Templates\nJOIN Documents ON Templates.Template_ID = Documents.Template_ID\nGROUP BY Template_ID, Template_Type_Code\nORDER BY COUNT(*) DESC\nLIMIT 1;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 152, "prompt_tokens": 438}}

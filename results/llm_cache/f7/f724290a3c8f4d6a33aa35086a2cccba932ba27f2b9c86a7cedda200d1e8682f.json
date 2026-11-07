@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT AirportCode\nFROM airports\nORDER BY (\n    SELECT COUNT(*)\n    FROM flights f\n    WHERE f.SourceAirport = airports.AirportCode\n       OR f.DestAirport = airports.AirportCode\n) ASC\nLIMIT 1;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 92, "prompt_tokens": 823}}

@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT Name FROM singer WHERE Net_Worth_Millions = (SELECT MAX(Net_Worth_Millions) FROM singer);\nFINAL SQL:\nSELECT Name FROM singer WHERE Net_Worth_Millions = (SELECT MAX(Net_Worth_Millions) FROM singer);", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 101, "prompt_tokens": 325}}

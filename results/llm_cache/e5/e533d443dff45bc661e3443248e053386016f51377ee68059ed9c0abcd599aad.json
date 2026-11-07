@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT s.Name, SUM(song.Sales)\nFROM singer s\nJOIN song ON s.Singer_ID = song.Singer_ID\nGROUP BY s.Name;\nFINAL SQL:\nSELECT s.Name, SUM(song.Sales)\nFROM singer s\nJOIN song ON s.Singer_ID = song.Singer_ID\nGROUP BY s.Name;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 105, "prompt_tokens": 325}}

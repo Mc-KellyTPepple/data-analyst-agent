@@ -1,0 +1,1 @@
+{"message": {"content": "The maximum capacity of all stadiums is 52500 and the average capacity is 10621.666666666666.\n\nFINAL SQL:\nSELECT max(Capacity), avg(Capacity) FROM stadium;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 82, "prompt_tokens": 960}}

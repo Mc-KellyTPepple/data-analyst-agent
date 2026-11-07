@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Name FROM country WHERE Continent='Europe' AND Population=80000;\"}", "name": "run_sql"}, "id": "fc_0488e8c1-4ea1-43c1-a2ba-203681551cbb", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 64, "prompt_tokens": 728}}

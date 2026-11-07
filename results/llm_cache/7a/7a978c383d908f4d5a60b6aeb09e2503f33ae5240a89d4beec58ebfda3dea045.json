@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT created, state, phone_number FROM VOTES JOIN CONTESTANTS ON VOTES.contestant_number = CONTESTANTS.contestant_number WHERE contestant_name = 'Tabatha Gehling';", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 60, "prompt_tokens": 595}}

@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT state, COUNT(*) FROM VOTES WHERE state IN ('NY','CA') GROUP BY state;\"}", "name": "run_sql"}, "id": "fc_8cd968a2-2177-41e1-96cc-7fb42043997b", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 111, "prompt_tokens": 494}}

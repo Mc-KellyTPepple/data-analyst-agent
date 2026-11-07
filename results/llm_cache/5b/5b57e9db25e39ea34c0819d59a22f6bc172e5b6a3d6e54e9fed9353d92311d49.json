@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Owners.owner_id, Owners.last_name\nFROM Owners\nJOIN Dogs ON Owners.owner_id = Dogs.owner_id\nJOIN Treatments ON Dogs.dog_id = Treatments.dog_id\nGROUP BY Owners.owner_id, Owners.last_name\nORDER BY COUNT(*) DESC\nLIMIT 1;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 77, "prompt_tokens": 1190}}

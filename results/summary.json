@@ -90,23 +90,45 @@
     "accuracy_by_agreement": {},
     "databases_worst": [
       [
+        "flight_2",
+        40.0,
+        5
+      ],
+      [
+        "real_estate_properties",
+        50.0,
+        4
+      ],
+      [
         "concert_singer",
-        100.0,
-        1
+        60.0,
+        5
+      ],
+      [
+        "car_1",
+        60.0,
+        5
+      ],
+      [
+        "wta_1",
+        60.0,
+        5
       ]
     ],
-    "execution_accuracy": 100.0,
-    "mean_llm_calls": 2.0,
-    "mean_seconds": 0.0,
-    "mean_sql_errors": 0.0,
-    "mean_tokens": 1915,
+    "execution_accuracy": 84.0,
+    "mean_llm_calls": 2.25,
+    "mean_seconds": 3.6,
+    "mean_sql_errors": 0.02,
+    "mean_tokens": 2381,
     "models": {
-      "openai/gpt-oss-20b": 1
+      "openai/gpt-oss-20b": 100
     },
     "outcomes": {
-      "match": 1
+      "match": 84,
+      "mismatch": 15,
+      "pred_error": 1
     },
-    "questions": 1
+    "questions": 100
   },
   "agent_nosamples_v1_s1_n200": {
     "questions": 0
@@ -115,13 +137,61 @@
     "accuracy_by_agreement": {},
     "databases_worst": [
       [
+        "world_1",
+        20.0,
+        5
+      ],
+      [
+        "real_estate_properties",
+        50.0,
+        4
+      ],
+      [
         "flight_2",
+        60.0,
+        5
+      ],
+      [
+        "network_1",
         60.0,
         5
       ],
       [
         "concert_singer",
         80.0,
+        5
+      ]
+    ],
+    "execution_accuracy": 83.0,
+    "mean_llm_calls": 2.25,
+    "mean_seconds": 16.9,
+    "mean_sql_errors": 0.01,
+    "mean_tokens": 1593,
+    "models": {
+      "openai/gpt-oss-120b": 100
+    },
+    "outcomes": {
+      "match": 83,
+      "mismatch": 17
+    },
+    "questions": 100
+  },
+  "agent_nosamples_v2_gpt-oss-20b_s1_n100": {
+    "accuracy_by_agreement": {},
+    "databases_worst": [
+      [
+        "world_1",
+        40.0,
+        5
+      ],
+      [
+        "concert_singer",
+        60.0,
+        5
+      ],
+      [
+        "flight_2",
+        60.0,
         5
       ],
       [
@@ -130,32 +200,25 @@
         5
       ],
       [
-        "pets_1",
-        100.0,
-        5
-      ],
-      [
-        "employee_hire_evaluation",
-        100.0,
+        "wta_1",
+        80.0,
         5
       ]
     ],
-    "execution_accuracy": 90.7,
-    "mean_llm_calls": 2.28,
-    "mean_seconds": 15.4,
-    "mean_sql_errors": 0.02,
-    "mean_tokens": 1456,
+    "execution_accuracy": 88.3,
+    "mean_llm_calls": 2.31,
+    "mean_seconds": 17.3,
+    "mean_sql_errors": 0.03,
+    "mean_tokens": 1632,
     "models": {
-      "openai/gpt-oss-120b": 43
+      "openai/gpt-oss-20b": 94
     },
     "outcomes": {
-      "match": 39,
-      "mismatch": 4
+      "match": 83,
+      "mismatch": 10,
+      "pred_error": 1
     },
-    "questions": 43
-  },
-  "agent_nosamples_v2_gpt-oss-20b_s1_n100": {
-    "questions": 0
+    "questions": 94
   },
   "agent_v1_s1_n200": {
     "accuracy_by_agreement": {},
@@ -931,12 +994,12 @@
   "vote_v2_gpt-oss-20b_s2_n100": {
     "accuracy_by_agreement": {
       "split": {
-        "accuracy": 64.3,
-        "n": 28
+        "accuracy": 62.5,
+        "n": 32
       },
       "unanimous": {
-        "accuracy": 86.0,
-        "n": 57
+        "accuracy": 85.3,
+        "n": 68
       }
     },
     "databases_worst": [
@@ -944,6 +1007,11 @@
         "car_1",
         20.0,
         5
+      ],
+      [
+        "real_estate_properties",
+        50.0,
+        4
       ],
       [
         "concert_singer",
@@ -959,25 +1027,20 @@
         "tvshow",
         60.0,
         5
-      ],
-      [
-        "flight_2",
-        80.0,
-        5
       ]
     ],
-    "execution_accuracy": 78.8,
+    "execution_accuracy": 78.0,
     "mean_llm_calls": 5.0,
-    "mean_seconds": 20.5,
-    "mean_sql_errors": 0.26,
-    "mean_tokens": 2783,
+    "mean_seconds": 19.3,
+    "mean_sql_errors": 0.28,
+    "mean_tokens": 2882,
     "models": {
-      "openai/gpt-oss-20b": 85
+      "openai/gpt-oss-20b": 100
     },
     "outcomes": {
-      "match": 67,
-      "mismatch": 18
+      "match": 78,
+      "mismatch": 22
     },
-    "questions": 85
+    "questions": 100
   }
 }

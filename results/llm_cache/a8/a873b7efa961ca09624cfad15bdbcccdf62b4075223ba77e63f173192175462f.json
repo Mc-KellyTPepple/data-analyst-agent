@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT charge_type, charge_amount FROM Charges\"}", "name": "run_sql"}, "id": "fc_cd000466-3aba-46c3-bd95-18ab152bc4ea", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 63, "prompt_tokens": 941}}

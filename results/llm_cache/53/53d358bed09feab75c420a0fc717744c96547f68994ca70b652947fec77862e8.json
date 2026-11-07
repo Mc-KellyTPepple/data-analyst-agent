@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Birth_Year, Citizenship FROM singer;\"}", "name": "run_sql"}, "id": "fc_71c8e887-1efb-4450-ab84-7efc7178bf63", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 46, "prompt_tokens": 438}}

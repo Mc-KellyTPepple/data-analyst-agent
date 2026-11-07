@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT contestant_number FROM CONTESTANTS WHERE contestant_name = 'Tabatha Gehling';\"}", "name": "run_sql"}, "id": "fc_27291aff-c8e4-4ebd-b21b-2dfe11bd40d2", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 88, "prompt_tokens": 505}}

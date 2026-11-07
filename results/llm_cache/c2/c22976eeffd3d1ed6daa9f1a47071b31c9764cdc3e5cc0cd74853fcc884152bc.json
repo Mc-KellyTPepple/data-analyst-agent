@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT MAX(Share), MIN(Share) FROM performance WHERE Type \\u003c\\u003e 'Live final';\"}", "name": "run_sql"}, "id": "fc_0120126a-781c-408d-93a3-6ac7753ad596", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 103, "prompt_tokens": 582}}

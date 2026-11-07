@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT name\nFROM Dogs d\nJOIN Treatments t ON d.dog_id = t.dog_id\nGROUP BY d.dog_id\nHAVING COALESCE(SUM(t.cost_of_treatment),0) <= 1000;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 160, "prompt_tokens": 1046}}

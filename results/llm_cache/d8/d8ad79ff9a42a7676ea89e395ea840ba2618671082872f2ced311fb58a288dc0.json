@@ -1,0 +1,1 @@
+{"message": {"content": "SELECT student_id, COUNT(*) FROM Likes GROUP BY student_id;\nFINAL SQL:\nSELECT student_id, COUNT(*) FROM Likes GROUP BY student_id;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 162, "prompt_tokens": 325}}

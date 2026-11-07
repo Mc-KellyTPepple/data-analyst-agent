@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT r.property_type_description\nFROM Properties p\nJOIN Ref_Property_Types r ON p.property_type_code = r.property_type_code;", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 107, "prompt_tokens": 978}}

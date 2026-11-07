@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT ID FROM Highschooler h WHERE NOT EXISTS (SELECT 1 FROM Friend f WHERE f.student_id = h.ID);\"}", "name": "run_sql"}, "id": "fc_88681ec6-df16-4baf-a7e2-ccfcf0927031", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 128, "prompt_tokens": 445}}

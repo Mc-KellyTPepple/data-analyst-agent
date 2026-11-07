@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT student_id, COUNT(*) as c FROM Likes GROUP BY student_id HAVING c\\u003e=2;\"}", "name": "run_sql"}, "id": "fc_cef9c363-a079-4622-992e-b4d24ff818e6", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 66, "prompt_tokens": 729}}

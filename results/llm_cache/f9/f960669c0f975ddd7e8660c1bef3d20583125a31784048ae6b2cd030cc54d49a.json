@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT COUNT(*) FROM matches WHERE winner_hand = 'L' AND tourney_name = 'WTA Championships';\"}", "name": "run_sql"}, "id": "fc_5fc2b6a0-5a3e-4726-a913-c53351bd57fe", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 119, "prompt_tokens": 650}}

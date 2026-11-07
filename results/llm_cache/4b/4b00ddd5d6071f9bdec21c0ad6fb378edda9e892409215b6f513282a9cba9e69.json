@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT * FROM Ref_Property_Types\"}", "name": "run_sql"}, "id": "fc_400a9944-47bf-4ff5-902f-fcb81531e8c0", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 62, "prompt_tokens": 837}}

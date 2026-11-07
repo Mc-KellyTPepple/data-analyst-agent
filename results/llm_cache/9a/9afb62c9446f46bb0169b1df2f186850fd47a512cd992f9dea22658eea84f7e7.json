@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT AVG(CAST(age AS INTEGER)) FROM Dogs\"}", "name": "run_sql"}, "id": "fc_eb2b425f-82e9-4c0e-8d0f-a97e51cf3160", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 47, "prompt_tokens": 977}}

@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT Name FROM museum m WHERE NOT EXISTS (SELECT 1 FROM visit v WHERE v.Museum_ID = m.Museum_ID);", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 108, "prompt_tokens": 798}}

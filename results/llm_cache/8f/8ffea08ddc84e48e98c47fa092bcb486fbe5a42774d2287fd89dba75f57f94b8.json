@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Package_Option, series_name FROM TV_Channel WHERE Hight_definition_TV='yes';\"}", "name": "run_sql"}, "id": "fc_bce2f88e-32a8-4b0c-851f-2ada241e5175", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 72, "prompt_tokens": 726}}

@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT name FROM Highschooler WHERE ID IN (SELECT student_id FROM Likes GROUP BY student_id ORDER BY COUNT(*) DESC LIMIT 1);", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 71, "prompt_tokens": 497}}

@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Name FROM conductor WHERE Nationality != 'USA';\"}", "name": "run_sql"}, "id": "fc_1188f8f1-bd84-44c4-8056-d8b4e8cc026e", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 48, "prompt_tokens": 580}}

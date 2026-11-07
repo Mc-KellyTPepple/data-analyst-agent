@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT CountryCode, Language FROM countrylanguage WHERE IsOfficial = 'T' AND CountryCode IN (SELECT Code FROM country WHERE HeadOfState = 'Beatrix')", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 40, "prompt_tokens": 849}}

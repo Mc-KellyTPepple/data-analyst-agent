@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT name FROM Highschooler\"}", "name": "run_sql"}, "id": "fc_df22969c-271d-416f-9a4d-c2a5c39d815a", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 83, "prompt_tokens": 444}}

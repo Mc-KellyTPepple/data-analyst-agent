@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT * FROM Likes\"}", "name": "run_sql"}, "id": "fc_801c025c-269b-487d-a00b-9dac1962ce9b", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 31, "prompt_tokens": 639}}

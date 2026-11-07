@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Share FROM performance WHERE Type != 'Live final' LIMIT 5\"}", "name": "run_sql"}, "id": "fc_4b4469b7-4673-4f9f-aa25-dd04ca7fd082", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 89, "prompt_tokens": 582}}

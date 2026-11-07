@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT MAX(Final_Table_Made) FROM poker_player WHERE Earnings \\u003c 200000\"}", "name": "run_sql"}, "id": "fc_23e50fff-e0a0-4e6d-9824-20ebaeb76ae5", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 85, "prompt_tokens": 454}}

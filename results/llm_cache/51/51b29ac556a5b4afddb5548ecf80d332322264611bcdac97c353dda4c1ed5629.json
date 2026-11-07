@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT CountryCode\nFROM countrylanguage\nWHERE Language = 'Spanish'\n  AND Percentage = (\n    SELECT MAX(Percentage)\n    FROM countrylanguage\n    WHERE Language = 'Spanish'\n  );", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 103, "prompt_tokens": 823}}

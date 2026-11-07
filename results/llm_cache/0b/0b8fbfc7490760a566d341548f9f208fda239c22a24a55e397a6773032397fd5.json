@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT count(*) FROM flights WHERE SourceAirport='APG';\"}", "name": "run_sql"}, "id": "fc_5a4d09cc-f4c1-465d-9e51-8b3360c7d3e9", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 59, "prompt_tokens": 440}}

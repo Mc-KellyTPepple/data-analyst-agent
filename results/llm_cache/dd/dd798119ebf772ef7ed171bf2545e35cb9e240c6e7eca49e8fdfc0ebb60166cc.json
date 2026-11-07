@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT first_name FROM Students WHERE permanent_address_id \\u003c\\u003e current_address_id;\"}", "name": "run_sql"}, "id": "fc_d4538cca-aa7b-4831-a95c-8580abcd717d", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 58, "prompt_tokens": 1113}}

@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT Name FROM conductor ORDER BY Year_of_Work DESC LIMIT 1;\"}", "name": "run_sql"}, "id": "fc_77977302-a968-4a1e-ae86-298247e6f0a4", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 67, "prompt_tokens": 581}}

@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT COUNT(DISTINCT Nationality) FROM conductor\"}", "name": "run_sql"}, "id": "fc_6fe08c76-c861-4d01-8b7b-f10a759c7a27", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 58, "prompt_tokens": 575}}

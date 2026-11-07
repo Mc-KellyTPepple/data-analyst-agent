@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT DISTINCT Hight_definition_TV FROM TV_Channel\"}", "name": "run_sql"}, "id": "fc_c0db56e1-49f6-4111-95ae-cf0bb1d3ee77", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 75, "prompt_tokens": 732}}

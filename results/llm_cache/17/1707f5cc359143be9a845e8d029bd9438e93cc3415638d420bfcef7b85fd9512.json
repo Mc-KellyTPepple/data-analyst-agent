@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT MAX(transcript_date) FROM Transcripts\"}", "name": "run_sql"}, "id": "fc_01d43728-fb2d-43ee-a566-50b56ca263d8", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 67, "prompt_tokens": 1101}}

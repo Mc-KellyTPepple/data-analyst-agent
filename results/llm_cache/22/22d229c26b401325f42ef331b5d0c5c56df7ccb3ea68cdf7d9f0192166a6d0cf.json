@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT DISTINCT name FROM battle WHERE bulgarian_commander='Kaloyan' AND latin_commander='Baldwin I';\"}", "name": "run_sql"}, "id": "fc_7f7c1ffe-902e-4463-8a04-58553312fded", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 102, "prompt_tokens": 527}}

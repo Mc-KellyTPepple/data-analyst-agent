@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT h.ID FROM Highschooler h WHERE NOT EXISTS (SELECT 1 FROM Friend f WHERE f.student_id = h.ID OR f.friend_id = h.ID);", "role": "assistant"}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 63, "prompt_tokens": 559}}

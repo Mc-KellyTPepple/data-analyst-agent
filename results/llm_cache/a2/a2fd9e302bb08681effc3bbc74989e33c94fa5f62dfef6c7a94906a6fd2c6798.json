@@ -1,0 +1,1 @@
+{"message": {"content": "FINAL SQL:\nSELECT cm.FullName, cm.Id\nFROM car_makers cm\nJOIN (\n    SELECT Maker\n    FROM model_list\n    GROUP BY Maker\n    HAVING COUNT(*) > 3\n) m ON cm.Id = m.Maker;", "role": "assistant"}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 100, "prompt_tokens": 846}}

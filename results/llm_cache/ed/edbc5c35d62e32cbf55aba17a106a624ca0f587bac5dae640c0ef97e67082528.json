@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT age FROM Dogs LIMIT 5\"}", "name": "run_sql"}, "id": "fc_9fe46d40-d092-4a6a-a4fa-d520e20bbc16", "type": "function"}]}, "model": "openai/gpt-oss-120b", "usage": {"completion_tokens": 47, "prompt_tokens": 935}}

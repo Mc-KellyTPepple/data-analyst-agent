@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT AirportCode FROM airports LIMIT 1;\"}", "name": "run_sql"}, "id": "fc_e8e24501-7d8d-44ae-bb3d-e299f5ee95de", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 78, "prompt_tokens": 442}}

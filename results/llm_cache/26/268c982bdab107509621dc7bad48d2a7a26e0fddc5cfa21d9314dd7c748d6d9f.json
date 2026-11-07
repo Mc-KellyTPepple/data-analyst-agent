@@ -1,0 +1,1 @@
+{"message": {"role": "assistant", "tool_calls": [{"function": {"arguments": "{\"sql\":\"SELECT COUNT(*) FROM flights WHERE Airline=1 AND SourceAirport='AHD';\"}", "name": "run_sql"}, "id": "fc_abb6dfb5-17b6-4bc1-8c45-1c99af672fac", "type": "function"}]}, "model": "openai/gpt-oss-20b", "usage": {"completion_tokens": 89, "prompt_tokens": 745}}

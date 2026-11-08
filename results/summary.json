@@ -185,6 +185,11 @@
         5
       ],
       [
+        "real_estate_properties",
+        50.0,
+        4
+      ],
+      [
         "concert_singer",
         60.0,
         5
@@ -198,27 +203,22 @@
         "car_1",
         80.0,
         5
-      ],
-      [
-        "wta_1",
-        80.0,
-        5
       ]
     ],
-    "execution_accuracy": 88.3,
-    "mean_llm_calls": 2.31,
-    "mean_seconds": 17.3,
+    "execution_accuracy": 87.0,
+    "mean_llm_calls": 2.3,
+    "mean_seconds": 16.9,
     "mean_sql_errors": 0.03,
-    "mean_tokens": 1632,
+    "mean_tokens": 1642,
     "models": {
-      "openai/gpt-oss-20b": 94
+      "openai/gpt-oss-20b": 100
     },
     "outcomes": {
-      "match": 83,
-      "mismatch": 10,
+      "match": 87,
+      "mismatch": 12,
       "pred_error": 1
     },
-    "questions": 94
+    "questions": 100
   },
   "agent_v1_s1_n200": {
     "accuracy_by_agreement": {},

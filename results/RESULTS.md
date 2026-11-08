@@ -6,7 +6,7 @@
 | agent_1try_v2_gpt-oss-120b_s1_n100 | 100 | 82.0% | 2.15 | 0.01 | 2246 |
 | agent_1try_v2_gpt-oss-20b_s1_n100 | 100 | 84.0% | 2.25 | 0.02 | 2381 |
 | agent_nosamples_v2_gpt-oss-120b_s1_n100 | 100 | 83.0% | 2.25 | 0.01 | 1593 |
-| agent_nosamples_v2_gpt-oss-20b_s1_n100 | 94 | 88.3% | 2.31 | 0.03 | 1632 |
+| agent_nosamples_v2_gpt-oss-20b_s1_n100 | 100 | 87.0% | 2.3 | 0.03 | 1642 |
 | agent_v1_s1_n200 | 154 | 79.2% | 2.26 | 0.01 | 2195 |
 | agent_v2_gpt-oss-120b_s1_n100 | 100 | 81.0% | 2.19 | 0.01 | 2294 |
 | agent_v2_gpt-oss-120b_s2_n100 | 100 | 78.0% | 2.19 | 0.0 | 2327 |

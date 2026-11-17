@@ -116,7 +116,7 @@ class HttpTests(unittest.TestCase):
         self.assertNotIn("secret", json.dumps(body))
         code, body, _ = self.call("/ask", {"question": "quota"}, ip="9.9.9.6")
         self.assertEqual(code, 503)
-        self.assertIn("free quota", body["error"])
+        self.assertIn("out of quota", body["error"])
 
     def test_rate_limit_per_forwarded_ip(self):
         codes = [self.call("/ask", {"question": "q"}, ip="9.9.9.7")[0] for _ in range(5)]

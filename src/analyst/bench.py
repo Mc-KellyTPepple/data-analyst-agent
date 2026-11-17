@@ -2,7 +2,7 @@
 
 For each question: run the agent against the database, execute its final SQL and the gold SQL
 (both read-only), and compare the results. Results are appended to a JSONL file, one line per
-question, so a run that hits the free daily quota can simply be continued the next day.
+question, so a run that hits the daily quota can simply be continued the next day.
 """
 from __future__ import annotations
 

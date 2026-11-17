@@ -4,10 +4,10 @@ Ask questions about a database in plain English. The agent writes SQL, runs it *
 fixes its own mistakes, and answers. Its accuracy is measured on the public [Spider](https://yale-lily.github.io/spider)
 text-to-SQL benchmark, including an ablation that shows what each part of the design contributes.
 
-Runs on free Groq models and free hosting. No paid plan is needed anywhere.
+Runs on Groq-hosted models and cloud hosting.
 
 > **Status:** code, tests, benchmark pipeline and the main results are done. A second, unseen sample (seed 2) and two ablation
-> arms are still running on the free daily quota; the full tables are in [`results/RESULTS.md`](results/RESULTS.md).
+> arms are still running under the daily quota; the full tables are in [`results/RESULTS.md`](results/RESULTS.md).
 
 ## Results (Spider dev set, two 100-question samples, prompt v2)
 
@@ -35,7 +35,7 @@ Ablations (sample 1 only):
 * **History.** The first run (prompt v1, kept in `results/*_v1_*`) had the agent ~3 points behind the baseline. The failure
   analysis (`python -m analyst analyze`) found 13 of 32 wrong answers added helpful extra columns that strict scoring rejects,
   plus a parsing bug. Both were fixed in prompt v2.
-* The live web app runs the single agent, not five-way voting (too expensive for the free quota).
+* The live web app runs the single agent, not five-way voting (too expensive for the daily quota).
 
 ## How it works
 
@@ -66,14 +66,14 @@ Ablations (sample 1 only):
 | `agent` | Self-correction and sample rows (the full design) |
 
 Runs are resumable and quota-aware (rate limiter, model fallback chain, response cache, daily ledger), so the whole benchmark
-finishes over a few nights on Groq's free tier. See `.github/workflows/bench.yml`.
+finishes over a few nights under Groq's daily limits. See `.github/workflows/bench.yml`.
 
 ### Limits to keep in mind
 
 * Spider is public and widely studied; a good score matches the field rather than leading it.
 * A sample of 200 questions has a margin of error of several percentage points; differences of a few points between
   configurations are not conclusive.
-* Scores depend on the free models available on the day, and runs may mix models when a
+* Scores depend on the models available on the day, and runs may mix models when a
   daily quota runs out (the per-model counts are recorded in `results/summary.json`).
 
 ## Run it
@@ -82,17 +82,17 @@ finishes over a few nights on Groq's free tier. See `.github/workflows/bench.yml
 pip install -e .
 python -m unittest discover -s tests -t .            # 33 tests, no network
 python scripts/make_demo_db.py                        # builds demo/demo.sqlite (synthetic shop data)
-export GROQ_API_KEY=...                               # free key from console.groq.com
+export GROQ_API_KEY=...                               # key from console.groq.com
 python -m analyst ask demo/demo.sqlite "Which country has the most customers?"
 python scripts/fetch_spider.py && python -m analyst bench --config agent --n 200
 python -m analyst serve                                # web service: /ask, /upload (CSV), /health
 ```
 
-## Free deployment
+## Deployment
 
-`render.yaml` defines a free Render web service. Set `GROQ_API_KEY` as a secret. The service sleeps when idle, so the
+`render.yaml` defines the Render web service. Set `GROQ_API_KEY` as a secret. The service sleeps when idle, so the
 portfolio page wakes it when someone opens the demo and keeps visitors engaged while it starts. The service limits each
-visitor to 10 questions an hour and the whole demo to 150 a day, to stay within the free model quota.
+visitor to 10 questions an hour and the whole demo to 150 a day, to stay within the model quota.
 
 Uploaded CSVs (max 400 KB) are held in memory for an hour and never written to disk.
 

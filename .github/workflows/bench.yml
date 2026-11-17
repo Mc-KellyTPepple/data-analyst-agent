@@ -1,6 +1,6 @@
 name: Benchmark on Spider
 
-# Runs the Spider development-set sample through Groq's free tier, grades execution accuracy, and commits the
+# Runs the Spider development-set sample through Groq, grades execution accuracy, and commits the
 # results, the response cache and the daily request ledger. Runs are resumable: finished questions are skipped,
 # so when a daily quota runs out the run stops cleanly and the nightly run continues it.
 #
@@ -60,7 +60,7 @@ jobs:
           max="${{ inputs.max_requests }}"; max="${max:-900}"
           models="${{ inputs.models }}"
           if [ "${{ github.event_name }}" = "schedule" ] || [ -z "$models" ]; then
-            model_list="openai/gpt-oss-120b openai/gpt-oss-20b"   # each model has its own free daily quota, so both progress every night
+            model_list="openai/gpt-oss-120b openai/gpt-oss-20b"   # each model has its own daily quota, so both progress every night
           else
             model_list="$models"
           fi

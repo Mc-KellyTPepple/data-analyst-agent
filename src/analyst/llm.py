@@ -1,6 +1,6 @@
-"""Groq client built for the free tier: rate limiter, model fallback chain, response cache, daily ledger.
+"""Groq client built for tight rate limits: rate limiter, model fallback chain, response cache, daily ledger.
 
-Limits below are free-tier values at the time of writing and can change; check
+Limits below are the values at the time of writing and can change; check
 https://console.groq.com/settings/limits and override with `limits=`.
 """
 from __future__ import annotations

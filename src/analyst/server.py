@@ -5,7 +5,7 @@
   POST /upload            {"name": "...", "csv": "..."} -> {"dataset": id, "table": ..., "columns": [...], "rows": n}
   POST /ask               {"question": "...", "dataset": "demo" | id} -> answer, sql, columns, rows, ...
 
-It runs on a free host with a free Groq key, so it protects the quota: per-IP and daily limits, a question
+It runs on a small host with a rate-limited Groq key, so it protects the quota: per-IP and daily limits, a question
 length limit, a size limit on uploads, and the on-disk response cache.
 """
 from __future__ import annotations
@@ -47,7 +47,7 @@ class Limits:
             if today != self.day:
                 self.day, self.count = today, 0
             if cost and self.count >= self.daily_cap:
-                return "The daily free quota for this demo is used up. Please try again tomorrow."
+                return "The daily quota for this demo is used up. Please try again tomorrow."
             q = self.hits[ip]
             while q and now - q[0] > 3600:
                 q.popleft()
@@ -163,7 +163,7 @@ class App:
                     except QueryError as exc:
                         result = {"columns": [], "rows": [], "truncated": False, "error": str(exc)}
         except LLMError as exc:
-            msg = ("The model provider is busy or out of free quota right now. Try again later."
+            msg = ("The model provider is busy or out of quota right now. Try again later."
                    if "quota" in str(exc).lower() or "budget" in str(exc).lower() else "The model provider returned an error. Try again.")
             return 503, {"error": msg}
         except Exception as exc:   # network failure, bad key, anything unexpected: never leak internals
